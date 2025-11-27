@@ -1,0 +1,732 @@
+[
+  {
+    "id": "techflow_20251125_194940",
+    "filename": "techflow_v1_basic.svg",
+    "company_name": "TechFlow",
+    "industry": "Technology",
+    "style": "minimalist",
+    "score": 84,
+    "complexity": 2,
+    "version": "v1",
+    "iteration": 1,
+    "colors": [
+      "#2563eb",
+      "#ffffff"
+    ],
+    "notes": "Técnica: Zero-shot básico",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.904058",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 3,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 2,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": false,
+        "has_ids": false,
+        "color_count": 2,
+        "warnings": [],
+        "score": 95
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 88,
+      "passed": true
+    },
+    "legacy_score": 88,
+    "aesthetic_metrics": {
+      "golden_ratio": 67.8,
+      "color_harmony": 95.0,
+      "visual_interest": 80.0,
+      "score": 80
+    }
+  },
+  {
+    "id": "techflow_20251125_194940",
+    "filename": "techflow_v2_cot.svg",
+    "company_name": "TechFlow",
+    "industry": "Technology",
+    "style": "minimalist",
+    "score": 89,
+    "complexity": 4,
+    "version": "v2",
+    "iteration": 2,
+    "colors": [
+      "#2563eb"
+    ],
+    "notes": "Técnica: Chain-of-Thought",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.907107",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 5,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 4,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": false,
+        "has_ids": false,
+        "color_count": 2,
+        "warnings": [],
+        "score": 95
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 88,
+      "passed": true
+    },
+    "legacy_score": 88,
+    "aesthetic_metrics": {
+      "golden_ratio": 92.1,
+      "color_harmony": 95.0,
+      "visual_interest": 80.0,
+      "score": 89
+    }
+  },
+  {
+    "id": "techflow_20251125_194940",
+    "filename": "techflow_v2_golden.svg",
+    "company_name": "TechFlow",
+    "industry": "Technology",
+    "style": "minimalist",
+    "score": 89,
+    "complexity": 5,
+    "version": "v2",
+    "iteration": 3,
+    "colors": [
+      "#2563eb",
+      "#3b82f6"
+    ],
+    "notes": "Técnica: Chain-of-Thought + Golden Ratio",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.908497",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 7,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 5,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": true,
+        "has_ids": false,
+        "color_count": 4,
+        "warnings": [
+          "⚠ Más de 3 colores"
+        ],
+        "score": 91
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 87,
+      "passed": true
+    },
+    "legacy_score": 87,
+    "aesthetic_metrics": {
+      "golden_ratio": 82.6,
+      "color_harmony": 90.0,
+      "visual_interest": 100.0,
+      "score": 90
+    }
+  },
+  {
+    "id": "healthplus_20251125_194940",
+    "filename": "healthplus_v1_simple.svg",
+    "company_name": "HealthPlus",
+    "industry": "Healthcare",
+    "style": "modern",
+    "score": 80,
+    "complexity": 2,
+    "version": "v1",
+    "iteration": 1,
+    "colors": [
+      "#10b981"
+    ],
+    "notes": "Técnica: Simple generation",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.910082",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 3,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 2,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": false,
+        "has_ids": false,
+        "color_count": 2,
+        "warnings": [],
+        "score": 95
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 88,
+      "passed": true
+    },
+    "legacy_score": 88,
+    "aesthetic_metrics": {
+      "golden_ratio": 58.8,
+      "color_harmony": 95.0,
+      "visual_interest": 60.0,
+      "score": 71
+    }
+  },
+  {
+    "id": "healthplus_20251125_194940",
+    "filename": "healthplus_v2_gestalt.svg",
+    "company_name": "HealthPlus",
+    "industry": "Healthcare",
+    "style": "modern",
+    "score": 88,
+    "complexity": 5,
+    "version": "v2",
+    "iteration": 2,
+    "colors": [
+      "#10b981",
+      "#059669"
+    ],
+    "notes": "Técnica: Gestalt Principles (Figure-Ground)",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.911470",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 6,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 5,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": true,
+        "has_ids": false,
+        "color_count": 4,
+        "warnings": [
+          "⚠ Más de 3 colores"
+        ],
+        "score": 91
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 87,
+      "passed": true
+    },
+    "legacy_score": 87,
+    "aesthetic_metrics": {
+      "golden_ratio": 77.7,
+      "color_harmony": 90.0,
+      "visual_interest": 100.0,
+      "score": 88
+    }
+  },
+  {
+    "id": "finvest_20251125_194940",
+    "filename": "finvest_v1_basic.svg",
+    "company_name": "FinVest",
+    "industry": "Finance",
+    "style": "professional",
+    "score": 80,
+    "complexity": 1,
+    "version": "v1",
+    "iteration": 1,
+    "colors": [
+      "#1e40af"
+    ],
+    "notes": "Técnica: Basic geometric",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.912400",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 2,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 1,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": false,
+        "has_ids": false,
+        "color_count": 2,
+        "warnings": [],
+        "score": 95
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 88,
+      "passed": true
+    },
+    "legacy_score": 88,
+    "aesthetic_metrics": {
+      "golden_ratio": 60.9,
+      "color_harmony": 95.0,
+      "visual_interest": 60.0,
+      "score": 72
+    }
+  },
+  {
+    "id": "finvest_20251125_194940",
+    "filename": "finvest_v2_balance.svg",
+    "company_name": "FinVest",
+    "industry": "Finance",
+    "style": "professional",
+    "score": 86,
+    "complexity": 6,
+    "version": "v2",
+    "iteration": 2,
+    "colors": [
+      "#1e3a8a",
+      "#1e40af"
+    ],
+    "notes": "Técnica: Symmetrical Balance + Structure",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.917154",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 7,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 6,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": false,
+        "has_ids": false,
+        "color_count": 4,
+        "warnings": [
+          "⚠ Más de 3 colores"
+        ],
+        "score": 91
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 87,
+      "passed": true
+    },
+    "legacy_score": 87,
+    "aesthetic_metrics": {
+      "golden_ratio": 64.2,
+      "color_harmony": 90.0,
+      "visual_interest": 100.0,
+      "score": 83
+    }
+  },
+  {
+    "id": "dataflow_20251125_194940",
+    "filename": "dataflow_v2_network.svg",
+    "company_name": "DataFlow",
+    "industry": "AI/ML",
+    "style": "geometric",
+    "score": 85,
+    "complexity": 9,
+    "version": "v2",
+    "iteration": 1,
+    "colors": [
+      "#6366f1",
+      "#8b5cf6"
+    ],
+    "notes": "Técnica: Network topology + Golden Ratio",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.918786",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 11,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 9,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": true,
+        "has_ids": false,
+        "color_count": 4,
+        "warnings": [
+          "⚠ Más de 3 colores"
+        ],
+        "score": 91
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 85,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 87
+      },
+      "final_score": 86,
+      "passed": true
+    },
+    "legacy_score": 86,
+    "aesthetic_metrics": {
+      "golden_ratio": 63.8,
+      "color_harmony": 90.0,
+      "visual_interest": 100.0,
+      "score": 83
+    }
+  },
+  {
+    "id": "coffeehub_20251125_194940",
+    "filename": "coffeehub_v1_simple.svg",
+    "company_name": "CoffeeHub",
+    "industry": "Food/Coffee",
+    "style": "friendly",
+    "score": 84,
+    "complexity": 2,
+    "version": "v1",
+    "iteration": 1,
+    "colors": [
+      "#92400e"
+    ],
+    "notes": "Técnica: Simple shapes",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.923749",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 3,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 2,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": false,
+        "has_ids": false,
+        "color_count": 2,
+        "warnings": [],
+        "score": 95
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 88,
+      "passed": true
+    },
+    "legacy_score": 88,
+    "aesthetic_metrics": {
+      "golden_ratio": 65.4,
+      "color_harmony": 95.0,
+      "visual_interest": 80.0,
+      "score": 80
+    }
+  },
+  {
+    "id": "coffeehub_20251125_194940",
+    "filename": "coffeehub_v2_detailed.svg",
+    "company_name": "CoffeeHub",
+    "industry": "Food/Coffee",
+    "style": "friendly",
+    "score": 91,
+    "complexity": 6,
+    "version": "v2",
+    "iteration": 2,
+    "colors": [
+      "#92400e",
+      "#78350f"
+    ],
+    "notes": "Técnica: Gestalt Continuation + Details",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.927981",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 7,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 6,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": true,
+        "has_ids": false,
+        "color_count": 4,
+        "warnings": [
+          "⚠ Más de 3 colores"
+        ],
+        "score": 91
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 87,
+      "passed": true
+    },
+    "legacy_score": 87,
+    "aesthetic_metrics": {
+      "golden_ratio": 93.9,
+      "color_harmony": 90.0,
+      "visual_interest": 100.0,
+      "score": 94
+    }
+  },
+  {
+    "id": "retailhub_20251125_194940",
+    "filename": "retailhub_v2_minimal.svg",
+    "company_name": "RetailHub",
+    "industry": "E-commerce",
+    "style": "modern",
+    "score": 84,
+    "complexity": 2,
+    "version": "v2",
+    "iteration": 1,
+    "colors": [
+      "#7c3aed",
+      "#6d28d9"
+    ],
+    "notes": "Técnica: Minimalist + Color Psychology",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:40.930952",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 3,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 2,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": false,
+        "has_ids": false,
+        "color_count": 4,
+        "warnings": [
+          "⚠ Más de 3 colores"
+        ],
+        "score": 91
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 87,
+      "passed": true
+    },
+    "legacy_score": 87,
+    "aesthetic_metrics": {
+      "golden_ratio": 72.8,
+      "color_harmony": 90.0,
+      "visual_interest": 80.0,
+      "score": 80
+    }
+  },
+  {
+    "id": "greenleaf_20251125_194941",
+    "filename": "greenleaf_v2_optimal.svg",
+    "company_name": "GreenLeaf",
+    "industry": "Wellness",
+    "style": "organic",
+    "score": 87,
+    "complexity": 7,
+    "version": "v2",
+    "iteration": 1,
+    "colors": [
+      "#34d399",
+      "#065f46"
+    ],
+    "notes": "Técnica: Optimal Complexity (20-40 target)",
+    "is_favorite": true,
+    "timestamp": "2025-11-25T19:49:41.020470",
+    "validation": {
+      "level1_xml": {
+        "valid": true,
+        "error": null,
+        "score": 100
+      },
+      "level2_svg": {
+        "has_svg_root": true,
+        "has_viewbox": true,
+        "has_xmlns": false,
+        "elements_count": 9,
+        "warnings": [],
+        "score": 66
+      },
+      "level3_quality": {
+        "complexity": 7,
+        "complexity_rating": "ultra_minimal",
+        "precision_ok": true,
+        "has_comments": true,
+        "has_ids": false,
+        "color_count": 4,
+        "warnings": [
+          "⚠ Más de 3 colores"
+        ],
+        "score": 91
+      },
+      "level4_professional": {
+        "scalability": 90,
+        "memorability": 95,
+        "versatility": 95,
+        "originality": 75,
+        "warnings": [],
+        "score": 90
+      },
+      "final_score": 87,
+      "passed": true
+    },
+    "legacy_score": 87,
+    "aesthetic_metrics": {
+      "golden_ratio": 70.2,
+      "color_harmony": 90.0,
+      "visual_interest": 100.0,
+      "score": 86
+    }
+  }
+]

@@ -1,0 +1,68 @@
+🚀 DEPLOYMENT SUPER FÁCIL - Cloudflare Pages
+===============================================
+
+Tus archivos están listos en: output/deploy/
+
+📦 Archivo ZIP creado: output/logo-gallery-deploy.zip
+
+═══════════════════════════════════════════════════════════
+
+OPCIÓN 1: DRAG & DROP (Más Fácil - 2 minutos)
+═══════════════════════════════════════════════════════════
+
+1. Ve a: https://dash.cloudflare.com/sign-up
+   (o login si ya tienes cuenta - es GRATIS)
+
+2. Click en "Workers & Pages" en el menú izquierdo
+
+3. Click "Create application" → "Pages" → "Upload assets"
+
+4. Arrastra el archivo: output/logo-gallery-deploy.zip
+   (O click "Select from computer" y seleccionalo)
+
+5. Nombre del proyecto: logo-gallery-ai
+
+6. Click "Deploy site"
+
+7. ¡LISTO! En 30 segundos tendrás tu URL:
+   → https://logo-gallery-ai.pages.dev
+
+═══════════════════════════════════════════════════════════
+
+OPCIÓN 2: Direct Upload sin ZIP
+═══════════════════════════════════════════════════════════
+
+1. Ve a: https://dash.cloudflare.com
+2. Workers & Pages → Create → Pages → Upload assets
+3. Arrastra TODA la carpeta: output/deploy/
+4. Deploy!
+
+═══════════════════════════════════════════════════════════
+
+CUSTOM DOMAIN (Opcional)
+═══════════════════════════════════════════════════════════
+
+Después de deployar:
+
+1. En tu proyecto → Settings → Custom domains
+2. Click "Set up a custom domain"
+3. Escribe: logos.tudominio.com
+4. Cloudflare configurará el DNS automáticamente si tu dominio está ahí
+5. Si no, crea un CNAME:
+   Nombre: logos
+   Target: logo-gallery-ai.pages.dev
+
+═══════════════════════════════════════════════════════════
+
+ARCHIVOS INCLUIDOS:
+═══════════════════════════════════════════════════════════
+
+✓ index.html (24KB) - Galería interactiva
+✓ techflow_demo.svg - Logo demo 1
+✓ healthplus_demo.svg - Logo demo 2
+✓ finvest_demo.svg - Logo demo 3
+✓ logos_metadata.json - Metadata
+
+═══════════════════════════════════════════════════════════
+
+¡Tu galería estará online en menos de 2 minutos! 🎉

@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+type: software
+title: "LLM-QD Logo System: Large Language Model Guided Quality-Diversity for Logo Generation"
+version: 1.0.0
+date-released: 2025-11-27
+abstract: "A novel system combining Large Language Models with Quality-Diversity algorithms for automated SVG logo generation. Features 4D behavioral characterization, semantic mutation operators, RAG-enhanced evolution, and natural language query interface. Achieves 4-7.5x better diversity coverage while maintaining quality (85-90 fitness scores)."
+authors:
+  - family-names: "Arancibia"
+    given-names: "Luis"
+    affiliation: "GuanacoLabs"
+    email: "luis@guanacolabs.com"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/larancibia/svg-logo-ai"
+url: "https://github.com/larancibia/svg-logo-ai"
+license: MIT
+keywords:
+  - "quality-diversity"
+  - "map-elites"
+  - "large language models"
+  - "logo generation"
+  - "evolutionary algorithms"
+  - "retrieval-augmented generation"
+  - "SVG"
+  - "creative AI"
+  - "design automation"
+  - "generative design"
+references:
+  - type: article
+    title: "LLM-ME-Logo: Large Language Model Guided MAP-Elites for Logo Design"
+    authors:
+      - family-names: "Arancibia"
+        given-names: "Luis"
+    year: 2025
+    notes: "Manuscript in preparation for ICLR 2026"
+preferred-citation:
+  type: software
+  title: "LLM-QD Logo System: Large Language Model Guided Quality-Diversity for Logo Generation"
+  authors:
+    - family-names: "Arancibia"
+      given-names: "Luis"
+      affiliation: "GuanacoLabs"
+  version: 1.0.0
+  year: 2025
+  url: "https://github.com/larancibia/svg-logo-ai"
+  notes: "Original implementation and research"

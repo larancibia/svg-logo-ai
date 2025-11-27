@@ -1,0 +1,19 @@
+{
+  "dimensions": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "num_occupied": 0,
+  "coverage": 0.0,
+  "statistics": {
+    "coverage": 0.0,
+    "num_occupied": 0,
+    "total_cells": 20,
+    "avg_fitness": 0.0,
+    "max_fitness": 0.0,
+    "min_fitness": 0.0
+  },
+  "entries": []
+}

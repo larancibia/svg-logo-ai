@@ -1,6 +1,11 @@
-# SVG Logo AI: Evolutionary & Quality-Diversity Logo Generation
+# LLM-QD Logo System: Evolutionary & Quality-Diversity Logo Generation
 
-Novel research combining LLMs, RAG, and Quality-Diversity algorithms for automated SVG logo design.
+![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
+Revolutionary research combining Large Language Models, Retrieval-Augmented Generation, and Quality-Diversity algorithms for automated SVG logo design.
 
 ## 🎯 Research Contributions
 
@@ -125,7 +130,45 @@ python src/map_elites_experiment.py
 - GECCO 2026 (RAG + Evolution)
 - IEEE CEC 2026 (Comparative study)
 
-**Paper Draft**: `docs/EVOLUTIONARY_PAPER_DRAFT.md`
+**Paper Drafts:**
+- `docs/EVOLUTIONARY_PAPER_DRAFT.md`
+- `docs/LLM_QD_PAPER_DRAFT.md`
+
+## 📚 Documentation
+
+**Complete documentation suite (24,000+ words):**
+- [Quick Start Guide](QUICKSTART.md) - Get running in 5 minutes
+- [User Guide](docs/LLM_QD_USER_GUIDE.md) - Complete API reference
+- [Architecture](docs/LLM_QD_ARCHITECTURE.md) - System design (18,000 words)
+- [Contributing](CONTRIBUTING.md) - How to contribute
+- [Examples](examples/README.md) - Code examples and tutorials
+- [Documentation Index](docs/INDEX.md) - Complete documentation map
+
+## 💻 Examples
+
+Three comprehensive examples included:
+1. **[example_basic.py](examples/example_basic.py)** - Simplest usage (2-3 min)
+2. **[example_advanced.py](examples/example_advanced.py)** - All features (15-20 min)
+3. **[example_custom_query.py](examples/example_custom_query.py)** - Natural language interface
+
+See [examples/README.md](examples/README.md) for detailed usage.
+
+## 📖 Citation
+
+If you use this software in your research, please cite:
+
+```bibtex
+@software{arancibia2025llmqd,
+  title = {LLM-QD Logo System: Large Language Model Guided
+           Quality-Diversity for Logo Generation},
+  author = {Arancibia, Luis},
+  year = {2025},
+  version = {1.0.0},
+  url = {https://github.com/larancibia/svg-logo-ai}
+}
+```
+
+See [CITATION.cff](CITATION.cff) for complete citation metadata.
 
 ## 🔗 Related Work
 

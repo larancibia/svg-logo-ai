@@ -1,0 +1,298 @@
+{
+  "experiment_id": "quick_demo_20251127_150735",
+  "experiment_name": "quick_demo",
+  "logs": [
+    {
+      "id": "543dd8ff-66c1-435a-b702-38ca784ef497",
+      "document": "Starting experiment: quick_demo",
+      "metadata": {
+        "step_type": "experiment_start",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:07:35.388653",
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    },
+    {
+      "id": "76106bcd-975b-4e80-a761-d1a89e0ddae6",
+      "document": "LLM-QD System initialized",
+      "metadata": {
+        "step_type": "initialization",
+        "experiment_name": "quick_demo",
+        "model_name": "gemini-2.0-flash-exp",
+        "grid_dimensions": "(5, 5, 5, 5)",
+        "total_grid_cells": 625,
+        "experiment_id": "quick_demo_20251127_150735",
+        "timestamp": "2025-11-27T15:07:36.909472"
+      }
+    },
+    {
+      "id": "897ffe97-fe30-4fe0-b8ac-b9bd24a4d948",
+      "document": "Parsed query: modern minimalist logo for AI startup\n\nData: {\n  \"company\": \"Client\",\n  \"industry\": \"creative\",\n  \"style_keywords\": [\n    \"minimalist\",\n    \"modern\"\n  ],\n  \"color_palette\": [\n    \"#8b5cf6\",\n    \"#a78bfa\"\n  ],\n  \"design_principles\": [\n    \"balance\",\n    \"simplicity\"\n  ],\n  \"complexity_target\": 15,\n  \"golden_ratio_weight\": 0.8,\n  \"color_harmony_type\": \"complementary\",\n  \"original_query\": \"modern minimalist logo for AI startup\"\n}",
+      "metadata": {
+        "step_type": "query_parsing",
+        "experiment_id": "quick_demo_20251127_150735",
+        "timestamp": "2025-11-27T15:07:41.730907",
+        "experiment_name": "quick_demo"
+      }
+    },
+    {
+      "id": "f5a0cae6-0f4d-4667-b502-52ce46ebb8b8",
+      "document": "Generating 20 initial diverse individuals",
+      "metadata": {
+        "experiment_id": "quick_demo_20251127_150735",
+        "experiment_name": "quick_demo",
+        "step_type": "initialization",
+        "timestamp": "2025-11-27T15:07:43.241494"
+      }
+    },
+    {
+      "id": "e1e75d8e-94b8-4f25-b280-79d8d1f7c929",
+      "document": "Failed to generate initial individual 0: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:07:49.234080",
+        "step_type": "error",
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    },
+    {
+      "id": "3a36ff8b-4d41-4f5a-a28a-50ce0b29fb99",
+      "document": "Failed to generate initial individual 1: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_name": "quick_demo",
+        "experiment_id": "quick_demo_20251127_150735",
+        "step_type": "error",
+        "timestamp": "2025-11-27T15:07:52.998454"
+      }
+    },
+    {
+      "id": "d87afe74-5621-4e93-b087-5a4c272b1899",
+      "document": "Failed to generate initial individual 2: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_id": "quick_demo_20251127_150735",
+        "timestamp": "2025-11-27T15:07:56.582565",
+        "step_type": "error",
+        "experiment_name": "quick_demo"
+      }
+    },
+    {
+      "id": "dae15d1f-3c87-4316-b3da-aa6d9de134bb",
+      "document": "Failed to generate initial individual 3: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_id": "quick_demo_20251127_150735",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:08:01.470325",
+        "step_type": "error"
+      }
+    },
+    {
+      "id": "2a89f7bd-1b89-4e4c-b164-8539dee0503b",
+      "document": "Failed to generate initial individual 4: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "step_type": "error",
+        "experiment_id": "quick_demo_20251127_150735",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:08:07.220872"
+      }
+    },
+    {
+      "id": "271501b3-95f7-4042-92db-b174be4ec178",
+      "document": "Failed to generate initial individual 5: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "timestamp": "2025-11-27T15:08:11.588884",
+        "experiment_name": "quick_demo",
+        "step_type": "error",
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    },
+    {
+      "id": "b8e03f3d-6bee-4f52-831d-e564bcf7f499",
+      "document": "Failed to generate initial individual 6: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "step_type": "error",
+        "experiment_id": "quick_demo_20251127_150735",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:08:17.065297"
+      }
+    },
+    {
+      "id": "84f4fde4-3828-44cf-b4e6-b4b9db88b736",
+      "document": "Failed to generate initial individual 7: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "timestamp": "2025-11-27T15:08:21.330177",
+        "experiment_id": "quick_demo_20251127_150735",
+        "step_type": "error",
+        "experiment_name": "quick_demo"
+      }
+    },
+    {
+      "id": "76373433-c8e3-4bc5-b02f-ec54a1f41b4d",
+      "document": "Failed to generate initial individual 8: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "step_type": "error",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:08:25.940310",
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    },
+    {
+      "id": "cbf5f3ef-f8b5-4d76-8cdb-beb8fe1a5a1f",
+      "document": "Failed to generate initial individual 9: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:08:30.986357",
+        "experiment_id": "quick_demo_20251127_150735",
+        "step_type": "error"
+      }
+    },
+    {
+      "id": "947a149d-891b-4b31-9970-6c399bf9675d",
+      "document": "Failed to generate initial individual 10: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_id": "quick_demo_20251127_150735",
+        "step_type": "error",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:08:34.586876"
+      }
+    },
+    {
+      "id": "e1e624ce-a9d4-4dff-82d4-2ab5ff8d4fb1",
+      "document": "Failed to generate initial individual 11: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_id": "quick_demo_20251127_150735",
+        "timestamp": "2025-11-27T15:08:38.402251",
+        "step_type": "error",
+        "experiment_name": "quick_demo"
+      }
+    },
+    {
+      "id": "64068d53-7d01-48bb-8c17-962704040eca",
+      "document": "Failed to generate initial individual 12: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "timestamp": "2025-11-27T15:08:42.485734",
+        "step_type": "error",
+        "experiment_name": "quick_demo",
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    },
+    {
+      "id": "f7e61c0e-1d13-4370-ae09-08d7cd941fb3",
+      "document": "Failed to generate initial individual 13: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "step_type": "error",
+        "experiment_id": "quick_demo_20251127_150735",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:08:46.251796"
+      }
+    },
+    {
+      "id": "897454db-80f7-4c53-8444-983f773d4a16",
+      "document": "Failed to generate initial individual 14: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_id": "quick_demo_20251127_150735",
+        "timestamp": "2025-11-27T15:08:51.557034",
+        "experiment_name": "quick_demo",
+        "step_type": "error"
+      }
+    },
+    {
+      "id": "7f76acd7-8b9b-447e-98f2-56a5a645275f",
+      "document": "Failed to generate initial individual 15: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_id": "quick_demo_20251127_150735",
+        "step_type": "error",
+        "timestamp": "2025-11-27T15:08:57.685338",
+        "experiment_name": "quick_demo"
+      }
+    },
+    {
+      "id": "1ccf5bb5-60c5-4f94-a5aa-13c6c97bda97",
+      "document": "Failed to generate initial individual 16: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "experiment_name": "quick_demo",
+        "step_type": "error",
+        "experiment_id": "quick_demo_20251127_150735",
+        "timestamp": "2025-11-27T15:09:02.772728"
+      }
+    },
+    {
+      "id": "3b26873e-9719-437b-97b8-548019407ded",
+      "document": "Failed to generate initial individual 17: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "step_type": "error",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:09:09.198088",
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    },
+    {
+      "id": "220ae719-2df7-488e-9653-09827ad77ac6",
+      "document": "Failed to generate initial individual 18: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "step_type": "error",
+        "experiment_id": "quick_demo_20251127_150735",
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:09:15.263051"
+      }
+    },
+    {
+      "id": "32dd5bd1-f998-4d51-a68d-8d96351560a0",
+      "document": "Failed to generate initial individual 19: Behavior dimensions 5 don't match archive 4",
+      "metadata": {
+        "timestamp": "2025-11-27T15:09:20.435858",
+        "experiment_name": "quick_demo",
+        "step_type": "error",
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    },
+    {
+      "id": "4d91f825-934e-43e1-86ed-ac8abbcb97c7",
+      "document": "Added 0/20 individuals to archive",
+      "metadata": {
+        "coverage": 0.0,
+        "step_type": "initialization_complete",
+        "experiment_id": "quick_demo_20251127_150735",
+        "timestamp": "2025-11-27T15:09:23.259826",
+        "experiment_name": "quick_demo"
+      }
+    },
+    {
+      "id": "5453a129-429e-44aa-9b44-0e10863ba3eb",
+      "document": "Finalizing experiment: quick_demo",
+      "metadata": {
+        "experiment_name": "quick_demo",
+        "timestamp": "2025-11-27T15:09:27.926275",
+        "step_type": "experiment_end",
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "f1efcb4f-76cd-4c01-b2da-9703aa53c217",
+      "document": "DECISION: Starting LLM-QD search for 15 iterations\n\nRATIONALE: LLM-guided exploration systematically fills behavior space with high-quality diverse solutions\n\nALTERNATIVES CONSIDERED:\n- Random search\n- Pure evolutionary\n- Pure LLM generation",
+      "metadata": {
+        "timestamp": "2025-11-27T15:07:39.085803",
+        "experiment_id": "quick_demo_20251127_150735",
+        "decision_type": "key_decision"
+      }
+    }
+  ],
+  "results": [
+    {
+      "id": "4abd1c59-cf53-4bc5-9235-97c61540b5ab",
+      "document": "RESULT TYPE: final_results\n\nLLM-QD search completed\n\nMETRICS:\n- coverage: 0.0\n- num_occupied: 0\n- total_cells: 20\n- avg_fitness: 0.0\n- max_fitness: 0.0\n- min_fitness: 0.0",
+      "metadata": {
+        "max_fitness": 0.0,
+        "num_occupied": 0,
+        "timestamp": "2025-11-27T15:09:25.133495",
+        "result_type": "final_results",
+        "avg_fitness": 0.0,
+        "min_fitness": 0.0,
+        "total_cells": 20,
+        "coverage": 0.0,
+        "experiment_id": "quick_demo_20251127_150735"
+      }
+    }
+  ]
+}

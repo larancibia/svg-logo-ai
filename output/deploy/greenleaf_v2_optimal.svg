@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g transform="translate(100,100)">
+    <!-- Circle base -->
+    <circle r="55" fill="#34d399"/>
+    <!-- Leaf shape using golden ratio proportions -->
+    <path d="M0 -35 Q22 -18 18 5 Q14 28 0 50 Q-14 28 -18 5 Q-22 -18 0 -35" fill="#065f46"/>
+    <!-- Veins -->
+    <line x1="0" y1="-35" x2="0" y2="50" stroke="#34d399" stroke-width="2"/>
+    <path d="M0 -10 Q8 -5 10 0" fill="none" stroke="#34d399" stroke-width="1.5"/>
+    <path d="M0 -10 Q-8 -5 -10 0" fill="none" stroke="#34d399" stroke-width="1.5"/>
+    <path d="M0 10 Q8 15 10 20" fill="none" stroke="#34d399" stroke-width="1.5"/>
+    <path d="M0 10 Q-8 15 -10 20" fill="none" stroke="#34d399" stroke-width="1.5"/>
+  </g>
+</svg>

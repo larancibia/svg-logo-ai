@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g transform="translate(100,100)">
+    <!-- Outer circle: r=60 -->
+    <circle r="60" fill="none" stroke="#2563eb" stroke-width="6"/>
+    <!-- Inner circle: 60/1.618 = 37 (Golden Ratio) -->
+    <circle r="37" fill="none" stroke="#3b82f6" stroke-width="4"/>
+    <!-- Center dot: 37/1.618 = 23 -->
+    <circle r="23" fill="#2563eb"/>
+    <!-- Flow lines -->
+    <path d="M-37 0 Q-20 -20 0 -23" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M37 0 Q20 20 0 23" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

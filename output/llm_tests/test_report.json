@@ -1,0 +1,80 @@
+{
+  "tests_run": 3,
+  "tests_passed": 3,
+  "tests_failed": 0,
+  "component_results": {
+    "query_parser": {
+      "total_tests": 3,
+      "passed": 3,
+      "queries": [
+        {
+          "query": "100 minimalist tech logos with circular motifs conveying innovation",
+          "parsed": {
+            "quantity": 100,
+            "styles": [
+              "minimalist",
+              "tech",
+              "minimal"
+            ],
+            "emotion": "innovation",
+            "industry": "tech"
+          },
+          "checks": {
+            "has_quantity": true,
+            "has_styles": true,
+            "has_emotion": true,
+            "has_behavioral_prefs": true
+          },
+          "passed": true
+        },
+        {
+          "query": "50 organic healthcare logos in green tones",
+          "parsed": {
+            "quantity": 50,
+            "styles": [
+              "organic"
+            ],
+            "emotion": "eco",
+            "industry": "health"
+          },
+          "checks": {
+            "has_quantity": true,
+            "has_styles": true,
+            "has_emotion": true,
+            "has_behavioral_prefs": true
+          },
+          "passed": true
+        },
+        {
+          "query": "Logo for 'TechFlow' - modern AI company",
+          "parsed": {
+            "quantity": 20,
+            "styles": [
+              "modern",
+              "tech"
+            ],
+            "emotion": "trust",
+            "industry": "ai"
+          },
+          "checks": {
+            "has_quantity": true,
+            "has_styles": true,
+            "has_emotion": true,
+            "has_behavioral_prefs": true
+          },
+          "passed": true
+        }
+      ]
+    },
+    "logo_generator": {
+      "error": "GOOGLE_API_KEY environment variable not set"
+    },
+    "semantic_mutator": {
+      "error": "GOOGLE_API_KEY environment variable not set"
+    },
+    "evaluator": {
+      "error": "GOOGLE_API_KEY environment variable not set"
+    }
+  },
+  "timestamp": "2025-11-27 14:31:21"
+}

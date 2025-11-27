@@ -1,0 +1,19 @@
+{
+  "grid_dimensions": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "model_name": "gemini-2.0-flash-exp",
+  "total_iterations": 15,
+  "api_calls": 20,
+  "final_statistics": {
+    "coverage": 0.0,
+    "num_occupied": 0,
+    "total_cells": 20,
+    "avg_fitness": 0.0,
+    "max_fitness": 0.0,
+    "min_fitness": 0.0
+  }
+}
