@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      /* Define color classes for consistency and professionalism */
+      .dark-purple { fill: #8b5cf6; }
+      .light-purple { fill: #c4b5fd; }
+      .flow-line-dark { stroke: #8b5cf6; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .flow-line-light { stroke: #c4b5fd; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .accent-line-light { stroke: #c4b5fd; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Central Core Structure: Two sets of mirrored, elegant, filled 'C' shapes in dark purple, defining the primary 'brain' or 'processing unit' and framing the central negative space. (4 elements) -->
+  <path class="dark-purple" d="M 30 30 Q 20 40, 25 50 Q 20 60, 30 70 L 35 65 Q 28 55, 30 50 Q 28 45, 35 35 Z"/>
+  <path class="dark-purple" d="M 70 30 Q 80 40, 75 50 Q 80 60, 70 70 L 65 65 Q 72 55, 70 50 Q 72 45, 65 35 Z"/>
+  <path class="dark-purple" d="M 33 35 Q 28 42, 30 50 Q 28 58, 33 65 L 36 62 Q 30 54, 33 50 Q 30 46, 36 38 Z"/>
+  <path class="dark-purple" d="M 67 35 Q 72 42, 70 50 Q 72 58, 67 65 L 64 62 Q 70 54, 67 50 Q 70 46, 64 38 Z"/>
+
+  <!-- Flowing Neural Pathways: Four main dark purple lines, split into two segments each for increased complexity and sleek curves, representing the main data streams emanating from the core. (8 elements) -->
+  <path class="flow-line-dark" d="M 30 30 Q 22 25, 20 35"/>
+  <path class="flow-line-dark" d="M 20 35 Q 18 45, 20 50"/>
+  <path class="flow-line-dark" d="M 30 70 Q 22 75, 20 65"/>
+  <path class="flow-line-dark" d="M 20 65 Q 18 55, 20 50"/>
+  <path class="flow-line-dark" d="M 70 30 Q 78 25, 80 35"/>
+  <path class="flow-line-dark" d="M 80 35 Q 82 45, 80 50"/>
+  <path class="flow-line-dark" d="M 70 70 Q 78 75, 80 65"/>
+  <path class="flow-line-dark" d="M 80 65 Q 82 55, 80 50"/>
+
+  <!-- Inner Data Streams: Six thinner light purple lines subtly highlighting internal flow and connectivity within the main structure. (6 elements) -->
+  <path class="flow-line-light" d="M 33 35 Q 28 40, 28 50"/>
+  <path class="flow-line-light" d="M 33 65 Q 28 60, 28 50"/>
+  <path class="flow-line-light" d="M 67 35 Q 72 40, 72 50"/>
+  <path class="flow-line-light" d="M 67 65 Q 72 60, 72 50"/>
+  <path class="flow-line-light" d="M 45 40 Q 50 35, 55 40"/>
+  <path class="flow-line-light" d="M 45 60 Q 50 65, 55 60"/>
+
+  <!-- Neural Connection Nodes: Eight small light purple circles positioned at key interaction points, symbolizing data nodes or synapses. (8 elements) -->
+  <circle class="light-purple" cx="20" cy="35" r="1.5"/>
+  <circle class="light-purple" cx="20" cy="50" r="1.5"/>
+  <circle class="light-purple" cx="20" cy="65" r="1.5"/>
+  <circle class="light-purple" cx="30" cy="30" r="1.5"/>
+  <circle class="light-purple" cx="70" cy="30" r="1.5"/>
+  <circle class="light-purple" cx="80" cy="35" r="1.5"/>
+  <circle class="light-purple" cx="80" cy="50" r="1.5"/>
+  <circle class="light-purple" cx="80" cy="65" r="1.5"/>
+
+  <!-- Central Spark: A dynamic abstract shape in the very center, dark purple, representing the core intelligence or a powerful connection point. (1 element) -->
+  <path class="dark-purple" d="M 48 45 L 50 40 L 52 45 L 50 50 L 52 55 L 50 60 L 48 55 L 50 50 Z"/>
+
+  <!-- Accentuated Connectors: Two small, delicate light purple lines, symmetrically placed to add intricate detail and emphasize the network feel. (2 elements) -->
+  <path class="accent-line-light" d="M 35 45 Q 38 48, 35 55"/>
+  <path class="accent-line-light" d="M 65 45 Q 62 48, 65 55"/>
+</svg>

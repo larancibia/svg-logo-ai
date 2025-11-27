@@ -1,0 +1,84 @@
+{
+  "experiment_id": "map_elites_test_small_20251127_074332",
+  "experiment_name": "map_elites_test_small",
+  "logs": [
+    {
+      "id": "9f9f519e-fa9b-4c55-b731-581aeb5d9672",
+      "document": "Starting experiment: map_elites_test_small",
+      "metadata": {
+        "timestamp": "2025-11-27T07:43:32.342354",
+        "experiment_id": "map_elites_test_small_20251127_074332",
+        "experiment_name": "map_elites_test_small",
+        "step_type": "experiment_start"
+      }
+    },
+    {
+      "id": "b308332e-ec60-4adc-8a87-5a96fbfcf379",
+      "document": "Saved experiment results to /home/luis/svg-logo-ai/experiments/map_elites_20251127_074420",
+      "metadata": {
+        "experiment_name": "map_elites_test_small",
+        "timestamp": "2025-11-27T07:44:20.364031",
+        "output_dir": "/home/luis/svg-logo-ai/experiments/map_elites_20251127_074420",
+        "experiment_id": "map_elites_test_small_20251127_074332",
+        "step_type": "save_results"
+      }
+    },
+    {
+      "id": "2cfb8ad0-76f9-4381-b5e6-e449610c3209",
+      "document": "Finalizing experiment: map_elites_test_small",
+      "metadata": {
+        "experiment_id": "map_elites_test_small_20251127_074332",
+        "experiment_name": "map_elites_test_small",
+        "timestamp": "2025-11-27T07:44:22.671991",
+        "step_type": "experiment_end"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "cffb11b5-b1dd-4440-b49b-72505d9e4b04",
+      "document": "DECISION: Use LLM-Guided MAP-Elites for logo generation\n\nRATIONALE: Combine quality-diversity with intelligent LLM-guided mutations for systematic design space exploration\n\nALTERNATIVES CONSIDERED:\n- Pure evolutionary algorithm\n- Random sampling\n- RAG-only approach",
+      "metadata": {
+        "total_cells": 625,
+        "timestamp": "2025-11-27T07:43:33.427767",
+        "use_llm": false,
+        "industry": "technology",
+        "experiment_id": "map_elites_test_small_20251127_074332",
+        "decision_type": "key_decision",
+        "company": "TestCorp",
+        "grid_dimensions": "5x5x5x5"
+      }
+    }
+  ],
+  "results": [
+    {
+      "id": "d2f5f63d-79f5-4d40-bdbe-8bf518af06b3",
+      "document": "RESULT TYPE: initialization\n\nArchive initialized with random logos\n\nMETRICS:\n- n_generated: 50\n- n_added: 26\n- coverage: 0.032\n- avg_fitness: 84.55\n- max_fitness: 89",
+      "metadata": {
+        "timestamp": "2025-11-27T07:44:05.355825",
+        "coverage": 0.032,
+        "result_type": "initialization",
+        "experiment_id": "map_elites_test_small_20251127_074332",
+        "n_added": 26,
+        "n_generated": 50,
+        "avg_fitness": 84.55,
+        "max_fitness": 89
+      }
+    },
+    {
+      "id": "901611eb-cc73-45b3-b52b-84e08a1cf30b",
+      "document": "RESULT TYPE: map_elites_iterations\n\nCompleted 100 MAP-Elites iterations\n\nMETRICS:\n- n_iterations: 100\n- successful_additions: 34\n- failed_additions: 92\n- final_coverage: 0.04\n- final_avg_fitness: 83.88\n- final_max_fitness: 89",
+      "metadata": {
+        "n_iterations": 100,
+        "timestamp": "2025-11-27T07:44:18.633484",
+        "result_type": "map_elites_iterations",
+        "experiment_id": "map_elites_test_small_20251127_074332",
+        "successful_additions": 34,
+        "final_coverage": 0.04,
+        "failed_additions": 92,
+        "final_max_fitness": 89,
+        "final_avg_fitness": 83.88
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "generation": 1,
+    "mean_fitness": 83.8,
+    "max_fitness": 87,
+    "min_fitness": 80,
+    "std_fitness": 3.1240998703626617
+  },
+  {
+    "generation": 2,
+    "mean_fitness": 85.2,
+    "max_fitness": 89,
+    "min_fitness": 82,
+    "std_fitness": 2.7856776554368237
+  }
+]

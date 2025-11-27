@@ -1,0 +1,47 @@
+<svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    NeuralFlow Logo: Symbolic representation of neural pathways and data flow.
+    Style: Organic, professional, elegant.
+    Aesthetic: Golden Ratio applied to proportions (e.g., stroke widths, radii), asymmetrical balance.
+    Colors: Monochrome using #f59e0b and #fcd34d.
+  -->
+
+  <!-- Main flowing path, forming a dynamic 'N' or wave, central to the "Flow" concept -->
+  <path d="M15 85 C30 70 40 75 50 60 C60 45 70 50 85 35" stroke="#f59e0b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Inner parallel flow, slightly offset. Stroke width (5) approximately 8 / φ (1.618) -->
+  <path d="M18 80 C33 65 43 70 53 55 C63 40 73 45 88 30" stroke="#fcd34d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Outer parallel flow, adding depth and reinforcing the organic multi-channel data flow -->
+  <path d="M12 90 C27 75 37 80 47 65 C57 50 67 55 82 40" stroke="#fcd34d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Primary nodes along the main flow, representing neural connection points -->
+  <circle cx="25" cy="77" r="4" fill="#f59e0b" />
+  <circle cx="50" cy="60" r="4" fill="#f59e0b" />
+  <circle cx="75" cy="42.5" r="4" fill="#f59e0b" />
+
+  <!-- Secondary, smaller nodes on parallel flows, radius (2.5) approximately 4 / φ -->
+  <circle cx="38" cy="72" r="2.5" fill="#fcd34d" />
+  <circle cx="63" cy="52" r="2.5" fill="#fcd34d" />
+  <circle cx="43" cy="67" r="2.5" fill="#fcd34d" />
+
+  <!-- Connecting pathways, enhancing the "neural network" feel and adding complexity (6 elements) -->
+  <path d="M25 77 Q27 72 30 70" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" />
+  <path d="M30 70 Q32 68 38 72" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" />
+  <path d="M50 60 Q52 55 55 53" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" />
+  <path d="M55 53 Q57 51 63 52" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" />
+  <path d="M75 42.5 Q77 38 80 37" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" />
+  <path d="M80 37 Q82 35 88 30" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Subtle accent lines, suggesting energy or information branching (2 elements) -->
+  <path d="M15 85 Q10 80 12 75" stroke="#fcd34d" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M85 35 Q90 30 88 25" stroke="#fcd34d" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Asymmetrical balance element: a prominent "output" or destination point -->
+  <path d="M88 30 Q92 25 95 20" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+  <circle cx="95" cy="20" r="3" fill="#f59e0b" />
+
+  <!-- Asymmetrical balance counterweight: a subtle "input" or origin point -->
+  <path d="M12 90 Q10 95 5 92" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="5" cy="92" r="1.5" fill="#f59e0b" />
+</svg>

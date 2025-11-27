@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Central Node Ring -->
+  <circle cx="50" cy="50" r="18" stroke="#f59e0b" stroke-width="4" fill="none"/>
+
+  <!-- Inner Core -->
+  <circle cx="50" cy="50" r="11" fill="#fcd34d"/>
+
+  <!-- Four Main Flow Paths (dendrite-like extensions) -->
+  <path d="M 50 18 C 40 5, 20 10, 15 25" stroke="#f59e0b" stroke-width="3" fill="none"/>
+  <path d="M 50 18 C 60 5, 80 10, 85 25" stroke="#f59e0b" stroke-width="3" fill="none"/>
+  <path d="M 50 82 C 40 95, 20 90, 15 75" stroke="#f59e0b" stroke-width="3" fill="none"/>
+  <path d="M 50 82 C 60 95, 80 90, 85 75" stroke="#f59e0b" stroke-width="3" fill="none"/>
+
+  <!-- Eight Inner Connecting Lines (representing neural connections) -->
+  <!-- Vertical lines -->
+  <line x1="50" y1="39" x2="50" y2="32" stroke="#fcd34d" stroke-width="1.5"/>
+  <line x1="50" y1="61" x2="50" y2="68" stroke="#fcd34d" stroke-width="1.5"/>
+  <!-- Horizontal lines -->
+  <line x1="39" y1="50" x2="32" y2="50" stroke="#fcd34d" stroke-width="1.5"/>
+  <line x1="61" y1="50" x2="68" y2="50" stroke="#fcd34d" stroke-width="1.5"/>
+  <!-- Diagonal lines -->
+  <line x1="42.2" y1="42.2" x2="37.3" y2="37.3" stroke="#fcd34d" stroke-width="1.5"/>
+  <line x1="57.8" y1="42.2" x2="62.7" y2="37.3" stroke="#fcd34d" stroke-width="1.5"/>
+  <line x1="42.2" y1="57.8" x2="37.3" y2="62.7" stroke="#fcd34d" stroke-width="1.5"/>
+  <line x1="57.8" y1="57.8" x2="62.7" y2="62.7" stroke="#fcd34d" stroke-width="1.5"/>
+
+  <!-- Four Large Data Points (at the ends of main flow paths) -->
+  <circle cx="15" cy="25" r="4" fill="#f59e0b"/>
+  <circle cx="85" cy="25" r="4" fill="#f59e0b"/>
+  <circle cx="15" cy="75" r="4" fill="#f59e0b"/>
+  <circle cx="85" cy="75" r="4" fill="#f59e0b"/>
+
+  <!-- Three Small Data Points (enhancing central flow and connections) -->
+  <circle cx="50" cy="50" r="2.5" fill="#fcd34d"/>
+  <circle cx="35" cy="50" r="2.5" fill="#fcd34d"/>
+  <circle cx="65" cy="50" r="2.5" fill="#fcd34d"/>
+</svg>

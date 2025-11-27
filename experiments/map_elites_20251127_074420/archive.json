@@ -1,0 +1,1135 @@
+{
+  "dimensions": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "num_occupied": 25,
+  "coverage": 0.04,
+  "statistics": {
+    "coverage": 0.04,
+    "num_occupied": 25,
+    "total_cells": 20,
+    "avg_fitness": 83.88,
+    "max_fitness": 89,
+    "min_fitness": 79,
+    "generations_represented": 1
+  },
+  "entries": [
+    {
+      "logo_id": "init_0002",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "geometric",
+          "clean"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#c0392b"
+        ],
+        "design_principles": [
+          "simplicity",
+          "balance"
+        ],
+        "complexity_target": 30,
+        "color_harmony_type": "monochrome"
+      },
+      "fitness": 87,
+      "aesthetic_breakdown": {
+        "aesthetic": 87,
+        "professional": 87,
+        "technical": 87.33333333333333,
+        "golden_ratio": 75.7,
+        "color_harmony": 90.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        4,
+        0,
+        0,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 30,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.25
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0001",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "elegant",
+          "refined"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#f39c12",
+          "#2563eb"
+        ],
+        "design_principles": [
+          "hierarchy",
+          "contrast"
+        ],
+        "complexity_target": 30,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 77,
+        "professional": 85,
+        "technical": 85.33333333333333,
+        "golden_ratio": 76.0,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        4,
+        0,
+        1,
+        2
+      ],
+      "raw_behavior": {
+        "complexity": 30,
+        "style": 0.0,
+        "symmetry": 0.25,
+        "color_richness": 0.5
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0003",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "geometric",
+          "clean"
+        ],
+        "color_palette": [
+          "#2563eb"
+        ],
+        "design_principles": [
+          "symmetry",
+          "harmony"
+        ],
+        "complexity_target": 40,
+        "color_harmony_type": "analogous"
+      },
+      "fitness": 86,
+      "aesthetic_breakdown": {
+        "aesthetic": 90,
+        "professional": 81,
+        "technical": 88.66666666666667,
+        "golden_ratio": 79.0,
+        "color_harmony": 95.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        4,
+        0,
+        1,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 40,
+        "style": 0.0,
+        "symmetry": 0.21739130434782608,
+        "color_richness": 0.0
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0005",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "modern",
+          "minimal"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#c0392b"
+        ],
+        "design_principles": [
+          "simplicity",
+          "balance"
+        ],
+        "complexity_target": 25,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 87,
+      "aesthetic_breakdown": {
+        "aesthetic": 87,
+        "professional": 87,
+        "technical": 87.33333333333333,
+        "golden_ratio": 75.2,
+        "color_harmony": 90.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 25,
+        "style": 0.0,
+        "symmetry": 0.26666666666666666,
+        "color_richness": 0.25
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0006",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "modern",
+          "minimal"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#f39c12",
+          "#2563eb"
+        ],
+        "design_principles": [
+          "symmetry",
+          "harmony"
+        ],
+        "complexity_target": 25,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 77,
+        "professional": 85,
+        "technical": 85.33333333333333,
+        "golden_ratio": 76.4,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        3,
+        0,
+        0,
+        2
+      ],
+      "raw_behavior": {
+        "complexity": 25,
+        "style": 0.0,
+        "symmetry": 0.1,
+        "color_richness": 0.5
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0010",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "elegant",
+          "refined"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#c0392b"
+        ],
+        "design_principles": [
+          "hierarchy",
+          "contrast"
+        ],
+        "complexity_target": 15,
+        "color_harmony_type": "complementary"
+      },
+      "fitness": 87,
+      "aesthetic_breakdown": {
+        "aesthetic": 87,
+        "professional": 87,
+        "technical": 85.66666666666667,
+        "golden_ratio": 74.8,
+        "color_harmony": 90.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 15,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.25
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0012",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "geometric",
+          "clean"
+        ],
+        "color_palette": [
+          "#e74c3c"
+        ],
+        "design_principles": [
+          "simplicity",
+          "balance"
+        ],
+        "complexity_target": 15,
+        "color_harmony_type": "monochrome"
+      },
+      "fitness": 88,
+      "aesthetic_breakdown": {
+        "aesthetic": 89,
+        "professional": 87,
+        "technical": 87.0,
+        "golden_ratio": 74.0,
+        "color_harmony": 95.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 15,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.0
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0022",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "organic",
+          "flowing"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#f39c12",
+          "#2563eb"
+        ],
+        "design_principles": [
+          "rhythm",
+          "proportion"
+        ],
+        "complexity_target": 35,
+        "color_harmony_type": "monochrome"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 78,
+        "professional": 85,
+        "technical": 85.33333333333333,
+        "golden_ratio": 78.4,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        4,
+        0,
+        0,
+        2
+      ],
+      "raw_behavior": {
+        "complexity": 35,
+        "style": 0.0,
+        "symmetry": 0.09090909090909091,
+        "color_richness": 0.5
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "gen000_iter0061",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "bold",
+          "dynamic"
+        ],
+        "color_palette": [
+          "#e74c3c"
+        ],
+        "design_principles": [
+          "hierarchy",
+          "contrast"
+        ],
+        "complexity_target": 25,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 87,
+      "aesthetic_breakdown": {
+        "aesthetic": 87,
+        "professional": 87,
+        "technical": 87.33333333333333,
+        "golden_ratio": 79.7,
+        "color_harmony": 85.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 26,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.25
+      },
+      "generation": 0,
+      "parent_ids": [
+        "init_0034"
+      ]
+    },
+    {
+      "logo_id": "init_0045",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "organic",
+          "flowing"
+        ],
+        "color_palette": [
+          "#2563eb",
+          "#1e40af"
+        ],
+        "design_principles": [
+          "simplicity",
+          "balance"
+        ],
+        "complexity_target": 40,
+        "color_harmony_type": "monochrome"
+      },
+      "fitness": 85,
+      "aesthetic_breakdown": {
+        "aesthetic": 87,
+        "professional": 81,
+        "technical": 87.33333333333333,
+        "golden_ratio": 75.7,
+        "color_harmony": 90.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        4,
+        0,
+        1,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 40,
+        "style": 0.0,
+        "symmetry": 0.375,
+        "color_richness": 0.25
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0019",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "elegant",
+          "refined"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#c0392b"
+        ],
+        "design_principles": [
+          "rhythm",
+          "proportion"
+        ],
+        "complexity_target": 20,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 87,
+      "aesthetic_breakdown": {
+        "aesthetic": 87,
+        "professional": 87,
+        "technical": 87.33333333333333,
+        "golden_ratio": 74.9,
+        "color_harmony": 90.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.0,
+        "symmetry": 0.07692307692307693,
+        "color_richness": 0.25
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0020",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "modern",
+          "minimal"
+        ],
+        "color_palette": [
+          "#2563eb",
+          "#10b981"
+        ],
+        "design_principles": [
+          "simplicity",
+          "balance"
+        ],
+        "complexity_target": 15,
+        "color_harmony_type": "analogous"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 75,
+        "professional": 87,
+        "technical": 85.66666666666667,
+        "golden_ratio": 70.4,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 15,
+        "style": 0.0,
+        "symmetry": 0.36363636363636365,
+        "color_richness": 0.25
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0024",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "geometric",
+          "clean"
+        ],
+        "color_palette": [
+          "#2563eb",
+          "#10b981"
+        ],
+        "design_principles": [
+          "hierarchy",
+          "contrast"
+        ],
+        "complexity_target": 20,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 76,
+        "professional": 87,
+        "technical": 87.33333333333333,
+        "golden_ratio": 73.9,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.0,
+        "symmetry": 0.26666666666666666,
+        "color_richness": 0.25
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0040",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "modern",
+          "minimal"
+        ],
+        "color_palette": [
+          "#2563eb"
+        ],
+        "design_principles": [
+          "rhythm",
+          "proportion"
+        ],
+        "complexity_target": 35,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 89,
+      "aesthetic_breakdown": {
+        "aesthetic": 91,
+        "professional": 87,
+        "technical": 88.66666666666667,
+        "golden_ratio": 80.2,
+        "color_harmony": 95.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 35,
+        "style": 0.0,
+        "symmetry": 0.09090909090909091,
+        "color_richness": 0.0
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0034",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "bold",
+          "dynamic"
+        ],
+        "color_palette": [
+          "#e74c3c"
+        ],
+        "design_principles": [
+          "hierarchy",
+          "contrast"
+        ],
+        "complexity_target": 25,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 89,
+      "aesthetic_breakdown": {
+        "aesthetic": 91,
+        "professional": 87,
+        "technical": 88.66666666666667,
+        "golden_ratio": 80.5,
+        "color_harmony": 95.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 25,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.0
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0033",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "organic",
+          "flowing"
+        ],
+        "color_palette": [
+          "#2563eb"
+        ],
+        "design_principles": [
+          "simplicity",
+          "balance"
+        ],
+        "complexity_target": 25,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 89,
+      "aesthetic_breakdown": {
+        "aesthetic": 91,
+        "professional": 87,
+        "technical": 88.66666666666667,
+        "golden_ratio": 79.5,
+        "color_harmony": 95.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        3,
+        0,
+        1,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 25,
+        "style": 0.0,
+        "symmetry": 0.23809523809523808,
+        "color_richness": 0.0
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0037",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "bold",
+          "dynamic"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#f39c12",
+          "#2563eb"
+        ],
+        "design_principles": [
+          "hierarchy",
+          "contrast"
+        ],
+        "complexity_target": 15,
+        "color_harmony_type": "complementary"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 77,
+        "professional": 85,
+        "technical": 83.66666666666667,
+        "golden_ratio": 74.8,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "raw_behavior": {
+        "complexity": 15,
+        "style": 0.0,
+        "symmetry": 0.375,
+        "color_richness": 0.5
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0046",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "elegant",
+          "refined"
+        ],
+        "color_palette": [
+          "#2563eb"
+        ],
+        "design_principles": [
+          "symmetry",
+          "harmony"
+        ],
+        "complexity_target": 20,
+        "color_harmony_type": "complementary"
+      },
+      "fitness": 89,
+      "aesthetic_breakdown": {
+        "aesthetic": 91,
+        "professional": 87,
+        "technical": 88.66666666666667,
+        "golden_ratio": 80.3,
+        "color_harmony": 95.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.0,
+        "symmetry": 0.08333333333333333,
+        "color_richness": 0.0
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "init_0048",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "geometric",
+          "clean"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#f39c12",
+          "#2563eb"
+        ],
+        "design_principles": [
+          "rhythm",
+          "proportion"
+        ],
+        "complexity_target": 15,
+        "color_harmony_type": "complementary"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 78,
+        "professional": 85,
+        "technical": 83.66666666666667,
+        "golden_ratio": 77.5,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "raw_behavior": {
+        "complexity": 15,
+        "style": 0.0,
+        "symmetry": 0.1111111111111111,
+        "color_richness": 0.5
+      },
+      "generation": 0,
+      "parent_ids": []
+    },
+    {
+      "logo_id": "gen000_iter0012",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "elegant",
+          "refined"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#c0392b"
+        ],
+        "design_principles": [
+          "rhythm",
+          "proportion"
+        ],
+        "complexity_target": 20,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 77,
+        "professional": 85,
+        "technical": 85.33333333333333,
+        "golden_ratio": 74.9,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "raw_behavior": {
+        "complexity": 21,
+        "style": 0.0,
+        "symmetry": 0.07142857142857142,
+        "color_richness": 0.5
+      },
+      "generation": 0,
+      "parent_ids": [
+        "init_0019"
+      ]
+    },
+    {
+      "logo_id": "gen000_iter0004",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "modern",
+          "minimal"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#f39c12",
+          "#2563eb"
+        ],
+        "design_principles": [
+          "symmetry",
+          "harmony"
+        ],
+        "complexity_target": 20,
+        "color_harmony_type": "monochrome"
+      },
+      "fitness": 79,
+      "aesthetic_breakdown": {
+        "aesthetic": 76,
+        "professional": 81,
+        "technical": 84.0,
+        "golden_ratio": 72.7,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        2,
+        0,
+        0,
+        3
+      ],
+      "raw_behavior": {
+        "complexity": 21,
+        "style": 0.0,
+        "symmetry": 0.13333333333333333,
+        "color_richness": 0.75
+      },
+      "generation": 0,
+      "parent_ids": [
+        "init_0049"
+      ]
+    },
+    {
+      "logo_id": "gen000_iter0027",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "elegant",
+          "refined"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#f39c12",
+          "#2563eb"
+        ],
+        "design_principles": [
+          "hierarchy",
+          "contrast"
+        ],
+        "complexity_target": 30,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 79,
+      "aesthetic_breakdown": {
+        "aesthetic": 77,
+        "professional": 81,
+        "technical": 84.0,
+        "golden_ratio": 75.7,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        4,
+        0,
+        1,
+        3
+      ],
+      "raw_behavior": {
+        "complexity": 31,
+        "style": 0.0,
+        "symmetry": 0.24,
+        "color_richness": 0.75
+      },
+      "generation": 0,
+      "parent_ids": [
+        "init_0001"
+      ]
+    },
+    {
+      "logo_id": "gen000_iter0034",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "modern",
+          "minimal"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#c0392b"
+        ],
+        "design_principles": [
+          "simplicity",
+          "balance"
+        ],
+        "complexity_target": 25,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 77,
+        "professional": 85,
+        "technical": 85.33333333333333,
+        "golden_ratio": 74.4,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "raw_behavior": {
+        "complexity": 26,
+        "style": 0.0,
+        "symmetry": 0.25,
+        "color_richness": 0.5
+      },
+      "generation": 0,
+      "parent_ids": [
+        "init_0005"
+      ]
+    },
+    {
+      "logo_id": "gen000_iter0057",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "geometric",
+          "clean"
+        ],
+        "color_palette": [
+          "#2563eb",
+          "#10b981"
+        ],
+        "design_principles": [
+          "hierarchy",
+          "contrast"
+        ],
+        "complexity_target": 20,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 81,
+      "aesthetic_breakdown": {
+        "aesthetic": 77,
+        "professional": 85,
+        "technical": 85.33333333333333,
+        "golden_ratio": 74.4,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "raw_behavior": {
+        "complexity": 21,
+        "style": 0.0,
+        "symmetry": 0.25,
+        "color_richness": 0.5
+      },
+      "generation": 0,
+      "parent_ids": [
+        "init_0024"
+      ]
+    },
+    {
+      "logo_id": "gen000_iter0062",
+      "genome": {
+        "company": "TestCorp",
+        "industry": "technology",
+        "style_keywords": [
+          "modern",
+          "minimal"
+        ],
+        "color_palette": [
+          "#e74c3c",
+          "#c0392b"
+        ],
+        "design_principles": [
+          "simplicity",
+          "balance"
+        ],
+        "complexity_target": 25,
+        "color_harmony_type": "triadic"
+      },
+      "fitness": 79,
+      "aesthetic_breakdown": {
+        "aesthetic": 77,
+        "professional": 81,
+        "technical": 84.0,
+        "golden_ratio": 75.1,
+        "color_harmony": 60.0,
+        "visual_interest": 100.0
+      },
+      "behavior": [
+        3,
+        0,
+        1,
+        3
+      ],
+      "raw_behavior": {
+        "complexity": 27,
+        "style": 0.0,
+        "symmetry": 0.35294117647058826,
+        "color_richness": 0.75
+      },
+      "generation": 0,
+      "parent_ids": [
+        "gen000_iter0034"
+      ]
+    }
+  ]
+}

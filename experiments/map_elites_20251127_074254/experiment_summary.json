@@ -1,0 +1,9 @@
+{
+  "experiment": "LLM-Guided MAP-Elites",
+  "grid_dimensions": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "total_cells": 

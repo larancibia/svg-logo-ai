@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# API Keys & Secrets
+.env
+*.key
+*_key.txt
+credentials*.json
+
+# ChromaDB databases (too large)
+chroma_db/
+chroma_experiments/
+
+# Large experiment files
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+nohup.out
+
+# Temporary files
+/tmp/
+*.tmp
+
+# Node modules
+node_modules/
+package-lock.json

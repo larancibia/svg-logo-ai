@@ -1,0 +1,367 @@
+{
+  "experiment": {
+    "company": "NeuralFlow (DEMO)",
+    "industry": "artificial intelligence",
+    "date": "2025-11-26 12:46:23",
+    "note": "Simulated data for demonstration purposes"
+  },
+  "baselines": {
+    "zero_shot": {
+      "method": "zero_shot",
+      "n_samples": 10,
+      "avg_fitness": 82.72999999999999,
+      "max_fitness": 86.3,
+      "results": [
+        {
+          "sample": 1,
+          "fitness": 80.5,
+          "breakdown": {
+            "aesthetic": 69.2615607907473,
+            "golden_ratio": 47.19627814528714,
+            "color_harmony": 71.37481474049937,
+            "visual_interest": 60.12109061686315,
+            "professional": 84.86764392917995,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 2,
+          "fitness": 82.3,
+          "breakdown": {
+            "aesthetic": 71.01519692453746,
+            "golden_ratio": 57.18319337045155,
+            "color_harmony": 72.08758976654084,
+            "visual_interest": 63.28905178956588,
+            "professional": 90.38101390280966,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 3,
+          "fitness": 84.1,
+          "breakdown": {
+            "aesthetic": 69.79682784882162,
+            "golden_ratio": 52.40117376764984,
+            "color_harmony": 70.44588505936588,
+            "visual_interest": 60.40784626943265,
+            "professional": 89.2605778111024,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 4,
+          "fitness": 81.7,
+          "breakdown": {
+            "aesthetic": 69.7146488836193,
+            "golden_ratio": 49.490392883121444,
+            "color_harmony": 73.73597543105572,
+            "visual_interest": 65.21862764867998,
+            "professional": 89.8375062016097,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 5,
+          "fitness": 83.2,
+          "breakdown": {
+            "aesthetic": 72.55491551099685,
+            "golden_ratio": 56.3975805831299,
+            "color_harmony": 75.22416438565465,
+            "visual_interest": 62.543259958391424,
+            "professional": 86.7339346389661,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 6,
+          "fitness": 85.0,
+          "breakdown": {
+            "aesthetic": 71.26956727067576,
+            "golden_ratio": 49.3796338868083,
+            "color_harmony": 72.41334389521033,
+            "visual_interest": 66.92256547438787,
+            "professional": 90.48136984316555,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 7,
+          "fitness": 79.8,
+          "breakdown": {
+            "aesthetic": 69.67276963964628,
+            "golden_ratio": 54.55189509667289,
+            "color_harmony": 73.37377667035679,
+            "visual_interest": 66.49041878751662,
+            "professional": 85.88732811395823,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 8,
+          "fitness": 86.3,
+          "breakdown": {
+            "aesthetic": 73.66724378763935,
+            "golden_ratio": 58.544479483259465,
+            "color_harmony": 78.06172449120679,
+            "visual_interest": 69.19417461136163,
+            "professional": 92.0432392737162,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 9,
+          "fitness": 82.5,
+          "breakdown": {
+            "aesthetic": 71.35243101728955,
+            "golden_ratio": 48.972567099523786,
+            "color_harmony": 73.28744222206332,
+            "visual_interest": 62.53229162437746,
+            "professional": 90.35104011538188,
+            "technical": 95.0
+          }
+        },
+        {
+          "sample": 10,
+          "fitness": 81.9,
+          "breakdown": {
+            "aesthetic": 68.01174531816619,
+            "golden_ratio": 47.01882328272193,
+            "color_harmony": 70.08017420273505,
+            "visual_interest": 62.29604634046477,
+            "professional": 88.2658391051496,
+            "technical": 95.0
+          }
+        }
+      ]
+    },
+    "cot": {
+      "method": "chain_of_thought",
+      "n_samples": 10,
+      "avg_fitness": 84.6,
+      "max_fitness": 87.9,
+      "results": [
+        {
+          "sample": 1,
+          "fitness": 82.1,
+          "breakdown": {
+            "aesthetic": 71.72872386846753,
+            "golden_ratio": 55.059035340945925,
+            "color_harmony": 70.79663515666398,
+            "visual_interest": 68.6103534852651,
+            "professional": 86.72389384426023,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 2,
+          "fitness": 84.5,
+          "breakdown": {
+            "aesthetic": 74.79652402266795,
+            "golden_ratio": 57.20632840371914,
+            "color_harmony": 75.71303121446935,
+            "visual_interest": 66.7932170634261,
+            "professional": 90.12163367472706,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 3,
+          "fitness": 85.8,
+          "breakdown": {
+            "aesthetic": 77.46209340254639,
+            "golden_ratio": 63.089672800869856,
+            "color_harmony": 77.68989237764497,
+            "visual_interest": 72.37281143628192,
+            "professional": 90.13544423943057,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 4,
+          "fitness": 83.9,
+          "breakdown": {
+            "aesthetic": 74.93599964618498,
+            "golden_ratio": 57.781184292660825,
+            "color_harmony": 73.06440062180113,
+            "visual_interest": 67.83383796284467,
+            "professional": 89.8087773720729,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 5,
+          "fitness": 86.2,
+          "breakdown": {
+            "aesthetic": 74.69993137434531,
+            "golden_ratio": 63.30322281415669,
+            "color_harmony": 76.20540188023598,
+            "visual_interest": 67.61200414918855,
+            "professional": 91.12968400411536,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 6,
+          "fitness": 84.0,
+          "breakdown": {
+            "aesthetic": 73.50252760424266,
+            "golden_ratio": 62.118402801318474,
+            "color_harmony": 73.33793501459225,
+            "visual_interest": 66.21160639489156,
+            "professional": 89.98011747691805,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 7,
+          "fitness": 81.7,
+          "breakdown": {
+            "aesthetic": 72.1414725366526,
+            "golden_ratio": 55.81511089750556,
+            "color_harmony": 72.47981649754676,
+            "visual_interest": 68.75709203533526,
+            "professional": 87.03779848457881,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 8,
+          "fitness": 87.9,
+          "breakdown": {
+            "aesthetic": 76.22928303662914,
+            "golden_ratio": 64.9637272812642,
+            "color_harmony": 76.267388211335,
+            "visual_interest": 67.67639686674157,
+            "professional": 94.79065087372581,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 9,
+          "fitness": 85.3,
+          "breakdown": {
+            "aesthetic": 73.50259652140262,
+            "golden_ratio": 59.82164555074682,
+            "color_harmony": 74.67091397885449,
+            "visual_interest": 67.15534860048852,
+            "professional": 91.93341688154413,
+            "technical": 96.0
+          }
+        },
+        {
+          "sample": 10,
+          "fitness": 84.6,
+          "breakdown": {
+            "aesthetic": 73.97447714602615,
+            "golden_ratio": 63.148552758741694,
+            "color_harmony": 74.0909345264227,
+            "visual_interest": 70.88298924002576,
+            "professional": 88.7856608932965,
+            "technical": 96.0
+          }
+        }
+      ]
+    }
+  },
+  "evolutionary": {
+    "method": "evolutionary",
+    "num_generations": 10,
+    "population_size": 20,
+    "initial_avg": 83.0,
+    "initial_max": 86.1,
+    "final_avg": 90.47347705898474,
+    "final_max": 92.55006289456199,
+    "improvement_avg": 7.4734770589847415,
+    "improvement_max": 6.450062894561995,
+    "history": [
+      {
+        "generation": 0,
+        "mean_fitness": 83.0,
+        "std_fitness": 1.756701454431002,
+        "max_fitness": 86.1,
+        "min_fitness": 79.5,
+        "best_individual_id": "gen0_mock_8610"
+      },
+      {
+        "generation": 1,
+        "mean_fitness": 84.28186896516489,
+        "std_fitness": 1.616165338076522,
+        "max_fitness": 87.41189933963389,
+        "min_fitness": 81.8576209580501,
+        "best_individual_id": "gen1_mock_8741"
+      },
+      {
+        "generation": 2,
+        "mean_fitness": 85.53994998656526,
+        "std_fitness": 1.4868721110304002,
+        "max_fitness": 88.64752564877358,
+        "min_fitness": 83.30964182001966,
+        "best_individual_id": "gen2_mock_8864"
+      },
+      {
+        "generation": 3,
+        "mean_fitness": 87.2532701277799,
+        "std_fitness": 1.3679223421479683,
+        "max_fitness": 90.06787460818856,
+        "min_fitness": 85.20138661455795,
+        "best_individual_id": "gen3_mock_9006"
+      },
+      {
+        "generation": 4,
+        "mean_fitness": 88.16861432004298,
+        "std_fitness": 1.2584885547761309,
+        "max_fitness": 90.53130426242097,
+        "min_fitness": 86.28088148787879,
+        "best_individual_id": "gen4_mock_9053"
+      },
+      {
+        "generation": 5,
+        "mean_fitness": 88.86142480034256,
+        "std_fitness": 1.1578094703940405,
+        "max_fitness": 91.08134686356391,
+        "min_fitness": 87.1247105947515,
+        "best_individual_id": "gen5_mock_9108"
+      },
+      {
+        "generation": 6,
+        "mean_fitness": 89.85413079183236,
+        "std_fitness": 1.0651847127625174,
+        "max_fitness": 91.65710711306275,
+        "min_fitness": 88.25635372268859,
+        "best_individual_id": "gen6_mock_9165"
+      },
+      {
+        "generation": 7,
+        "mean_fitness": 89.76209305762507,
+        "std_fitness": 0.979969935741516,
+        "max_fitness": 91.90775804771661,
+        "min_fitness": 88.29213815401279,
+        "best_individual_id": "gen7_mock_9190"
+      },
+      {
+        "generation": 8,
+        "mean_fitness": 90.04871527113308,
+        "std_fitness": 0.9015723408821947,
+        "max_fitness": 92.08567618688768,
+        "min_fitness": 88.69635675980979,
+        "best_individual_id": "gen8_mock_9208"
+      },
+      {
+        "generation": 9,
+        "mean_fitness": 90.24637953172144,
+        "std_fitness": 0.8294465536116192,
+        "max_fitness": 92.3722641686106,
+        "min_fitness": 89.00220970130401,
+        "best_individual_id": "gen9_mock_9237"
+      },
+      {
+        "generation": 10,
+        "mean_fitness": 90.47347705898474,
+        "std_fitness": 0.7630908293226897,
+        "max_fitness": 92.55006289456199,
+        "min_fitness": 89.3288408150007,
+        "best_individual_id": "gen10_mock_9255"
+      }
+    ]
+  }
+}

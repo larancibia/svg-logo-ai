@@ -1,0 +1,43 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Central Node (1 element) -->
+  <circle cx="50" cy="50" r="8" fill="#f59e0b"/>
+
+  <!-- Outer Layer Flow Paths (4 elements) -->
+  <!-- Base path for outer layer -->
+  <path d="M50 42 C65 30, 80 30, 80 50 C80 70, 65 70, 50 58 Z" fill="#fcd34d"/>
+  <path d="M50 42 C65 30, 80 30, 80 50 C80 70, 65 70, 50 58 Z" transform="rotate(90 50 50)" fill="#fcd34d"/>
+  <path d="M50 42 C65 30, 80 30, 80 50 C80 70, 65 70, 50 58 Z" transform="rotate(180 50 50)" fill="#fcd34d"/>
+  <path d="M50 42 C65 30, 80 30, 80 50 C80 70, 65 70, 50 58 Z" transform="rotate(270 50 50)" fill="#fcd34d"/>
+
+  <!-- Middle Layer Flow Paths (4 elements) -->
+  <!-- Base path for middle layer (scaled by approximately 1/φ) -->
+  <path d="M50 44 C59 38, 68 38, 68 50 C68 62, 59 62, 50 56 Z" fill="#f59e0b"/>
+  <path d="M50 44 C59 38, 68 38, 68 50 C68 62, 59 62, 50 56 Z" transform="rotate(90 50 50)" fill="#f59e0b"/>
+  <path d="M50 44 C59 38, 68 38, 68 50 C68 62, 59 62, 50 56 Z" transform="rotate(180 50 50)" fill="#f59e0b"/>
+  <path d="M50 44 C59 38, 68 38, 68 50 C68 62, 59 62, 50 56 Z" transform="rotate(270 50 50)" fill="#f59e0b"/>
+
+  <!-- Inner Layer Flow Paths (4 elements) -->
+  <!-- Base path for inner layer (scaled by approximately 1/φ^2) -->
+  <path d="M50 46 C56 42, 61.5 42, 61.5 50 C61.5 58, 56 58, 50 54 Z" fill="#fcd34d"/>
+  <path d="M50 46 C56 42, 61.5 42, 61.5 50 C61.5 58, 56 58, 50 54 Z" transform="rotate(90 50 50)" fill="#fcd34d"/>
+  <path d="M50 46 C56 42, 61.5 42, 61.5 50 C61.5 58, 56 58, 50 54 Z" transform="rotate(180 50 50)" fill="#fcd34d"/>
+  <path d="M50 46 C56 42, 61.5 42, 61.5 50 C61.5 58, 56 58, 50 54 Z" transform="rotate(270 50 50)" fill="#fcd34d"/>
+
+  <!-- Outer Layer Tip Circles (4 elements) -->
+  <circle cx="80" cy="50" r="3" fill="#fcd34d"/>
+  <circle cx="80" cy="50" r="3" transform="rotate(90 50 50)" fill="#fcd34d"/>
+  <circle cx="80" cy="50" r="3" transform="rotate(180 50 50)" fill="#fcd34d"/>
+  <circle cx="80" cy="50" r="3" transform="rotate(270 50 50)" fill="#fcd34d"/>
+
+  <!-- Middle Layer Tip Circles (4 elements) -->
+  <circle cx="68.5" cy="50" r="2.5" fill="#f59e0b"/>
+  <circle cx="68.5" cy="50" r="2.5" transform="rotate(90 50 50)" fill="#f59e0b"/>
+  <circle cx="68.5" cy="50" r="2.5" transform="rotate(180 50 50)" fill="#f59e0b"/>
+  <circle cx="68.5" cy="50" r="2.5" transform="rotate(270 50 50)" fill="#f59e0b"/>
+
+  <!-- Inner Layer Tip Circles (4 elements) -->
+  <circle cx="61.5" cy="50" r="2" fill="#fcd34d"/>
+  <circle cx="61.5" cy="50" r="2" transform="rotate(90 50 50)" fill="#fcd34d"/>
+  <circle cx="61.5" cy="50" r="2" transform="rotate(180 50 50)" fill="#fcd34d"/>
+  <circle cx="61.5" cy="50" r="2" transform="rotate(270 50 50)" fill="#fcd34d"/>
+</svg>

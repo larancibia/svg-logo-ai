@@ -1,0 +1,56 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Primary Brand Color: Deep Indigo */
+      .color-main { fill: #3730a3; stroke: #3730a3; }
+      /* Secondary Accent Color: Lighter Indigo/Lavender (derived from #3730a3 for monochrome effect) */
+      .color-accent { fill: #8c88d8; stroke: #8c88d8; }
+
+      /* Common styles for flow paths to ensure clean, round ends */
+      .flow-path {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+
+  <!-- Central "Neural" Core Unit (1 element) -->
+  <!-- An abstract, organic shape representing the central processing or a key neuron, slightly off-center for asymmetry. -->
+  <path class="color-main" d="M45 30 C55 20 70 35 65 45 C60 55 45 60 35 50 C25 40 35 25 45 30 Z"/>
+
+  <!-- Main Flow Branches (4 elements) -->
+  <!-- Thicker lines representing significant data streams or primary connections emanating from the core, using the main brand color. -->
+  <path class="flow-path color-main" stroke-width="2.8" d="M60 40 Q75 30 85 40"/>
+  <path class="flow-path color-main" stroke-width="2.8" d="M35 45 Q20 55 15 40"/>
+  <path class="flow-path color-main" stroke-width="2.8" d="M50 55 Q65 70 75 60"/>
+  <path class="flow-path color-main" stroke-width="2.8" d="M40 50 Q25 65 30 75"/>
+
+  <!-- Intermediate Connections (10 elements) -->
+  <!-- Medium thickness lines creating a web of secondary connections, using the lighter accent color for depth and visual separation. -->
+  <path class="flow-path color-accent" stroke-width="1.8" d="M85 40 Q90 50 75 60"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M15 40 Q10 30 25 25"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M75 60 Q70 75 55 80"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M30 75 Q20 85 10 70"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M40 20 Q50 10 60 20"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M60 20 Q70 30 80 25"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M25 25 Q15 20 10 15"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M55 80 Q45 90 35 85"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M70 70 Q80 75 85 65"/>
+  <path class="flow-path color-accent" stroke-width="1.8" d="M20 15 Q30 5 40 10"/>
+
+  <!-- Smaller Signals & Accent Nodes (11 elements) -->
+  <!-- Thinner, delicate lines and small circular nodes representing diffuse signals or activation points, adding fine detail and dynamism. -->
+  <path class="flow-path color-accent" stroke-width="1" d="M88 48 Q92 52 90 58"/>
+  <path class="flow-path color-accent" stroke-width="1" d="M12 30 Q8 25 15 20"/>
+  <path class="flow-path color-accent" stroke-width="1" d="M65 85 Q70 90 75 80"/>
+  <path class="flow-path color-accent" stroke-width="1" d="M30 80 Q25 85 20 75"/>
+  <path class="flow-path color-accent" stroke-width="1" d="M50 5 Q55 0 60 5"/>
+  <path class="flow-path color-accent" stroke-width="1" d="M40 95 Q45 100 50 95"/>
+
+  <circle class="color-accent" cx="80" cy="35" r="1.5"/>
+  <circle class="color-accent" cx="20" cy="60" r="1.5"/>
+  <circle class="color-accent" cx="68" cy="70" r="1.5"/>
+  <circle class="color-accent" cx="32" cy="30" r="1.5"/>
+  <circle class="color-accent" cx="45" cy="15" r="1.5"/>
+</svg>

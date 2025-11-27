@@ -1,0 +1,29 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Define a single arm segment for NeuralFlow, comprised of flowing paths and neural nodes.
+         This segment embodies the abstract, sleek, organic, and refined style. -->
+    <g id="neural-flow-arm">
+      <!-- Main flow path: Represents the primary data stream or neural connection. -->
+      <path d="M 50 50 C 55 40 65 25 80 25 C 90 30 85 50 70 55" stroke="#8b5cf6" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Inner parallel flow path: Suggests a deeper or supporting layer of data. -->
+      <path d="M 50 50 C 53 43 63 30 78 30 C 88 35 83 55 68 60" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Outer parallel flow path: Adds complexity and reinforces the 'flow' concept. -->
+      <path d="M 50 50 C 57 37 67 20 82 20 C 92 25 87 45 72 50" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Neural Nodes: Small circles representing data points or processing units within the flow. -->
+      <circle cx="65" cy="30" r="2.5" fill="#8b5cf6"/>
+      <circle cx="75" cy="25" r="2.5" fill="#8b5cf6"/>
+      <circle cx="85" cy="40" r="2.5" fill="#8b5cf6"/>
+      <circle cx="70" cy="50" r="2.5" fill="#8b5cf6"/>
+    </g>
+  </defs>
+
+  <!-- Instantiate and rotate the 'neural-flow-arm' four times around the center (50,50)
+       to create a symmetrical composition that evokes a central intelligence or data hub,
+       while the gaps and curves embody the Gestalt principle of closure,
+       allowing the viewer's mind to complete the dynamic, interconnected system. -->
+  <use href="#neural-flow-arm" transform="rotate(0 50 50)"/>
+  <use href="#neural-flow-arm" transform="rotate(90 50 50)"/>
+  <use href="#neural-flow-arm" transform="rotate(180 50 50)"/>
+  <use href="#neural-flow-arm" transform="rotate(270 50 50)"/>
+</svg>

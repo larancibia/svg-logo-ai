@@ -1,0 +1,70 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Define the two main colors */
+      .color-primary { stroke: #10b981; fill: #10b981; }
+      .color-secondary { stroke: #3730a3; fill: #3730a3; }
+
+      /* Common styles for the bold flow paths */
+      .flow-path {
+        fill: none;
+        stroke-width: 12;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      /* Styles for core neural nodes */
+      .node-core {
+        fill: #3730a3;
+      }
+      /* Styles for accent neural nodes */
+      .node-accent {
+        fill: #10b981;
+      }
+    </style>
+  </defs>
+
+  <!-- Main Flow Paths - utilizing Gestalt closure with deliberate breaks -->
+  <!-- Segment 1: Sweeping curve, lower left to mid-right -->
+  <path d="M 30 160 Q 70 110 120 100" class="flow-path color-primary"/>
+  <!-- Segment 2: Continuing the flow, from mid-left to upper right, creating a gap -->
+  <path d="M 80 80 Q 140 60 170 120" class="flow-path color-primary"/>
+  <!-- Segment 3: Complementary curve, upper left towards center -->
+  <path d="M 50 40 Q 90 20 120 70" class="flow-path color-primary"/>
+  <!-- Segment 4: Lower-mid curve, connecting to another node -->
+  <path d="M 60 130 Q 90 150 140 130" class="flow-path color-primary"/>
+
+  <!-- Core Neural Nodes - asymmetrically placed to guide the eye -->
+  <circle cx="100" cy="95" r="10" class="node-core"/>
+  <circle cx="160" cy="110" r="10" class="node-core"/>
+  <circle cx="45" cy="145" r="10" class="node-core"/>
+  <circle cx="125" cy="65" r="10" class="node-core"/>
+
+  <!-- Accent Nodes - smaller, emphasizing connections and subtle flow -->
+  <circle cx="70" cy="70" r="7" class="node-accent"/>
+  <circle cx="110" cy="120" r="7" class="node-accent"/>
+  <circle cx="150" cy="90" r="7" class="node-accent"/>
+  <circle cx="50" cy="110" r="7" class="node-accent"/>
+
+  <!-- Secondary Flow Lines - thinner, adding complexity and "neural" feel -->
+  <path d="M 90 85 Q 95 65 115 55" class="flow-path color-secondary" stroke-width="6"/>
+  <path d="M 105 105 Q 125 140 155 125" class="flow-path color-secondary" stroke-width="6"/>
+  <path d="M 55 120 Q 70 95 85 80" class="flow-path color-secondary" stroke-width="6"/>
+  <path d="M 130 70 Q 110 80 100 90" class="flow-path color-secondary" stroke-width="6"/>
+
+  <!-- Smaller, intricate connections and energy pulses -->
+  <line x1="165" y1="118" x2="185" y2="135" class="flow-path color-primary" stroke-width="4"/>
+  <line x1="40" y1="138" x2="20" y2="120" class="flow-path color-primary" stroke-width="4"/>
+  <line x1="100" y1="85" x2="110" y2="70" class="flow-path color-primary" stroke-width="4"/>
+
+  <!-- Minor detail nodes for complexity target -->
+  <circle cx="135" cy="115" r="3" class="node-accent"/>
+  <circle cx="65" cy="100" r="3" class="node-accent"/>
+  <circle cx="140" cy="75" r="3" class="node-accent"/>
+  <circle cx="85" cy="60" r="3" class="node-core"/>
+  <circle cx="150" cy="145" r="3" class="node-core"/>
+  <circle cx="35" cy="95" r="3" class="node-core"/>
+
+  <!-- Final elements to meet the count, enhancing the sense of distributed flow -->
+  <path d="M 180 100 Q 190 85 180 70" class="flow-path color-primary" stroke-width="4"/>
+  <path d="M 20 100 Q 10 115 20 130" class="flow-path color-primary" stroke-width="4"/>
+</svg>

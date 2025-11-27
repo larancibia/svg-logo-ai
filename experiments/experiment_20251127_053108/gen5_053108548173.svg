@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Central AI processing unit or core node, providing a dynamic focal point. (1 element) -->
+  <path d="M45 25 Q55 20 65 30 L75 50 Q80 60 70 70 L40 65 Q30 60 35 40 Z" fill="#f59e0b"/>
+
+  <!-- Flow Paths: Representing data streams or neural connections, creating movement and asymmetry. (6 elements) -->
+  <path d="M20 50 Q30 30 50 25" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+  <path d="M80 50 Q70 70 50 75" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+  <path d="M20 70 Q40 80 60 70 Q80 60 85 45" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M15 30 Q30 20 45 25" fill="none" stroke="#fcd34d" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M60 30 Q70 20 85 30" fill="none" stroke="#fcd34d" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M70 70 Q80 80 90 60" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Neural Nodes / Data Points: Small circles representing individual neurons or data units, enhancing the network feel. (14 elements) -->
+  <circle cx="20" cy="50" r="2" fill="#fcd34d"/>
+  <circle cx="35" cy="35" r="1.5" fill="#fcd34d"/>
+  <circle cx="50" cy="25" r="2" fill="#fcd34d"/>
+  <circle cx="80" cy="50" r="2" fill="#fcd34d"/>
+  <circle cx="65" cy="65" r="1.5" fill="#fcd34d"/>
+  <circle cx="50" cy="75" r="2" fill="#fcd34d"/>
+  <circle cx="20" cy="70" r="2" fill="#fcd34d"/>
+  <circle cx="40" cy="80" r="2" fill="#fcd34d"/>
+  <circle cx="85" cy="45" r="2" fill="#fcd34d"/>
+  <circle cx="15" cy="30" r="2" fill="#fcd34d"/>
+  <circle cx="85" cy="30" r="2" fill="#fcd34d"/>
+  <circle cx="90" cy="60" r="2" fill="#fcd34d"/>
+  <circle cx="60" cy="30" r="1.5" fill="#fcd34d"/>
+  <circle cx="30" cy="40" r="1.5" fill="#fcd34d"/>
+</svg>

@@ -1,0 +1,54 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Color palette for NeuralFlow */
+      .main-dark-violet { fill: #8b5cf6; } /* Deeper violet for core and secondary elements */
+      .main-light-violet { fill: #c4b5fd; } /* Lighter violet for primary flow elements */
+      .flow-line-accent { stroke: #c4b5fd; stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .node-dark { fill: #8b5cf6; }
+      .node-light { fill: #c4b5fd; }
+    </style>
+  </defs>
+
+  <!-- Central Node: Represents the core AI unit or a central neural hub. (1 element) -->
+  <circle cx="50" cy="50" r="6" class="main-dark-violet"/>
+
+  <!-- Primary Flow Channels: Four symmetrical, fluid shapes representing continuous data streams or neural pathways. (4 elements) -->
+  <!-- Each path is a flowing, organic shape, rotated to achieve radial symmetry. -->
+  <path d="M50 48 C 65 30, 80 35, 75 50 C 80 65, 65 70, 50 52 Z" class="main-light-violet" transform="rotate(0 50 50)"/>
+  <path d="M50 48 C 65 30, 80 35, 75 50 C 80 65, 65 70, 50 52 Z" class="main-light-violet" transform="rotate(90 50 50)"/>
+  <path d="M50 48 C 65 30, 80 35, 75 50 C 80 65, 65 70, 50 52 Z" class="main-light-violet" transform="rotate(180 50 50)"/>
+  <path d="M50 48 C 65 30, 80 35, 75 50 C 80 65, 65 70, 50 52 Z" class="main-light-violet" transform="rotate(270 50 50)"/>
+
+  <!-- Secondary Flow Accents: Nested within the primary channels, adding depth and highlighting the dynamic movement. (4 elements) -->
+  <path d="M50 49 C 62 35, 75 40, 70 50 C 75 60, 62 65, 50 51 Z" class="main-dark-violet" transform="rotate(0 50 50)"/>
+  <path d="M50 49 C 62 35, 75 40, 70 50 C 75 60, 62 65, 50 51 Z" class="main-dark-violet" transform="rotate(90 50 50)"/>
+  <path d="M50 49 C 62 35, 75 40, 70 50 C 75 60, 62 65, 50 51 Z" class="main-dark-violet" transform="rotate(180 50 50)"/>
+  <path d="M50 49 C 62 35, 75 40, 70 50 C 75 60, 62 65, 50 51 Z" class="main-dark-violet" transform="rotate(270 50 50)"/>
+
+  <!-- Connecting Nodes: Small circles representing data points or synaptic connections within the abstract neural network. (8 elements) -->
+  <circle cx="70" cy="50" r="3" class="node-dark" transform="rotate(0 50 50)"/>
+  <circle cx="70" cy="50" r="3" class="node-dark" transform="rotate(90 50 50)"/>
+  <circle cx="70" cy="50" r="3" class="node-dark" transform="rotate(180 50 50)"/>
+  <circle cx="70" cy="50" r="3" class="node-dark" transform="rotate(270 50 50)"/>
+  <circle cx="50" cy="70" r="3" class="node-light" transform="rotate(0 50 50)"/>
+  <circle cx="50" cy="70" r="3" class="node-light" transform="rotate(90 50 50)"/>
+  <circle cx="50" cy="70" r="3" class="node-light" transform="rotate(180 50 50)"/>
+  <circle cx="50" cy="70" r="3" class="node-light" transform="rotate(270 50 50)"/>
+
+  <!-- Micro-Flow Lines/Flares: Delicate curved lines emphasizing energy, data pulses, or emergent properties within the flow. (12 elements) -->
+  <path d="M75 50 Q80 55 78 60" class="flow-line-accent" transform="rotate(0 50 50)"/>
+  <path d="M75 50 Q80 55 78 60" class="flow-line-accent" transform="rotate(90 50 50)"/>
+  <path d="M75 50 Q80 55 78 60" class="flow-line-accent" transform="rotate(180 50 50)"/>
+  <path d="M75 50 Q80 55 78 60" class="flow-line-accent" transform="rotate(270 50 50)"/>
+
+  <path d="M70 50 Q65 45 68 40" class="flow-line-accent" transform="rotate(0 50 50)"/>
+  <path d="M70 50 Q65 45 68 40" class="flow-line-accent" transform="rotate(90 50 50)"/>
+  <path d="M70 50 Q65 45 68 40" class="flow-line-accent" transform="rotate(180 50 50)"/>
+  <path d="M70 50 Q65 45 68 40" class="flow-line-accent" transform="rotate(270 50 50)"/>
+
+  <path d="M50 75 Q45 78 40 75" class="flow-line-accent" transform="rotate(0 50 50)"/>
+  <path d="M50 75 Q45 78 40 75" class="flow-line-accent" transform="rotate(90 50 50)"/>
+  <path d="M50 75 Q45 78 40 75" class="flow-line-accent" transform="rotate(180 50 50)"/>
+  <path d="M50 75 Q45 78 40 75" class="flow-line-accent" transform="rotate(270 50 50)"/>
+</svg>

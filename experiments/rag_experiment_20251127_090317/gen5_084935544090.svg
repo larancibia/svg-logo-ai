@@ -1,0 +1,53 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .color-green { fill: #10b981; } /* Emerald Green */
+      .color-purple { fill: #8b5cf6; } /* Royal Purple */
+    </style>
+  </defs>
+
+  <!-- Central Core Elements (4 elements) -->
+  <circle cx="50" cy="50" r="8" class="color-green"/>
+  <circle cx="50" cy="50" r="4" class="color-purple"/>
+  <!-- Inner "N" or connection symbol -->
+  <path d="M47.5 50 L50 47.5 L52.5 50 Z" class="color-green"/>
+  <path d="M47.5 50 L50 52.5 L52.5 50 Z" class="color-purple"/>
+
+  <!-- Inner Flow Ribbons (8 elements) -->
+  <!-- Outer part of inner ribbon set (4 elements - purple) -->
+  <path d="M50 42 C58 35, 65 40, 65 50 C65 60, 58 65, 50 58 Z" class="color-purple"/>
+  <path d="M50 42 C58 35, 65 40, 65 50 C65 60, 58 65, 50 58 Z" transform="rotate(90 50 50)" class="color-purple"/>
+  <path d="M50 42 C58 35, 65 40, 65 50 C65 60, 58 65, 50 58 Z" transform="rotate(180 50 50)" class="color-purple"/>
+  <path d="M50 42 C58 35, 65 40, 65 50 C65 60, 58 65, 50 58 Z" transform="rotate(270 50 50)" class="color-purple"/>
+  
+  <!-- Inner part of inner ribbon set (4 elements - green) -->
+  <path d="M50 44 C55 38, 60 42, 60 50 C60 58, 55 62, 50 56 Z" class="color-green"/>
+  <path d="M50 44 C55 38, 60 42, 60 50 C60 58, 55 62, 50 56 Z" transform="rotate(90 50 50)" class="color-green"/>
+  <path d="M50 44 C55 38, 60 42, 60 50 C60 58, 55 62, 50 56 Z" transform="rotate(180 50 50)" class="color-green"/>
+  <path d="M50 44 C55 38, 60 42, 60 50 C60 58, 55 62, 50 56 Z" transform="rotate(270 50 50)" class="color-green"/>
+
+  <!-- Outer Flow Ribbons (8 elements) -->
+  <!-- Outer part of outer ribbon set (4 elements - purple) -->
+  <path d="M50 35 C65 25, 75 35, 75 50 C75 65, 65 75, 50 65 Z" class="color-purple"/>
+  <path d="M50 35 C65 25, 75 35, 75 50 C75 65, 65 75, 50 65 Z" transform="rotate(90 50 50)" class="color-purple"/>
+  <path d="M50 35 C65 25, 75 35, 75 50 C75 65, 65 75, 50 65 Z" transform="rotate(180 50 50)" class="color-purple"/>
+  <path d="M50 35 C65 25, 75 35, 75 50 C75 65, 65 75, 50 65 Z" transform="rotate(270 50 50)" class="color-purple"/>
+
+  <!-- Inner part of outer ribbon set (4 elements - green) -->
+  <path d="M50 38 C62 28, 70 38, 70 50 C70 62, 62 72, 50 62 Z" class="color-green"/>
+  <path d="M50 38 C62 28, 70 38, 70 50 C70 62, 62 72, 50 62 Z" transform="rotate(90 50 50)" class="color-green"/>
+  <path d="M50 38 C62 28, 70 38, 70 50 C70 62, 62 72, 50 62 Z" transform="rotate(180 50 50)" class="color-green"/>
+  <path d="M50 38 C62 28, 70 38, 70 50 C70 62, 62 72, 50 62 Z" transform="rotate(270 50 50)" class="color-green"/>
+
+  <!-- Connecting Bridges (4 elements - green) -->
+  <path d="M60 45 Q65 48 60 55 L55 50 Q60 47 55 45 Z" class="color-green"/>
+  <path d="M60 45 Q65 48 60 55 L55 50 Q60 47 55 45 Z" transform="rotate(90 50 50)" class="color-green"/>
+  <path d="M60 45 Q65 48 60 55 L55 50 Q60 47 55 45 Z" transform="rotate(180 50 50)" class="color-green"/>
+  <path d="M60 45 Q65 48 60 55 L55 50 Q60 47 55 45 Z" transform="rotate(270 50 50)" class="color-green"/>
+
+  <!-- Outer Nodes (4 elements - purple) -->
+  <circle cx="75" cy="50" r="2" class="color-purple"/>
+  <circle cx="75" cy="50" r="2" transform="rotate(90 50 50)" class="color-purple"/>
+  <circle cx="75" cy="50" r="2" transform="rotate(180 50 50)" class="color-purple"/>
+  <circle cx="75" cy="50" r="2" transform="rotate(270 50 50)" class="color-purple"/>
+</svg>

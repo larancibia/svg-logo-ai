@@ -1,0 +1,34 @@
+<svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Central Node (1 element) -->
+  <rect x="40" y="40" width="20" height="20" transform="rotate(45 50 50)" fill="#f59e0b"/>
+
+  <!-- Four Main Flow Paths (4 elements) -->
+  <path d="M 50 30 C 60 20, 70 25, 70 40" stroke="#fcd34d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 70 50 C 75 60, 70 70, 50 70" stroke="#fcd34d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 50 70 C 40 80, 30 75, 30 50" stroke="#fcd34d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 30 50 C 25 40, 30 30, 50 30" stroke="#fcd34d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Four Outer Enclosure Paths (4 elements) -->
+  <path d="M 50 15 C 75 15, 85 25, 85 50" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 85 50 C 85 75, 75 85, 50 85" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 50 85 C 25 85, 15 75, 15 50" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 15 50 C 15 25, 25 15, 50 15" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Eight Small Nodes (8 elements) -->
+  <!-- At ends of main flow paths -->
+  <circle cx="70" cy="40" r="2" fill="#fcd34d"/>
+  <circle cx="50" cy="70" r="2" fill="#fcd34d"/>
+  <circle cx="30" cy="50" r="2" fill="#fcd34d"/>
+  <circle cx="50" cy="30" r="2" fill="#fcd34d"/>
+  <!-- At corners of outer enclosure -->
+  <circle cx="85" cy="50" r="2" fill="#fcd34d"/>
+  <circle cx="50" cy="85" r="2" fill="#fcd34d"/>
+  <circle cx="15" cy="50" r="2" fill="#fcd34d"/>
+  <circle cx="50" cy="15" r="2" fill="#fcd34d"/>
+  
+  <!-- Four Small Nodes at Diamond Vertices (4 elements) -->
+  <circle cx="50" cy="30" r="2" fill="#f59e0b"/>
+  <circle cx="70" cy="50" r="2" fill="#f59e0b"/>
+  <circle cx="50" cy="70" r="2" fill="#f59e0b"/>
+  <circle cx="30" cy="50" r="2" fill="#f59e0b"/>
+</svg>

@@ -1,0 +1,196 @@
+[
+  {
+    "id": "gen0_071139939494",
+    "genome": {
+      "company": "NeuralFlow",
+      "industry": "artificial intelligence",
+      "style_keywords": [
+        "organic",
+        "minimalist",
+        "symbolic",
+        "bold"
+      ],
+      "color_palette": [
+        "#6ee7b7",
+        "#10b981"
+      ],
+      "design_principles": [
+        "gestalt_closure"
+      ],
+      "complexity_target": 25,
+      "golden_ratio_weight": 0.5747319161627931,
+      "color_harmony_type": "monochrome"
+    },
+    "fitness": 87,
+    "aesthetic_breakdown": {
+      "total": 87,
+      "legacy_score": 87,
+      "aesthetic": 88,
+      "golden_ratio": 86.1,
+      "color_harmony": 90.0,
+      "visual_interest": 90.0,
+      "professional": 87,
+      "technical": 88.6
+    },
+    "generation": 0,
+    "parent_ids": []
+  },
+  {
+    "id": "gen0_071005690225",
+    "genome": {
+      "company": "NeuralFlow",
+      "industry": "artificial intelligence",
+      "style_keywords": [
+        "clean",
+        "minimalist",
+        "sleek",
+        "abstract"
+      ],
+      "color_palette": [
+        "#3730a3"
+      ],
+      "design_principles": [
+        "negative_space",
+        "rule_of_thirds",
+        "asymmetry_balance"
+      ],
+      "complexity_target": 26,
+      "golden_ratio_weight": 0.6092342584343683,
+      "color_harmony_type": "monochrome"
+    },
+    "fitness": 86,
+    "aesthetic_breakdown": {
+      "total": 86,
+      "legacy_score": 87,
+      "aesthetic": 86,
+      "golden_ratio": 79.5,
+      "color_harmony": 90.0,
+      "visual_interest": 90.0,
+      "professional": 87,
+      "technical": 88.6
+    },
+    "generation": 0,
+    "parent_ids": []
+  },
+  {
+    "id": "gen2_071519756109",
+    "genome": {
+      "company": "NeuralFlow",
+      "industry": "artificial intelligence",
+      "style_keywords": [
+        "bold",
+        "minimalist",
+        "abstract",
+        "clean"
+      ],
+      "color_palette": [
+        "#10b981",
+        "#3730a3"
+      ],
+      "design_principles": [
+        "rule_of_thirds",
+        "gestalt_closure",
+        "asymmetry_balance"
+      ],
+      "complexity_target": 25,
+      "golden_ratio_weight": 0.5919830872985807,
+      "color_harmony_type": "monochrome"
+    },
+    "fitness": 82,
+    "aesthetic_breakdown": {
+      "total": 82,
+      "legacy_score": 87,
+      "aesthetic": 78,
+      "golden_ratio": 78.2,
+      "color_harmony": 60.0,
+      "visual_interest": 100.0,
+      "professional": 87,
+      "technical": 88.6
+    },
+    "generation": 2,
+    "parent_ids": [
+      "gen0_071139939494",
+      "gen0_071005690225"
+    ]
+  },
+  {
+    "id": "gen2_071554044561",
+    "genome": {
+      "company": "NeuralFlow",
+      "industry": "artificial intelligence",
+      "style_keywords": [
+        "bold",
+        "organic",
+        "minimalist",
+        "symbolic"
+      ],
+      "color_palette": [
+        "#10b981",
+        "#6ee7b7"
+      ],
+      "design_principles": [
+        "gestalt_closure"
+      ],
+      "complexity_target": 25,
+      "golden_ratio_weight": 0.5747319161627931,
+      "color_harmony_type": "monochrome"
+    },
+    "fitness": 89,
+    "aesthetic_breakdown": {
+      "total": 89,
+      "legacy_score": 87,
+      "aesthetic": 91,
+      "golden_ratio": 93.8,
+      "color_harmony": 90.0,
+      "visual_interest": 90.0,
+      "professional": 87,
+      "technical": 88.6
+    },
+    "generation": 2,
+    "parent_ids": [
+      "gen0_071139939494",
+      "gen0_071139939494"
+    ]
+  },
+  {
+    "id": "gen2_071633829948",
+    "genome": {
+      "company": "NeuralFlow",
+      "industry": "artificial intelligence",
+      "style_keywords": [
+        "organic",
+        "clean",
+        "symbolic",
+        "minimalist"
+      ],
+      "color_palette": [
+        "#10b981",
+        "#3730a3"
+      ],
+      "design_principles": [
+        "gestalt_closure",
+        "asymmetry_balance",
+        "negative_space"
+      ],
+      "complexity_target": 25,
+      "golden_ratio_weight": 0.5919830872985807,
+      "color_harmony_type": "monochrome"
+    },
+    "fitness": 82,
+    "aesthetic_breakdown": {
+      "total": 82,
+      "legacy_score": 87,
+      "aesthetic": 77,
+      "golden_ratio": 84.5,
+      "color_harmony": 60.0,
+      "visual_interest": 90.0,
+      "professional": 87,
+      "technical": 88.6
+    },
+    "generation": 2,
+    "parent_ids": [
+      "gen0_071005690225",
+      "gen0_071139939494"
+    ]
+  }
+]

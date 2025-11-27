@@ -1,0 +1,194 @@
+{
+  "experiment": "LLM-Guided MAP-Elites",
+  "grid_dimensions": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "total_cells": 625,
+  "statistics": {
+    "coverage": 0.04,
+    "num_occupied": 25,
+    "total_cells": 20,
+    "avg_fitness": 83.88,
+    "max_fitness": 89,
+    "min_fitness": 79,
+    "generations_represented": 1
+  },
+  "evaluations": 150,
+  "successful_additions": 34,
+  "failed_additions": 92,
+  "best_logos": [
+    {
+      "logo_id": "init_0040",
+      "fitness": 89.0,
+      "behavior": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 35,
+        "style": 0.0,
+        "symmetry": 0.09090909090909091,
+        "color_richness": 0.0
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "init_0034",
+      "fitness": 89.0,
+      "behavior": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 25,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.0
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "init_0033",
+      "fitness": 89.0,
+      "behavior": [
+        3,
+        0,
+        1,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 25,
+        "style": 0.0,
+        "symmetry": 0.23809523809523808,
+        "color_richness": 0.0
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "init_0046",
+      "fitness": 89.0,
+      "behavior": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.0,
+        "symmetry": 0.08333333333333333,
+        "color_richness": 0.0
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "init_0012",
+      "fitness": 88.0,
+      "behavior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "raw_behavior": {
+        "complexity": 15,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.0
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "init_0002",
+      "fitness": 87.0,
+      "behavior": [
+        4,
+        0,
+        0,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 30,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.25
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "init_0005",
+      "fitness": 87.0,
+      "behavior": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 25,
+        "style": 0.0,
+        "symmetry": 0.26666666666666666,
+        "color_richness": 0.25
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "init_0010",
+      "fitness": 87.0,
+      "behavior": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 15,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.25
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "gen000_iter0061",
+      "fitness": 87.0,
+      "behavior": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 26,
+        "style": 0.0,
+        "symmetry": 0.0,
+        "color_richness": 0.25
+      },
+      "generation": 0
+    },
+    {
+      "logo_id": "init_0019",
+      "fitness": 87.0,
+      "behavior": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.0,
+        "symmetry": 0.07692307692307693,
+        "color_richness": 0.25
+      },
+      "generation": 0
+    }
+  ]
+}

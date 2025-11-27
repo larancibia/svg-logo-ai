@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <path d="M178,177 L79,145" stroke="#2563eb" stroke-width="2" fill="none"/>
+  <rect x="49" y="100" width="26" height="35" fill="#2563eb"/>
+  <path d="M158,96 L49,29" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M177,159 L130,56" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <circle cx="110" cy="68" r="25" fill="#2563eb"/>
+  <path d="M81,155 L162,39" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M169,46 L74,110" stroke="#2563eb" stroke-width="2" fill="none"/>
+  <rect x="92" y="27" width="38" height="27" fill="#f39c12"/>
+  <rect x="11" y="39" width="21" height="34" fill="#2563eb"/>
+  <path d="M153,61 L96,108" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M120,162 L152,69" stroke="#f39c12" stroke-width="2" fill="none"/>
+  <path d="M107,118 L62,115" stroke="#f39c12" stroke-width="2" fill="none"/>
+  <rect x="101" y="73" width="37" height="23" fill="#f39c12"/>
+  <path d="M117,59 L77,76" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <rect x="42" y="116" width="24" height="33" fill="#2563eb"/>
+  <circle cx="93" cy="119" r="25" fill="#2563eb"/>
+  <rect x="122" y="119" width="19" height="29" fill="#f39c12"/>
+  <circle cx="106" cy="133" r="19" fill="#f39c12"/>
+  <circle cx="63" cy="178" r="7" fill="#e74c3c"/>
+  <circle cx="45" cy="49" r="13" fill="#f39c12"/>
+  <rect x="35" y="130" width="11" height="16" fill="#e74c3c"/>
+  <circle cx="60" cy="52" r="29" fill="#2563eb"/>
+  <path d="M41,110 L100,105" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M123,93 L48,80" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <rect x="105" y="121" width="23" height="40" fill="#2563eb"/>
+  <rect x="122" y="120" width="33" height="24" fill="#e74c3c"/>
+  <circle cx="130" cy="105" r="15" fill="#f39c12"/>
+  <path d="M93,88 L125,44" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <circle cx="39" cy="84" r="12" fill="#e74c3c"/>
+  <circle cx="65" cy="46" r="10" fill="#f39c12"/>
+  <circle cx="106" cy="95" r="17" fill="#f39c12"/>
+  <rect x="56" y="66" width="19" height="23" fill="#f39c12"/>
+  <circle cx="22" cy="34" r="16" fill="#2563eb"/>
+  <rect x="97" y="29" width="34" height="33" fill="#f39c12"/>
+  <path d="M76,77 L168,174" stroke="#2563eb" stroke-width="2" fill="none"/>
+</svg>

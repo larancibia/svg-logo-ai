@@ -1,0 +1,7 @@
+{
+  "population_size": 10,
+  "elite_size": 2,
+  "mutation_rate": 0.3,
+  "tournament_size": 3,
+  "total_generations": 5
+}

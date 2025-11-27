@@ -1,0 +1,41 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Main color palette */
+      .core-color { fill: #8b5cf6; } /* Darker violet for central elements */
+      .flow-color { stroke: #c4b5fd; fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; } /* Lighter violet for flow paths */
+      .node-color { fill: #c4b5fd; } /* Lighter violet for nodes */
+    </style>
+  </defs>
+
+  <!-- Central Core: Represents the AI's central processing unit or origin of intelligence. (1 element) -->
+  <circle cx="50" cy="50" r="12" class="core-color"/>
+
+  <!-- Inner Quadrant Nodes: Act as focal points or minor processing units, symmetrically placed. (4 elements) -->
+  <circle cx="50" cy="28" r="4" class="node-color"/>
+  <circle cx="72" cy="50" r="4" class="node-color"/>
+  <circle cx="50" cy="72" r="4" class="node-color"/>
+  <circle cx="28" cy="50" r="4" class="node-color"/>
+
+  <!-- Outer Flow Paths: Three segments creating a dynamic, outwardly flowing arc. (12 elements total, 3 per rotation) -->
+  <!-- The gaps between segments leverage the Gestalt principle of closure, implying continuous flow. -->
+  <g id="outer-flow-segment-set">
+    <path d="M50 20 Q60 15 75 25" class="flow-color"/>
+    <path d="M78 30 Q85 40 75 50" class="flow-color"/>
+    <path d="M68 53 Q60 60 50 65" class="flow-color"/>
+  </g>
+  <use href="#outer-flow-segment-set" transform="rotate(90 50 50)"/>
+  <use href="#outer-flow-segment-set" transform="rotate(180 50 50)"/>
+  <use href="#outer-flow-segment-set" transform="rotate(270 50 50)"/>
+
+  <!-- Inner Flow Paths: Three segments forming a secondary, more subtle layer of neural connections. (12 elements total, 3 per rotation) -->
+  <!-- These paths create additional depth and reinforce the concept of data streams. -->
+  <g id="inner-flow-segment-set">
+    <path d="M50 35 Q55 30 65 35" class="flow-color"/>
+    <path d="M67 40 Q70 45 65 50" class="flow-color"/>
+    <path d="M60 53 Q55 58 50 60" class="flow-color"/>
+  </g>
+  <use href="#inner-flow-segment-set" transform="rotate(90 50 50)"/>
+  <use href="#inner-flow-segment-set" transform="rotate(180 50 50)"/>
+  <use href="#inner-flow-segment-set" transform="rotate(270 50 50)"/>
+</svg>

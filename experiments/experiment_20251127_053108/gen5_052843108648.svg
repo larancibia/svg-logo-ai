@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Central "Neural" Node (1 element) -->
+  <circle cx="90" cy="100" r="30" fill="#2563eb"/>
+
+  <!-- Main flowing paths (2 elements) -->
+  <path d="M 60 100 Q 80 50 140 60 C 160 70 140 120 120 140" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 140 40 Q 120 150 70 130 Q 50 110 40 100" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Thinner connecting paths (8 elements) -->
+  <path d="M 90 70 Q 105 80 110 90" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 80 110 Q 95 120 110 130" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 120 80 Q 130 90 140 95" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 70 120 Q 60 130 50 140" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 150 70 Q 160 80 170 90" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 30 110 Q 40 120 50 130" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 100 50 Q 110 40 120 30" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 100 150 Q 90 160 80 170" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Secondary "Node" Circles (4 elements) -->
+  <circle cx="150" cy="90" r="8" fill="#60a5fa"/>
+  <circle cx="50" cy="110" r="8" fill="#60a5fa"/>
+  <circle cx="120" cy="50" r="6" fill="#60a5fa"/>
+  <circle cx="70" cy="140" r="6" fill="#60a5fa"/>
+
+  <!-- Smaller "data point" circles (4 elements) -->
+  <circle cx="170" cy="100" r="4" fill="#60a5fa"/>
+  <circle cx="30" cy="90" r="4" fill="#60a5fa"/>
+  <circle cx="100" cy="30" r="4" fill="#60a5fa"/>
+  <circle cx="90" cy="170" r="4" fill="#60a5fa"/>
+
+  <!-- Accents/Directionality (6 elements) -->
+  <rect x="160" y="87" width="6" height="1.5" fill="#60a5fa" rx="0.75"/>
+  <rect x="160" y="91.5" width="6" height="1.5" fill="#60a5fa" rx="0.75"/>
+  <rect x="160" y="96" width="6" height="1.5" fill="#60a5fa" rx="0.75"/>
+  <rect x="40" y="107" width="6" height="1.5" fill="#60a5fa" rx="0.75"/>
+  <rect x="40" y="111.5" width="6" height="1.5" fill="#60a5fa" rx="0.75"/>
+  <rect x="40" y="116" width="6" height="1.5" fill="#60a5fa" rx="0.75"/>
+</svg>

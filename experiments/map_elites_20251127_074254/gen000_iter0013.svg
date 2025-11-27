@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <path d="M98,106 L145,57" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M179,164 L133,104" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M63,80 L105,136" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <circle cx="173" cy="172" r="6" fill="#e74c3c"/>
+  <rect x="95" y="130" width="32" height="17" fill="#e74c3c"/>
+  <rect x="101" y="11" width="28" height="16" fill="#e74c3c"/>
+  <path d="M48,128 L30,71" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <circle cx="103" cy="47" r="22" fill="#e74c3c"/>
+  <circle cx="166" cy="75" r="20" fill="#e74c3c"/>
+  <rect x="89" y="128" width="13" height="37" fill="#e74c3c"/>
+  <path d="M45,125 L25,154" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M130,68 L163,127" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <rect x="84" y="111" width="21" height="39" fill="#e74c3c"/>
+  <rect x="144" y="57" width="17" height="23" fill="#e74c3c"/>
+  <path d="M133,129 L22,64" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <circle cx="175" cy="150" r="22" fill="#e74c3c"/>
+  <circle cx="109" cy="58" r="12" fill="#e74c3c"/>
+  <path d="M133,147 L35,159" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <rect x="61" y="94" width="11" height="13" fill="#e74c3c"/>
+  <path d="M147,42 L82,137" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M160,179 L36,124" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M111,134 L22,152" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <rect x="80" y="35" width="25" height="20" fill="#e74c3c"/>
+  <path d="M179,131 L106,105" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <rect x="150" y="134" width="15" height="33" fill="#e74c3c"/>
+  <rect x="72" y="139" width="23" height="14" fill="#e74c3c"/>
+  <rect x="147" y="69" width="25" height="19" fill="#e74c3c"/>
+  <rect x="110" y="115" width="34" height="25" fill="#e74c3c"/>
+  <path d="M139,87 L23,166" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <rect x="118" y="119" width="12" height="34" fill="#e74c3c"/>
+  <circle cx="79" cy="101" r="15" fill="#10b981"/>
+</svg>

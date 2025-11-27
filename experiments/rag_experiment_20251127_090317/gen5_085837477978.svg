@@ -1,0 +1,39 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Define the two analogous colors for clarity */
+      .dark-purple { fill: #8b5cf6; }
+      .light-lavender { fill: #c4b5fd; }
+    </style>
+  </defs>
+
+  <!-- Central "Neural Core" elements (3 elements) -->
+  <circle cx="50" cy="50" r="10" class="dark-purple"/>
+  <circle cx="50" cy="50" r="6" class="light-lavender"/>
+  <circle cx="50" cy="50" r="3" class="dark-purple"/>
+
+  <!-- Four symmetrical "Neural Flow" branches (28 elements = 4 branches * 7 elements/branch) -->
+  <!-- Each branch consists of an inner flow, two outer sheath paths, and four synaptic points -->
+  <g id="neural-branch">
+    <!-- Inner Flow Channel (1 element per branch) -->
+    <!-- Represents the main data stream, lighter color -->
+    <path d="M 50 42 C 46 32, 46 22, 50 18 S 54 22, 54 32 C 54 38, 50 42, 50 42 Z" class="light-lavender"/>
+
+    <!-- Outer Sheath / Connection (2 elements per branch) -->
+    <!-- Defines the structural connection, darker color, embracing the inner flow -->
+    <path d="M 50 45 C 43 30, 43 15, 50 10 S 57 15, 57 30 C 57 40, 50 45, 50 45 Z" class="dark-purple"/>
+    <path d="M 50 43 C 45 31, 45 19, 50 16 S 55 19, 55 31 C 55 39, 50 43, 50 43 Z" class="light-lavender"/> <!-- This lighter path creates negative space defining the sheath edge -->
+
+    <!-- Synaptic Points / Data Packets (4 elements per branch) -->
+    <!-- Small circles along the flow, lighter color for emphasis -->
+    <circle cx="50" cy="38" r="1.5" class="light-lavender"/>
+    <circle cx="50" cy="30" r="2" class="light-lavender"/>
+    <circle cx="50" cy="22" r="2.5" class="light-lavender"/>
+    <circle cx="50" cy="14" r="1.5" class="light-lavender"/>
+  </g>
+
+  <!-- Rotate the base neural branch to create 3 more symmetrical instances -->
+  <use href="#neural-branch" transform="rotate(90 50 50)"/>
+  <use href="#neural-branch" transform="rotate(180 50 50)"/>
+  <use href="#neural-branch" transform="rotate(270 50 50)"/>
+</svg>

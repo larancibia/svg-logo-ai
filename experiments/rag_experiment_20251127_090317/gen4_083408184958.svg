@@ -1,0 +1,58 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* NeuralFlow AI Logo - Sleek, organic, and sophisticated representation of interconnected intelligence. */
+      /* Primary color: Teal-Green (#10b981) - Represents growth, innovation, and technological advancement. */
+      /* Complementary accent color: Magenta-Red (#b91052) - Provides energy, focus, and dynamic contrast, highlighting data flow. */
+
+      .core-fill { fill: #10b981; }
+      .accent-fill { fill: #b91052; }
+      .flow-line-primary { stroke: #10b981; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .flow-line-accent { stroke: #b91052; stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Central Processing Node / Core: An organic shape representing the central intelligence unit. (3 elements) -->
+  <path d="M50 35 C65 25 75 35 75 50 C75 65 65 75 50 65 C35 75 25 65 25 50 C25 35 35 25 50 35 Z" class="core-fill"/>
+  <circle cx="50" cy="50" r="14" class="accent-fill" opacity="0.4"/>
+  <circle cx="50" cy="50" r="7" class="core-fill"/>
+
+  <!-- Neural Flow Arm 1: Represents a data stream or neural pathway, extending organically. (9 elements) -->
+  <g>
+    <path d="M50 50 C65 42 80 38 90 48 C95 58 80 62 65 58 C55 60 50 50 50 50 Z" class="core-fill"/>
+    <path d="M50 50 C60 48 70 42 80 48" class="flow-line-accent"/>
+    <path d="M50 50 C62 52 72 58 82 52" class="flow-line-accent"/>
+    <circle cx="80" cy="48" r="2.5" class="accent-fill"/>
+    <circle cx="82" cy="52" r="2.5" class="accent-fill"/>
+    <path d="M78 40 Q85 45 80 50" class="flow-line-primary"/>
+    <path d="M78 60 Q85 55 80 50" class="flow-line-primary"/>
+    <circle cx="90" cy="48" r="3" class="accent-fill"/>
+    <path d="M55 50 Q65 50 75 50" class="flow-line-primary"/>
+  </g>
+
+  <!-- Neural Flow Arm 2: Rotated for 3-fold symmetrical composition. (9 elements) -->
+  <g transform="rotate(120 50 50)">
+    <path d="M50 50 C65 42 80 38 90 48 C95 58 80 62 65 58 C55 60 50 50 50 50 Z" class="core-fill"/>
+    <path d="M50 50 C60 48 70 42 80 48" class="flow-line-accent"/>
+    <path d="M50 50 C62 52 72 58 82 52" class="flow-line-accent"/>
+    <circle cx="80" cy="48" r="2.5" class="accent-fill"/>
+    <circle cx="82" cy="52" r="2.5" class="accent-fill"/>
+    <path d="M78 40 Q85 45 80 50" class="flow-line-primary"/>
+    <path d="M78 60 Q85 55 80 50" class="flow-line-primary"/>
+    <circle cx="90" cy="48" r="3" class="accent-fill"/>
+    <path d="M55 50 Q65 50 75 50" class="flow-line-primary"/>
+  </g>
+
+  <!-- Neural Flow Arm 3: Rotated for 3-fold symmetrical composition. (9 elements) -->
+  <g transform="rotate(240 50 50)">
+    <path d="M50 50 C65 42 80 38 90 48 C95 58 80 62 65 58 C55 60 50 50 50 50 Z" class="core-fill"/>
+    <path d="M50 50 C60 48 70 42 80 48" class="flow-line-accent"/>
+    <path d="M50 50 C62 52 72 58 82 52" class="flow-line-accent"/>
+    <circle cx="80" cy="48" r="2.5" class="accent-fill"/>
+    <circle cx="82" cy="52" r="2.5" class="accent-fill"/>
+    <path d="M78 40 Q85 45 80 50" class="flow-line-primary"/>
+    <path d="M78 60 Q85 55 80 50" class="flow-line-primary"/>
+    <circle cx="90" cy="48" r="3" class="accent-fill"/>
+    <path d="M55 50 Q65 50 75 50" class="flow-line-primary"/>
+  </g>
+</svg>

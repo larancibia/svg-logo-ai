@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- NeuralFlow Logo: Sophisticated representation of AI, neural networks, and data flow.
+       Style: Elegant, innovative, sleek, with a focus on asymmetrical balance, negative space, and closure.
+       Colors: Complementary palette with #a78bfa (primary structure) and #c4b5fd (flowing connections).
+       Complexity: Approximately 33 elements. -->
+
+  <!-- Primary Neural Core / Processing Unit (4 elements)
+       Forms an elegant, slightly open 'eye' or 'lobe' shape, representing the core intelligence.
+       Leverages #a78bfa for a strong, sophisticated presence. -->
+  <path d="M30 40 Q20 20 50 15" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 15 Q80 20 70 40" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M70 40 C85 55 65 70 50 85" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 85 C35 70 15 55 30 40" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Central Node / Data Hub (1 element)
+       A focal point within the neural core, indicating a processing hub. -->
+  <circle cx="50" cy="50" r="4" fill="#a78bfa"/>
+
+  <!-- Flowing Data Paths / Connections (20 elements)
+       Dynamic, open-ended lines in #c4b5fd, representing data streams and neural connections.
+       Creates asymmetrical balance and utilizes the Gestalt principle of closure. -->
+  <path d="M10 30 Q25 15 40 25" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M90 30 Q75 15 60 25" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M10 70 Q25 85 40 75" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M90 70 Q75 85 60 75" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M50 5 Q40 10 30 20" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M50 95 Q40 90 30 80" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M5 50 Q15 40 25 35" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M95 50 Q85 40 75 35" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Inner Flowing Paths, creating layered complexity and emphasizing dynamism -->
+  <path d="M45 40 Q55 30 65 40" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M65 40 Q75 50 65 60" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M65 60 Q55 70 45 60" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M45 60 Q35 50 45 40" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M30 25 Q40 18 50 25" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M70 25 Q60 18 50 25" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M30 75 Q40 82 50 75" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M70 75 Q60 82 50 75" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M25 40 Q18 50 25 60" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M75 40 Q82 50 75 60" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M50 35 Q40 40 35 50" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M50 65 Q40 60 35 50" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Data Points / Peripheral Nodes (8 elements)
+       Small circles representing individual data packets or minor connection points,
+       enhancing the neural network aesthetic. -->
+  <circle cx="20" cy="20" r="1.5" fill="#c4b5fd"/>
+  <circle cx="80" cy="20" r="1.5" fill="#c4b5fd"/>
+  <circle cx="20" cy="80" r="1.5" fill="#c4b5fd"/>
+  <circle cx="80" cy="80" r="1.5" fill="#c4b5fd"/>
+  <circle cx="10" cy="50" r="1.5" fill="#c4b5fd"/>
+  <circle cx="90" cy="50" r="1.5" fill="#c4b5fd"/>
+  <circle cx="50" cy="10" r="1.5" fill="#c4b5fd"/>
+  <circle cx="50" cy="90" r="1.5" fill="#c4b5fd"/>
+</svg>

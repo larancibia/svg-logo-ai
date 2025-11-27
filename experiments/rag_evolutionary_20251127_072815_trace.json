@@ -1,0 +1,1968 @@
+{
+  "experiment_id": "rag_evolutionary_20251127_072815",
+  "experiment_name": "rag_evolutionary",
+  "logs": [
+    {
+      "id": "5f25cbba-a5f8-42e0-a8a7-dfbba2635c87",
+      "document": "Starting experiment: rag_evolutionary",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:28:16.902344",
+        "step_type": "experiment_start"
+      }
+    },
+    {
+      "id": "31ae3f66-1480-469b-a521-c2b4ac8a3650",
+      "document": "Initialized knowledge base with 10 successful logos",
+      "metadata": {
+        "logos_added": 10,
+        "timestamp": "2025-11-27T07:28:37.850665",
+        "kb_avg_fitness": 88.2,
+        "experiment_name": "rag_evolutionary",
+        "step_type": "kb_initialization",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "kb_max_fitness": 90,
+        "kb_count": 10
+      }
+    },
+    {
+      "id": "402c9961-ff0f-44d8-97ee-4a141c449d65",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "avg_fitness": 87.66666666666667,
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:28:41.088411",
+        "min_fitness": 87,
+        "max_fitness": 89,
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "3432745d-bfe0-4532-a67e-4718da95df50",
+      "document": "Generated individual 1 with RAG",
+      "metadata": {
+        "step_type": "individual_generation",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:29:27.067739",
+        "generation": 0,
+        "individual_id": "gen0_072927067641",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "fitness": 83
+      }
+    },
+    {
+      "id": "1c6483dc-1c42-45a3-8095-28fbb0fe1500",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:29:29.604000",
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "avg_fitness": 88.0,
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "9a9d4e05-471b-4c8a-a98e-b9c567258b86",
+      "document": "Generated individual 2 with RAG",
+      "metadata": {
+        "individual_id": "gen0_073014293214",
+        "step_type": "individual_generation",
+        "timestamp": "2025-11-27T07:30:14.293317",
+        "fitness": 83,
+        "experiment_name": "rag_evolutionary",
+        "generation": 0,
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "b9f178c9-389d-4e69-ad2e-bd1ef0cf9fba",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 89.0,
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T07:30:16.515471",
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "f0d40a38-2dd2-4fdd-bf0a-05aff3a3b8a0",
+      "document": "Generated individual 3 with RAG",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "fitness": 89,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "individual_id": "gen0_073114148162",
+        "timestamp": "2025-11-27T07:31:14.148263",
+        "generation": 0,
+        "step_type": "individual_generation"
+      }
+    },
+    {
+      "id": "3cdc947b-346a-4fd2-acf7-685b77510708",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 87.0,
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:31:17.493418",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 87,
+        "min_fitness": 87,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "8c75b180-fea2-4ec7-b36c-49fc0b4497a2",
+      "document": "Generated individual 4 with RAG",
+      "metadata": {
+        "generation": 0,
+        "timestamp": "2025-11-27T07:31:54.397582",
+        "step_type": "individual_generation",
+        "individual_id": "gen0_073154397454",
+        "fitness": 86,
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "5e38e90c-a9a5-46e6-875d-78dc9153ba0c",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "avg_fitness": 87.66666666666667,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 89,
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:31:56.831289",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "cbacd76a-7ef0-40d1-9520-98b842f04264",
+      "document": "Generated individual 5 with RAG",
+      "metadata": {
+        "step_type": "individual_generation",
+        "experiment_name": "rag_evolutionary",
+        "fitness": 85,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "individual_id": "gen0_073242901964",
+        "timestamp": "2025-11-27T07:32:42.902091",
+        "generation": 0
+      }
+    },
+    {
+      "id": "4e72a05f-e8ec-48da-9d47-b5b9b4c42c43",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "avg_fitness": 88.0,
+        "min_fitness": 87,
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:32:46.722316"
+      }
+    },
+    {
+      "id": "1cec681d-021b-42dd-be17-305632b347ea",
+      "document": "Generated individual 6 with RAG",
+      "metadata": {
+        "step_type": "individual_generation",
+        "timestamp": "2025-11-27T07:33:29.375047",
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "generation": 0,
+        "individual_id": "gen0_073329374937",
+        "fitness": 84
+      }
+    },
+    {
+      "id": "36f3dc0b-18b4-4383-8931-7fc2d0bc0e75",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "max_fitness": 89,
+        "min_fitness": 87,
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:33:31.871669",
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.0
+      }
+    },
+    {
+      "id": "565f2610-5d43-4a78-b5ae-072bfffad39b",
+      "document": "Generated individual 7 with RAG",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "individual_id": "gen0_073407735130",
+        "fitness": 84,
+        "timestamp": "2025-11-27T07:34:07.735234",
+        "generation": 0,
+        "step_type": "individual_generation"
+      }
+    },
+    {
+      "id": "47331cae-b3a1-4639-a43b-c4f06bfc3ede",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.33333333333333,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90,
+        "n_examples": 3,
+        "min_fitness": 87,
+        "timestamp": "2025-11-27T07:34:11.338114"
+      }
+    },
+    {
+      "id": "ea997696-2fae-4fc6-bca7-f91464f6729c",
+      "document": "Generated individual 8 with RAG",
+      "metadata": {
+        "individual_id": "gen0_073456068996",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "fitness": 81,
+        "generation": 0,
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:34:56.069093",
+        "step_type": "individual_generation"
+      }
+    },
+    {
+      "id": "7a69150f-ba3f-4b6a-a6fe-ae6b4a2d9672",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 89.0,
+        "max_fitness": 90,
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:34:58.643798",
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "ecf48d52-0b9e-4c6e-a328-24e26a17abd5",
+      "document": "Generated individual 9 with RAG",
+      "metadata": {
+        "timestamp": "2025-11-27T07:36:00.371051",
+        "generation": 0,
+        "fitness": 79,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "step_type": "individual_generation",
+        "individual_id": "gen0_073600370946"
+      }
+    },
+    {
+      "id": "51a7e129-6e60-45c2-a2d5-c35bedef1e7c",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T07:36:03.233949",
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 87,
+        "min_fitness": 87,
+        "avg_fitness": 87.0
+      }
+    },
+    {
+      "id": "e1f8d857-b3a4-4a16-83d5-34af981f2a86",
+      "document": "Generated individual 10 with RAG",
+      "metadata": {
+        "fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "individual_id": "gen0_073647069042",
+        "timestamp": "2025-11-27T07:36:47.069383",
+        "generation": 0,
+        "step_type": "individual_generation"
+      }
+    },
+    {
+      "id": "daea8d24-4132-4853-9061-842f164c62bf",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:36:49.745344",
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90,
+        "n_examples": 3,
+        "min_fitness": 87,
+        "avg_fitness": 88.0
+      }
+    },
+    {
+      "id": "1d83c992-49c4-4445-9ddd-dbe4102099c5",
+      "document": "Generated individual 11 with RAG",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "individual_id": "gen0_073742168540",
+        "step_type": "individual_generation",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:37:42.168657",
+        "fitness": 90,
+        "generation": 0
+      }
+    },
+    {
+      "id": "d568fb39-0c3c-4f71-bac5-663e79daee78",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90,
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:37:44.796974",
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "432abfa7-fd2f-45ba-b5b2-fe4398eda2e6",
+      "document": "Generated individual 12 with RAG",
+      "metadata": {
+        "fitness": 84,
+        "timestamp": "2025-11-27T07:38:25.089823",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "individual_id": "gen0_073825089722",
+        "generation": 0,
+        "step_type": "individual_generation",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "d6352db4-b491-4b48-b269-0daa71ff61e1",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "avg_fitness": 89.0,
+        "max_fitness": 90,
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:38:26.972331",
+        "step_type": "rag_retrieval",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "4f039a2c-ee4f-4190-a03b-4ff5fb87bb0a",
+      "document": "Generated individual 13 with RAG",
+      "metadata": {
+        "generation": 0,
+        "fitness": 83,
+        "experiment_name": "rag_evolutionary",
+        "individual_id": "gen0_073922381432",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "individual_generation",
+        "timestamp": "2025-11-27T07:39:22.381569"
+      }
+    },
+    {
+      "id": "8aad5ae4-911d-4ab6-964e-9e94b48e795b",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T07:39:24.767095",
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "avg_fitness": 87.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 87,
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "c931ef38-a9df-4e62-8b38-33f23a811eba",
+      "document": "Generated individual 14 with RAG",
+      "metadata": {
+        "generation": 0,
+        "timestamp": "2025-11-27T07:39:54.489337",
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "individual_generation",
+        "individual_id": "gen0_073954489218",
+        "fitness": 88
+      }
+    },
+    {
+      "id": "7256524e-492a-4f7b-875a-06568452a351",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "avg_fitness": 88.0,
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:39:58.157209"
+      }
+    },
+    {
+      "id": "bef8155b-13e2-4252-a1bc-e541ed98d684",
+      "document": "Generated individual 15 with RAG",
+      "metadata": {
+        "fitness": 87,
+        "individual_id": "gen0_074114097951",
+        "timestamp": "2025-11-27T07:41:14.098058",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "generation": 0,
+        "step_type": "individual_generation",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "6a3af218-5e52-4990-b4f3-d15d92c57ee8",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "n_examples": 3,
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:41:18.365875",
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "d5ad22a6-fca5-40d4-80c0-46af15ed5401",
+      "document": "Generated individual 16 with RAG",
+      "metadata": {
+        "timestamp": "2025-11-27T07:41:53.220400",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "fitness": 85,
+        "step_type": "individual_generation",
+        "generation": 0,
+        "individual_id": "gen0_074153220297",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "d5653aae-3f89-49f3-856a-aeeac76efd23",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "avg_fitness": 88.0,
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:41:55.574074",
+        "max_fitness": 90,
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "373571a2-c063-4032-9cba-009c2c603bae",
+      "document": "Generated individual 17 with RAG",
+      "metadata": {
+        "generation": 0,
+        "step_type": "individual_generation",
+        "fitness": 87,
+        "individual_id": "gen0_074225844785",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:42:25.844877",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "ec6900e5-af1f-4e1b-83bf-835eae5f447d",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:42:30.110295",
+        "max_fitness": 90,
+        "avg_fitness": 88.0,
+        "min_fitness": 87,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "33719d55-e9de-42a6-9787-e031063e071f",
+      "document": "Generated individual 18 with RAG",
+      "metadata": {
+        "fitness": 86,
+        "experiment_name": "rag_evolutionary",
+        "step_type": "individual_generation",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "individual_id": "gen0_074314930977",
+        "generation": 0,
+        "timestamp": "2025-11-27T07:43:14.933415"
+      }
+    },
+    {
+      "id": "54493a44-44f6-4f12-a28b-0639873afc31",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 89.0,
+        "max_fitness": 90,
+        "min_fitness": 87,
+        "timestamp": "2025-11-27T07:43:18.747239",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "114730a4-c4a6-415b-b958-7b12fb111435",
+      "document": "Generated individual 19 with RAG",
+      "metadata": {
+        "generation": 0,
+        "timestamp": "2025-11-27T07:44:18.840209",
+        "individual_id": "gen0_074418840098",
+        "step_type": "individual_generation",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "fitness": 85
+      }
+    },
+    {
+      "id": "162222e8-ef0d-48e4-b163-7a1df3bf671e",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.66666666666667,
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T07:44:23.068039",
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "18388daf-c541-4802-8b39-eff90069a747",
+      "document": "Generated individual 20 with RAG",
+      "metadata": {
+        "step_type": "individual_generation",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "fitness": 88,
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:45:23.695256",
+        "generation": 0,
+        "individual_id": "gen0_074523695154"
+      }
+    },
+    {
+      "id": "2c18aa1c-7273-4076-8274-c08889a4fae2",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T07:45:28.023419",
+        "avg_fitness": 88.0,
+        "min_fitness": 87,
+        "max_fitness": 90
+      }
+    },
+    {
+      "id": "233ed47b-b31d-44e1-84b9-dea0ecd61862",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "max_fitness": 89,
+        "avg_fitness": 87.66666666666667,
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:46:09.977140",
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "7022bd23-9ea7-40b6-a53f-a68a4b3b81d2",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:46:51.255060",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 89.0
+      }
+    },
+    {
+      "id": "590edddf-6a63-4883-a5c5-95e66e714d28",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 89,
+        "n_examples": 3,
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:48:05.840852",
+        "step_type": "rag_retrieval",
+        "avg_fitness": 87.66666666666667,
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "3b054fae-82e5-4207-87c5-d184321fcfc8",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:48:51.900975",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 87,
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 87.0
+      }
+    },
+    {
+      "id": "4b4e59cf-86d9-4f15-b49d-b985ddbe4d8d",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "avg_fitness": 87.66666666666667,
+        "max_fitness": 89,
+        "timestamp": "2025-11-27T07:49:28.456426",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "7f1035ce-5cc3-43f5-b13b-cd9c3a1299d2",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 87.66666666666667,
+        "max_fitness": 89,
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T07:49:54.534403",
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "52c1906d-423e-47ba-b37a-ae05245afb4e",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "avg_fitness": 89.0,
+        "max_fitness": 90,
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:50:41.760803",
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "f3956fae-94ee-4d90-a533-b18e40d97552",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T07:51:36.894495"
+      }
+    },
+    {
+      "id": "55d26184-c3b1-4657-99db-4135ee7557f8",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "avg_fitness": 88.0,
+        "min_fitness": 87,
+        "timestamp": "2025-11-27T07:52:14.744905",
+        "max_fitness": 90,
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "525b2040-52d4-4fb2-b3f6-a2be52d653aa",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 89.0,
+        "timestamp": "2025-11-27T07:53:07.373325",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "max_fitness": 90,
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "e20e65b2-45da-4e3d-a510-4e11b76ec74d",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "n_examples": 3,
+        "max_fitness": 89,
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:54:01.154247",
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "24bb1225-a785-4e76-9c03-adf8c9be8876",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T07:55:04.230319",
+        "step_type": "rag_retrieval",
+        "avg_fitness": 88.0,
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "94fb30a5-8b2b-4061-a544-59967e45b726",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:55:50.296985",
+        "max_fitness": 89,
+        "min_fitness": 87,
+        "avg_fitness": 87.66666666666667,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "a451c815-664f-4eb0-84f5-bd12332d168f",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.0,
+        "timestamp": "2025-11-27T07:56:25.516943",
+        "step_type": "rag_retrieval",
+        "max_fitness": 90,
+        "min_fitness": 87,
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "b262c525-7af4-4b32-b7d7-85d561b876d5",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T07:57:38.219826",
+        "n_examples": 3,
+        "avg_fitness": 87.66666666666667,
+        "max_fitness": 89
+      }
+    },
+    {
+      "id": "52b4d546-1804-47fe-a27b-7eeccae2142b",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 87.66666666666667,
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "max_fitness": 89,
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T07:58:14.333721"
+      }
+    },
+    {
+      "id": "1267399d-75fa-4565-99f2-5ca7646098fb",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 87.33333333333333,
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T07:58:52.345652",
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "max_fitness": 88,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "0589624e-aadd-488f-b7f1-791b177f79ff",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T07:59:33.811578",
+        "avg_fitness": 88.0,
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "e9133f97-b60d-4bea-b375-58e46a518855",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "avg_fitness": 89.0,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:00:28.890671",
+        "max_fitness": 90,
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "5aeb8d42-5f61-4725-8821-3e3569c44e9e",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.0,
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:01:27.767963"
+      }
+    },
+    {
+      "id": "1c767f10-bbba-45d0-9c74-f5fc95bbffe4",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:02:37.869752",
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "88d55067-a945-4030-9a38-66752abadc1e",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T08:03:18.653831",
+        "min_fitness": 87,
+        "n_examples": 3,
+        "avg_fitness": 88.66666666666667,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "c68b1feb-f1a8-47f4-a8cd-82dd888a6435",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "avg_fitness": 88.0,
+        "timestamp": "2025-11-27T08:04:11.684021"
+      }
+    },
+    {
+      "id": "011dfb0f-6bf8-438e-8d0f-31afa937a896",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 87,
+        "avg_fitness": 87.0,
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:04:53.833381",
+        "min_fitness": 87,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "b72cf647-6d78-4daf-8535-0dcadc4b3d3a",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "min_fitness": 87,
+        "timestamp": "2025-11-27T08:05:52.098932",
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90
+      }
+    },
+    {
+      "id": "7eedb8fe-5f31-4500-a216-474d2e4c19f6",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:06:28.389117",
+        "avg_fitness": 88.0,
+        "max_fitness": 90,
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "977eaad0-207d-4dda-8107-35bb01f1b117",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "n_examples": 3,
+        "avg_fitness": 88.0,
+        "timestamp": "2025-11-27T08:06:57.563934",
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "3e026b67-4844-406e-8947-a2298ba2e48f",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:07:59.554457"
+      }
+    },
+    {
+      "id": "97efe163-8b5f-400d-97d9-8c6ea7c67ec8",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T08:08:57.796894",
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "max_fitness": 89,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "avg_fitness": 87.66666666666667,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "92e62d3f-0079-4b41-b7e4-ea74e9530abb",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:09:39.312202",
+        "n_examples": 3,
+        "avg_fitness": 88.33333333333333,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "35c63385-c5cf-4bf9-a0d6-417218cf17e5",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "n_examples": 3,
+        "max_fitness": 90,
+        "avg_fitness": 88.33333333333333,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:10:46.486195",
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "c869eca7-75ab-4d94-90c1-11f27542a299",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90,
+        "n_examples": 3,
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:11:45.032244",
+        "avg_fitness": 88.33333333333333
+      }
+    },
+    {
+      "id": "092dc2b2-5d2a-4ffb-a048-2c5cb3213d4a",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T08:12:45.490789",
+        "avg_fitness": 88.66666666666667,
+        "n_examples": 3,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "afffe5fe-5277-4cc6-95f5-0654179187f1",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T08:13:44.460291",
+        "n_examples": 3,
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90,
+        "avg_fitness": 89.0,
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "1fd08caa-e9eb-4b3d-8fd3-937e409e88f6",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T08:14:54.207341",
+        "min_fitness": 87,
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "max_fitness": 90,
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "86567d95-59fb-4973-8d43-325f12c6ae36",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "timestamp": "2025-11-27T08:16:07.235022",
+        "max_fitness": 90,
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "97027cfd-691d-4019-a51f-bbf919a75eba",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 89.0,
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T08:18:22.812493",
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "8faa626e-364e-46da-a456-b7c8faed078e",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:19:32.406833",
+        "min_fitness": 87,
+        "max_fitness": 90
+      }
+    },
+    {
+      "id": "41611172-c115-4f43-87e2-9c00d8dd8a23",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.33333333333333,
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:20:22.474893",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "31d320f7-b644-4677-9939-2c30d3f26703",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.33333333333333,
+        "timestamp": "2025-11-27T08:21:35.889697",
+        "min_fitness": 87,
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "045a3a48-695b-4c1e-ab3c-cca79a072b01",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "timestamp": "2025-11-27T08:22:18.548371",
+        "avg_fitness": 87.0,
+        "max_fitness": 87,
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "691cc88e-c097-4313-a599-ec0a851366b9",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 89.0,
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T08:22:56.855266"
+      }
+    },
+    {
+      "id": "4b210348-3cb4-48f9-be99-3eb2c9770200",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 87,
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 87.0,
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:23:58.121742"
+      }
+    },
+    {
+      "id": "525ccf38-274b-4e73-b007-7b362e21dde3",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T08:24:43.621268",
+        "n_examples": 3,
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "1e200d5c-9bf2-47ae-9425-53941dec1336",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T08:25:27.288109",
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "avg_fitness": 89.0,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "45fa1214-0f82-4d67-bd1f-fa9463c4350e",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:26:29.290107",
+        "n_examples": 3,
+        "max_fitness": 90,
+        "avg_fitness": 88.0,
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "f6e58810-2d57-4c10-b717-9983fa68cfb0",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T08:27:19.780453",
+        "min_fitness": 87,
+        "avg_fitness": 89.0,
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "52340819-09f9-4626-8cb0-dadc2887e121",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T08:28:09.131226",
+        "max_fitness": 90,
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "8caf733f-3316-42fb-bc58-70ae98e9f7e3",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "n_examples": 3,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "timestamp": "2025-11-27T08:29:13.736960"
+      }
+    },
+    {
+      "id": "7d381242-fe85-406d-bd8e-0479f98a4570",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 89.0,
+        "timestamp": "2025-11-27T08:30:13.489210"
+      }
+    },
+    {
+      "id": "b5f8442d-9e78-4aac-8c27-9e74dc0eb237",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "n_examples": 3,
+        "max_fitness": 88,
+        "avg_fitness": 87.33333333333333,
+        "timestamp": "2025-11-27T08:31:06.550529",
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "c1756469-c15a-4527-961e-73ab6895b608",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "n_examples": 3,
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T08:31:43.416435"
+      }
+    },
+    {
+      "id": "87a96df4-536b-489d-9ccb-054892e32e07",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T08:32:22.678105",
+        "avg_fitness": 89.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "d1d0c40e-f71a-4da3-8fa3-f47c635ca446",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 90,
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:33:24.851450",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "c1ff1920-19c1-449a-b9c7-9ba06dfd013c",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "avg_fitness": 89.0,
+        "timestamp": "2025-11-27T08:34:10.086225",
+        "n_examples": 3,
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "ca63d4d8-7d50-4caa-a507-135fdc0a3f12",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 89,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:35:14.492184",
+        "min_fitness": 87,
+        "avg_fitness": 87.66666666666667,
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "20ec109d-1c3c-4466-9a10-b9a967ebfb96",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "max_fitness": 90,
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.66666666666667,
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:35:49.526219",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "9988b3ae-17ad-4fc3-88d9-f2ece1d39cc6",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:36:37.040728",
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.0,
+        "max_fitness": 90,
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "2b99f15c-537b-4df4-818b-59e9e71d6d7a",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:37:22.416370",
+        "max_fitness": 90
+      }
+    },
+    {
+      "id": "e947096a-06dc-4552-9fda-e2838e9282f6",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 90,
+        "n_examples": 3,
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:38:01.432985",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "a170ea3f-0d16-4725-acb2-94b3eb409d37",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T08:38:49.975875",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "avg_fitness": 87.0,
+        "min_fitness": 87,
+        "max_fitness": 87,
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "d320a041-c30a-4cb2-a0a0-c4dcf9d563f0",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "avg_fitness": 88.66666666666667,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T08:39:33.232927",
+        "n_examples": 3,
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "a468d2d0-0884-4ac3-8d39-445d342f3c6f",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "max_fitness": 90,
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T08:40:13.889641"
+      }
+    },
+    {
+      "id": "612fa27d-6f09-4481-89ec-370f3d3d5e07",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:41:06.813394",
+        "min_fitness": 87,
+        "avg_fitness": 89.0
+      }
+    },
+    {
+      "id": "992c5e88-8c8e-4f27-9995-24200d93c42f",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 90,
+        "min_fitness": 87,
+        "timestamp": "2025-11-27T08:42:12.807279",
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "fdcb8982-ca7d-4e5b-a090-5255e9ba2a1a",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "avg_fitness": 87.0,
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:43:15.118162",
+        "step_type": "rag_retrieval",
+        "max_fitness": 87
+      }
+    },
+    {
+      "id": "1166c375-b01f-4518-bf8d-686bc0eae040",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:43:56.034202",
+        "max_fitness": 90,
+        "avg_fitness": 88.0,
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "286f6b90-701e-4893-a089-4b8240b898b2",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "avg_fitness": 88.0,
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:44:35.340614",
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "e83c7247-42b8-4d97-9c74-de92cce7fb5e",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T08:45:26.059296",
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "n_examples": 3,
+        "max_fitness": 89,
+        "min_fitness": 87,
+        "avg_fitness": 87.66666666666667,
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "4339b311-34a3-4978-8957-114e8eb6ed7c",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:46:21.211009",
+        "avg_fitness": 89.0,
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "n_examples": 3,
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "e7168b13-b143-4ea1-aa46-e9eeb5d57512",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "max_fitness": 90,
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:47:24.840361",
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "08b314c2-a623-4c29-ae9d-5049483e6d9b",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T08:48:30.033049",
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 90,
+        "avg_fitness": 88.0,
+        "min_fitness": 87,
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "7e58fa9f-541a-423a-91e8-0aec50e0f2db",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 88,
+        "n_examples": 3,
+        "avg_fitness": 87.33333333333333,
+        "timestamp": "2025-11-27T08:49:36.464598",
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "29212472-b526-4838-978e-fbb4f9eef71a",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:50:29.692407",
+        "avg_fitness": 89.0,
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval"
+      }
+    },
+    {
+      "id": "d33dd939-4775-4b17-b78e-26e85a35d1ee",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T08:51:31.890952",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "avg_fitness": 88.0,
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "790527de-2f5e-437a-b08d-f53d42ea0086",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "avg_fitness": 87.0,
+        "max_fitness": 87,
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:52:33.158470"
+      }
+    },
+    {
+      "id": "217efa28-a64f-46b3-8921-f18cbf6a7124",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:53:29.912883",
+        "n_examples": 3,
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "6a6e599b-fc06-4a23-8849-1e54ac9044ec",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 89.0,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T08:54:12.651931",
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "n_examples": 3
+      }
+    },
+    {
+      "id": "1d1bd69d-ea97-46b1-9ed1-9530ff30d84c",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "n_examples": 3,
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "timestamp": "2025-11-27T08:54:57.350988",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary"
+      }
+    },
+    {
+      "id": "74ca45ff-b2c7-4e59-bcd5-bd21a1e1623c",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 87.66666666666667,
+        "n_examples": 3,
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "max_fitness": 89,
+        "timestamp": "2025-11-27T08:55:44.550884",
+        "experiment_name": "rag_evolutionary",
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "224baf20-2a8b-40b7-8ddf-a3ef969e70a8",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.0,
+        "n_examples": 3,
+        "step_type": "rag_retrieval",
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T08:56:23.018447",
+        "min_fitness": 87
+      }
+    },
+    {
+      "id": "b9250508-0c73-4102-be9c-43df2cfe80c9",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:57:08.345485",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "avg_fitness": 88.0,
+        "experiment_name": "rag_evolutionary",
+        "max_fitness": 90
+      }
+    },
+    {
+      "id": "62b10faa-b281-4d2c-a600-189d5848cfad",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "avg_fitness": 88.66666666666667,
+        "n_examples": 3,
+        "max_fitness": 90,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "step_type": "rag_retrieval",
+        "timestamp": "2025-11-27T08:58:04.176422"
+      }
+    },
+    {
+      "id": "6d0bca36-8eb0-4fac-ae1e-bd2fa9e5cd4e",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "avg_fitness": 89.0,
+        "timestamp": "2025-11-27T08:58:38.034722",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "max_fitness": 90
+      }
+    },
+    {
+      "id": "86f6f84f-be7a-459b-b275-230973f63071",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "avg_fitness": 88.0,
+        "max_fitness": 90,
+        "step_type": "rag_retrieval",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "n_examples": 3,
+        "timestamp": "2025-11-27T08:59:51.261613"
+      }
+    },
+    {
+      "id": "6c16aa1b-406e-49bc-88e3-9110e6782496",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 87,
+        "experiment_name": "rag_evolutionary",
+        "step_type": "rag_retrieval",
+        "max_fitness": 87,
+        "n_examples": 3,
+        "timestamp": "2025-11-27T09:00:30.396040",
+        "avg_fitness": 87.0
+      }
+    },
+    {
+      "id": "e52e2992-3d48-465c-a76e-20e3c869b07c",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "experiment_name": "rag_evolutionary",
+        "n_examples": 3,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "timestamp": "2025-11-27T09:01:16.651842",
+        "step_type": "rag_retrieval",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "avg_fitness": 88.66666666666667
+      }
+    },
+    {
+      "id": "777456c3-9948-45c4-947c-3d832de42b3d",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "timestamp": "2025-11-27T09:01:55.863641",
+        "n_examples": 3,
+        "step_type": "rag_retrieval",
+        "experiment_name": "rag_evolutionary",
+        "min_fitness": 87,
+        "max_fitness": 90,
+        "avg_fitness": 88.0,
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "34652ad6-d1b1-44bd-9e7d-17ed069e14c1",
+      "document": "Retrieved 3 similar logos for few-shot learning",
+      "metadata": {
+        "step_type": "rag_retrieval",
+        "n_examples": 3,
+        "avg_fitness": 88.0,
+        "max_fitness": 90,
+        "min_fitness": 87,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary",
+        "timestamp": "2025-11-27T09:02:33.312162"
+      }
+    },
+    {
+      "id": "3aadf328-0639-4325-8e45-44b122a11643",
+      "document": "Saved experiment results to /home/luis/svg-logo-ai/experiments/rag_experiment_20251127_090317",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "output_dir": "/home/luis/svg-logo-ai/experiments/rag_experiment_20251127_090317",
+        "experiment_name": "rag_evolutionary",
+        "step_type": "save_results",
+        "timestamp": "2025-11-27T09:03:17.864673"
+      }
+    },
+    {
+      "id": "ae699527-828e-41d0-bdd9-21f0a7386602",
+      "document": "Finalizing experiment: rag_evolutionary",
+      "metadata": {
+        "step_type": "experiment_end",
+        "timestamp": "2025-11-27T09:03:18.910001",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "experiment_name": "rag_evolutionary"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "2a542412-5227-4309-854f-fe33d2fd3f31",
+      "document": "DECISION: Use RAG-enhanced evolutionary approach\n\nRATIONALE: Combine evolutionary optimization with few-shot learning from successful examples\n\nALTERNATIVES CONSIDERED:\n- Pure evolutionary without RAG\n- Pure RAG without evolution\n- Rule-based generation",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "kb_avg_fitness": 88.2,
+        "decision_type": "key_decision",
+        "num_generations": 5,
+        "population_size": 20,
+        "kb_count": 10,
+        "timestamp": "2025-11-27T07:28:21.567629",
+        "kb_max_fitness": 90
+      }
+    }
+  ],
+  "results": [
+    {
+      "id": "dd6524cf-ca1a-4e23-a16c-d1e36b938515",
+      "document": "RESULT TYPE: generation_stats\n\nInitial population statistics\n\nMETRICS:\n- generation: 0\n- avg_fitness: 85.35\n- max_fitness: 90\n- min_fitness: 79",
+      "metadata": {
+        "max_fitness": 90,
+        "generation": 0,
+        "avg_fitness": 85.35,
+        "result_type": "generation_stats",
+        "timestamp": "2025-11-27T07:45:25.528406",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 79
+      }
+    },
+    {
+      "id": "3d8efa4f-bed3-440e-ba0e-5439a9de6383",
+      "document": "RESULT TYPE: generation_stats\n\nGeneration 1 statistics with RAG\n\nMETRICS:\n- generation: 1\n- avg_fitness: 85.3\n- max_fitness: 90\n- min_fitness: 80\n- std_fitness: 3.1000000000000005",
+      "metadata": {
+        "timestamp": "2025-11-27T07:59:31.040546",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "min_fitness": 80,
+        "avg_fitness": 85.3,
+        "result_type": "generation_stats",
+        "max_fitness": 90,
+        "std_fitness": 3.1000000000000005,
+        "generation": 1
+      }
+    },
+    {
+      "id": "b57640fe-6338-4024-a46b-d3729b71d290",
+      "document": "RESULT TYPE: generation_stats\n\nGeneration 2 statistics with RAG\n\nMETRICS:\n- generation: 2\n- avg_fitness: 86.55\n- max_fitness: 90\n- min_fitness: 79\n- std_fitness: 2.597595041572108",
+      "metadata": {
+        "generation": 2,
+        "timestamp": "2025-11-27T08:16:05.285742",
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "std_fitness": 2.597595041572108,
+        "avg_fitness": 86.55,
+        "min_fitness": 79,
+        "result_type": "generation_stats",
+        "max_fitness": 90
+      }
+    },
+    {
+      "id": "019aa78b-cfc4-4a81-a299-8ed837919e38",
+      "document": "RESULT TYPE: generation_stats\n\nGeneration 3 statistics with RAG\n\nMETRICS:\n- generation: 3\n- avg_fitness: 87.4\n- max_fitness: 91\n- min_fitness: 82\n- std_fitness: 2.3748684174075834",
+      "metadata": {
+        "generation": 3,
+        "min_fitness": 82,
+        "max_fitness": 91,
+        "avg_fitness": 87.4,
+        "std_fitness": 2.3748684174075834,
+        "result_type": "generation_stats",
+        "timestamp": "2025-11-27T08:33:22.685391",
+        "experiment_id": "rag_evolutionary_20251127_072815"
+      }
+    },
+    {
+      "id": "c6e09c14-1e34-4425-b295-d00c93f6ed6f",
+      "document": "RESULT TYPE: generation_stats\n\nGeneration 4 statistics with RAG\n\nMETRICS:\n- generation: 4\n- avg_fitness: 88.5\n- max_fitness: 92\n- min_fitness: 85\n- std_fitness: 1.9621416870348585",
+      "metadata": {
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "std_fitness": 1.9621416870348585,
+        "timestamp": "2025-11-27T08:48:27.917334",
+        "max_fitness": 92,
+        "avg_fitness": 88.5,
+        "generation": 4,
+        "result_type": "generation_stats",
+        "min_fitness": 85
+      }
+    },
+    {
+      "id": "5cc1a2eb-ecd9-4ee1-a83a-ff78f2bc43a9",
+      "document": "RESULT TYPE: generation_stats\n\nGeneration 5 statistics with RAG\n\nMETRICS:\n- generation: 5\n- avg_fitness: 87.15\n- max_fitness: 92\n- min_fitness: 81\n- std_fitness: 3.102821296820041",
+      "metadata": {
+        "min_fitness": 81,
+        "generation": 5,
+        "std_fitness": 3.102821296820041,
+        "timestamp": "2025-11-27T09:03:16.149116",
+        "avg_fitness": 87.15,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "max_fitness": 92,
+        "result_type": "generation_stats"
+      }
+    },
+    {
+      "id": "45208aec-80eb-4f43-94ab-d7e786acb777",
+      "document": "RESULT TYPE: final_results\n\nRAG-enhanced evolutionary experiment final results\n\nMETRICS:\n- initial_avg: 85.35\n- initial_max: 90\n- final_avg: 87.15\n- final_max: 92\n- improvement_avg: 1.8000000000000114\n- improvement_max: 2\n- improvement_pct: 2.1089630931458836",
+      "metadata": {
+        "improvement_max": 2,
+        "improvement_avg": 1.8000000000000114,
+        "experiment_id": "rag_evolutionary_20251127_072815",
+        "final_max": 92,
+        "timestamp": "2025-11-27T09:03:16.809882",
+        "final_avg": 87.15,
+        "result_type": "final_results",
+        "initial_max": 90,
+        "improvement_pct": 2.1089630931458836,
+        "initial_avg": 85.35
+      }
+    }
+  ]
+}

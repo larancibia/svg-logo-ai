@@ -1,0 +1,58 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Central Core: A bold, symmetrical abstract shape representing the "brain" or processing unit. (1 element) -->
+  <path d="M50 15 C70 20 85 40 85 50 C85 60 70 80 50 85 C30 80 15 60 15 50 C15 40 30 20 50 15Z" fill="#8b5cf6"/>
+
+  <!-- Inner Core Details: Two symmetrical elements, adding depth and hinting at internal structure within the core. (2 elements) -->
+  <!-- Left inner flow element -->
+  <path d="M50 35 C40 40 40 50 40 60 C40 65 45 68 50 70 L50 60 C45 55 45 50 45 45 C45 40 48 37 50 35Z" fill="#c4b5fd"/>
+  <!-- Right inner flow element (mirrored) -->
+  <path d="M50 35 C60 40 60 50 60 60 C60 65 55 68 50 70 L50 60 C55 55 55 50 55 45 C55 40 52 37 50 35Z" fill="#c4b5fd"/>
+
+  <!-- Radiating Neural Pathways: Four arms, each composed of three elegant, curved segments to represent flowing data. (12 elements) -->
+  <!-- Arm 1 (Top-Right quadrant) -->
+  <path d="M55 20 C65 15 75 25 80 35" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M80 35 C85 45 80 55 70 60" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M70 60 C60 65 55 60 50 50" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Arm 2 (Bottom-Right quadrant) -->
+  <path d="M80 65 C85 75 75 85 65 80" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M65 80 C55 85 45 80 40 70" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M40 70 C35 60 40 55 50 50" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Arm 3 (Bottom-Left quadrant) -->
+  <path d="M45 80 C35 85 25 75 20 65" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M20 65 C15 55 20 45 30 40" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M30 40 C40 35 45 40 50 50" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Arm 4 (Top-Left quadrant) -->
+  <path d="M20 35 C15 25 25 15 35 20" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M35 20 C45 15 55 20 60 30" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 30 C65 40 60 45 50 50" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Connecting Nodes/Data Points: Twelve small circles placed symmetrically along the neural pathways. (12 elements) -->
+  <!-- Top-Right nodes -->
+  <circle cx="68" cy="27" r="1.5" fill="#c4b5fd"/>
+  <circle cx="75" cy="48" r="1.5" fill="#c4b5fd"/>
+  <circle cx="58" cy="38" r="1.5" fill="#c4b5fd"/>
+  <!-- Bottom-Right nodes -->
+  <circle cx="75" cy="68" r="1.5" fill="#c4b5fd"/>
+  <circle cx="60" cy="78" r="1.5" fill="#c4b5fd"/>
+  <circle cx="62" cy="62" r="1.5" fill="#c4b5fd"/>
+  <!-- Bottom-Left nodes -->
+  <circle cx="32" cy="73" r="1.5" fill="#c4b5fd"/>
+  <circle cx="25" cy="52" r="1.5" fill="#c4b5fd"/>
+  <circle cx="42" cy="62" r="1.5" fill="#c4b5fd"/>
+  <!-- Top-Left nodes -->
+  <circle cx="25" cy="32" r="1.5" fill="#c4b5fd"/>
+  <circle cx="40" cy="22" r="1.5" fill="#c4b5fd"/>
+  <circle cx="38" cy="38" r="1.5" fill="#c4b5fd"/>
+
+  <!-- Central Spark/Focal Point: A small circle at the very center, symbolizing intelligence or a focal node. (1 element) -->
+  <circle cx="50" cy="50" r="2.5" fill="#c4b5fd"/>
+
+  <!-- Inner Delicate Flow Lines: Four thin, curved lines adding subtle detail and enhancing the flow within the core. (4 elements) -->
+  <path d="M47 47 Q50 45 53 47" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-linecap="round"/>
+  <path d="M53 47 Q55 50 53 53" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-linecap="round"/>
+  <path d="M53 53 Q50 55 47 53" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-linecap="round"/>
+  <path d="M47 53 Q45 50 47 47" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-linecap="round"/>
+</svg>

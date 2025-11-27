@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .primary-color { fill: #8b5cf6; stroke: #8b5cf6; } /* Purple */
+      .secondary-color { fill: #fbbf24; stroke: #fbbf24; } /* Orange/Yellow */
+    </style>
+  </defs>
+
+  <!-- Central Processing Core: Represents the brain or central AI unit. (1 element) -->
+  <circle cx="50" cy="50" r="8" class="primary-color"/>
+
+  <!-- Inner Neural Flow Paths: Four interconnected arcs forming an implied square,
+       symbolizing active data streams or thought pathways. (4 elements) -->
+  <path d="M40 30 C50 20, 60 20, 70 30" fill="none" class="secondary-color" stroke-width="3" stroke-linecap="round"/>
+  <path d="M70 30 C80 40, 80 50, 70 60" fill="none" class="secondary-color" stroke-width="3" stroke-linecap="round"/>
+  <path d="M70 60 C60 70, 50 70, 40 60" fill="none" class="secondary-color" stroke-width="3" stroke-linecap="round"/>
+  <path d="M40 60 C30 50, 30 40, 40 30" fill="none" class="secondary-color" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Outer Enveloping Network: Four larger arcs creating an implied circle,
+       suggesting the broader AI network or system boundary, demonstrating closure. (4 elements) -->
+  <path d="M85 50 C85 30, 70 15, 50 15" fill="none" class="primary-color" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 15 C30 15, 15 30, 15 50" fill="none" class="primary-color" stroke-width="4" stroke-linecap="round"/>
+  <path d="M15 50 C15 70, 30 85, 50 85" fill="none" class="primary-color" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 85 C70 85, 85 70, 85 50" fill="none" class="primary-color" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Key Junction Nodes: Represent important connection points within the network. (8 elements) -->
+  <!-- 4 nodes at inner square corners -->
+  <circle cx="35" cy="35" r="3" class="primary-color"/>
+  <circle cx="65" cy="35" r="3" class="primary-color"/>
+  <circle cx="65" cy="65" r="3" class="primary-color"/>
+  <circle cx="35" cy="65" r="3" class="primary-color"/>
+  <!-- 4 nodes at outer arc gaps -->
+  <circle cx="50" cy="15" r="3" class="secondary-color"/>
+  <circle cx="85" cy="50" r="3" class="secondary-color"/>
+  <circle cx="50" cy="85" r="3" class="secondary-color"/>
+  <circle cx="15" cy="50" r="3" class="secondary-color"/>
+
+  <!-- Data Packet Indicators: Small pulses or bits of information flowing along pathways. (8 elements) -->
+  <circle cx="45" cy="24" r="1.5" class="primary-color"/>
+  <circle cx="55" cy="24" r="1.5" class="primary-color"/>
+  <circle cx="76" cy="38" r="1.5" class="primary-color"/>
+  <circle cx="76" cy="52" r="1.5" class="primary-color"/>
+  <circle cx="55" cy="66" r="1.5" class="primary-color"/>
+  <circle cx="45" cy="66" r="1.5" class="primary-color"/>
+  <circle cx="24" cy="52" r="1.5" class="primary-color"/>
+  <circle cx="24" cy="38" r="1.5" class="primary-color"/>
+
+  <!-- Energetic Pulses: Signifying activity and processing around the central core. (3 elements) -->
+  <circle cx="50" cy="38" r="1.5" class="secondary-color"/>
+  <circle cx="38" cy="50" r="1.5" class="secondary-color"/>
+  <circle cx="50" cy="62" r="1.5" class="secondary-color"/>
+</svg>

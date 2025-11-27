@@ -1,0 +1,314 @@
+{
+  "experiment": {
+    "company": "NeuralFlow",
+    "industry": "artificial intelligence",
+    "date": "2025-11-27 05:31:08"
+  },
+  "baselines": {
+    "zero_shot": {
+      "method": "zero_shot",
+      "n_samples": 10,
+      "results": [
+        {
+          "sample": 1,
+          "fitness": 86,
+          "breakdown": {
+            "total": 86,
+            "legacy_score": 86,
+            "aesthetic": 85,
+            "golden_ratio": 76.6,
+            "color_harmony": 90.0,
+            "visual_interest": 90.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 2,
+          "fitness": 84,
+          "breakdown": {
+            "total": 84,
+            "legacy_score": 88,
+            "aesthetic": 80,
+            "golden_ratio": 75.1,
+            "color_harmony": 95.0,
+            "visual_interest": 70.0,
+            "professional": 90,
+            "technical": 88.3
+          }
+        },
+        {
+          "sample": 3,
+          "fitness": 84,
+          "breakdown": {
+            "total": 84,
+            "legacy_score": 88,
+            "aesthetic": 79,
+            "golden_ratio": 81.6,
+            "color_harmony": 95.0,
+            "visual_interest": 60.0,
+            "professional": 90,
+            "technical": 88.3
+          }
+        },
+        {
+          "sample": 4,
+          "fitness": 84,
+          "breakdown": {
+            "total": 84,
+            "legacy_score": 86,
+            "aesthetic": 82,
+            "golden_ratio": 68.8,
+            "color_harmony": 90.0,
+            "visual_interest": 90.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 5,
+          "fitness": 80,
+          "breakdown": {
+            "total": 80,
+            "legacy_score": 86,
+            "aesthetic": 74,
+            "golden_ratio": 76.7,
+            "color_harmony": 60.0,
+            "visual_interest": 90.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 6,
+          "fitness": 84,
+          "breakdown": {
+            "total": 84,
+            "legacy_score": 86,
+            "aesthetic": 81,
+            "golden_ratio": 64.4,
+            "color_harmony": 90.0,
+            "visual_interest": 90.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 7,
+          "fitness": 79,
+          "breakdown": {
+            "total": 79,
+            "legacy_score": 86,
+            "aesthetic": 72,
+            "golden_ratio": 70.7,
+            "color_harmony": 60.0,
+            "visual_interest": 90.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 8,
+          "fitness": 82,
+          "breakdown": {
+            "total": 82,
+            "legacy_score": 86,
+            "aesthetic": 78,
+            "golden_ratio": 74.0,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 9,
+          "fitness": 86,
+          "breakdown": {
+            "total": 86,
+            "legacy_score": 86,
+            "aesthetic": 86,
+            "golden_ratio": 79.6,
+            "color_harmony": 90.0,
+            "visual_interest": 90.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 10,
+          "fitness": 86,
+          "breakdown": {
+            "total": 86,
+            "legacy_score": 86,
+            "aesthetic": 85,
+            "golden_ratio": 76.0,
+            "color_harmony": 90.0,
+            "visual_interest": 90.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        }
+      ],
+      "avg_fitness": 83.5,
+      "max_fitness": 86
+    },
+    "cot": {
+      "method": "chain_of_thought",
+      "n_samples": 10,
+      "results": [
+        {
+          "sample": 1,
+          "fitness": 81,
+          "breakdown": {
+            "total": 81,
+            "legacy_score": 87,
+            "aesthetic": 73,
+            "golden_ratio": 61.4,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 90,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 2,
+          "fitness": 79,
+          "breakdown": {
+            "total": 79,
+            "legacy_score": 86,
+            "aesthetic": 71,
+            "golden_ratio": 62.3,
+            "color_harmony": 90.0,
+            "visual_interest": 60.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 3,
+          "fitness": 80,
+          "breakdown": {
+            "total": 80,
+            "legacy_score": 86,
+            "aesthetic": 73,
+            "golden_ratio": 58.7,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 4,
+          "fitness": 77,
+          "breakdown": {
+            "total": 77,
+            "legacy_score": 84,
+            "aesthetic": 67,
+            "golden_ratio": 73.3,
+            "color_harmony": 60.0,
+            "visual_interest": 70.0,
+            "professional": 88,
+            "technical": 85.3
+          }
+        },
+        {
+          "sample": 5,
+          "fitness": 82,
+          "breakdown": {
+            "total": 82,
+            "legacy_score": 86,
+            "aesthetic": 78,
+            "golden_ratio": 73.2,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 88,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 6,
+          "fitness": 81,
+          "breakdown": {
+            "total": 81,
+            "legacy_score": 84,
+            "aesthetic": 76,
+            "golden_ratio": 69.3,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 88,
+            "technical": 85.3
+          }
+        },
+        {
+          "sample": 7,
+          "fitness": 84,
+          "breakdown": {
+            "total": 84,
+            "legacy_score": 87,
+            "aesthetic": 80,
+            "golden_ratio": 79.0,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 90,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 8,
+          "fitness": 82,
+          "breakdown": {
+            "total": 82,
+            "legacy_score": 87,
+            "aesthetic": 75,
+            "golden_ratio": 65.7,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 90,
+            "technical": 87.1
+          }
+        },
+        {
+          "sample": 9,
+          "fitness": 78,
+          "breakdown": {
+            "total": 78,
+            "legacy_score": 80,
+            "aesthetic": 75,
+            "golden_ratio": 65.2,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 81,
+            "technical": 84.1
+          }
+        },
+        {
+          "sample": 10,
+          "fitness": 82,
+          "breakdown": {
+            "total": 82,
+            "legacy_score": 87,
+            "aesthetic": 75,
+            "golden_ratio": 65.5,
+            "color_harmony": 90.0,
+            "visual_interest": 70.0,
+            "professional": 90,
+            "technical": 87.1
+          }
+        }
+      ],
+      "avg_fitness": 80.6,
+      "max_fitness": 84
+    }
+  },
+  "evolutionary": {
+    "method": "evolutionary",
+    "num_generations": 5,
+    "population_size": 10,
+    "history": [
+      {
+        "generation": 1,
+        "mean_fitness": 84.9,
+        "std_fitness": 3.5623026261113755,
+        "max_fitness": 

@@ -1,0 +1,90 @@
+[
+  {
+    "generation": 0,
+    "mean_fitness": 83.0,
+    "std_fitness": 1.756701454431002,
+    "max_fitness": 86.1,
+    "min_fitness": 79.5,
+    "best_individual_id": "gen0_mock_8610"
+  },
+  {
+    "generation": 1,
+    "mean_fitness": 84.28186896516489,
+    "std_fitness": 1.616165338076522,
+    "max_fitness": 87.41189933963389,
+    "min_fitness": 81.8576209580501,
+    "best_individual_id": "gen1_mock_8741"
+  },
+  {
+    "generation": 2,
+    "mean_fitness": 85.53994998656526,
+    "std_fitness": 1.4868721110304002,
+    "max_fitness": 88.64752564877358,
+    "min_fitness": 83.30964182001966,
+    "best_individual_id": "gen2_mock_8864"
+  },
+  {
+    "generation": 3,
+    "mean_fitness": 87.2532701277799,
+    "std_fitness": 1.3679223421479683,
+    "max_fitness": 90.06787460818856,
+    "min_fitness": 85.20138661455795,
+    "best_individual_id": "gen3_mock_9006"
+  },
+  {
+    "generation": 4,
+    "mean_fitness": 88.16861432004298,
+    "std_fitness": 1.2584885547761309,
+    "max_fitness": 90.53130426242097,
+    "min_fitness": 86.28088148787879,
+    "best_individual_id": "gen4_mock_9053"
+  },
+  {
+    "generation": 5,
+    "mean_fitness": 88.86142480034256,
+    "std_fitness": 1.1578094703940405,
+    "max_fitness": 91.08134686356391,
+    "min_fitness": 87.1247105947515,
+    "best_individual_id": "gen5_mock_9108"
+  },
+  {
+    "generation": 6,
+    "mean_fitness": 89.85413079183236,
+    "std_fitness": 1.0651847127625174,
+    "max_fitness": 91.65710711306275,
+    "min_fitness": 88.25635372268859,
+    "best_individual_id": "gen6_mock_9165"
+  },
+  {
+    "generation": 7,
+    "mean_fitness": 89.76209305762507,
+    "std_fitness": 0.979969935741516,
+    "max_fitness": 91.90775804771661,
+    "min_fitness": 88.29213815401279,
+    "best_individual_id": "gen7_mock_9190"
+  },
+  {
+    "generation": 8,
+    "mean_fitness": 90.04871527113308,
+    "std_fitness": 0.9015723408821947,
+    "max_fitness": 92.08567618688768,
+    "min_fitness": 88.69635675980979,
+    "best_individual_id": "gen8_mock_9208"
+  },
+  {
+    "generation": 9,
+    "mean_fitness": 90.24637953172144,
+    "std_fitness": 0.8294465536116192,
+    "max_fitness": 92.3722641686106,
+    "min_fitness": 89.00220970130401,
+    "best_individual_id": "gen9_mock_9237"
+  },
+  {
+    "generation": 10,
+    "mean_fitness": 90.47347705898474,
+    "std_fitness": 0.7630908293226897,
+    "max_fitness": 92.55006289456199,
+    "min_fitness": 89.3288408150007,
+    "best_individual_id": "gen10_mock_9255"
+  }
+]

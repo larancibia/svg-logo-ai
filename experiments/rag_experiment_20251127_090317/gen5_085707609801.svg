@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      /* Violet for the central intelligence/node */
+      .core-color { fill: #8b5cf6; }
+      /* Amber for the data flow and accents, creating a complementary contrast */
+      .flow-color { stroke: #fbbf24; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .flow-thin { stroke-width: 1.5; }
+      .flow-medium { stroke-width: 2.5; }
+      .flow-thick { stroke-width: 3.5; }
+      .accent-color { fill: #fbbf24; } /* Matches flow color for harmony */
+    </style>
+  </defs>
+
+  <!-- Central Neural Core: An abstract, dynamic representation of an AI processing unit, slightly asymmetrical. (2 elements) -->
+  <path d="M48 28 Q42 38 48 48 Q58 58 68 50 Q60 40 50 30 Z" class="core-color"/>
+  <!-- Inner spark or energy point within the core, adding dynamism -->
+  <path d="M52 38 C56 40 54 44 50 42 C46 40 48 36 52 38 Z" class="accent-color"/>
+
+  <!-- Dynamic Flow Paths: Representing data streams and neural connections, leveraging asymmetrical balance and closure. -->
+  <!-- Primary flow paths, thicker, establishing main movement and creating distinct negative space (4 elements) -->
+  <path d="M25 50 Q30 30 50 25 M50 25 Q70 20 75 35" class="flow-color flow-medium"/>
+  <path d="M75 50 Q70 70 50 75 M50 75 Q30 80 25 65" class="flow-color flow-medium"/>
+  <path d="M20 40 Q35 20 50 30" class="flow-color flow-thick"/>
+  <path d="M80 60 Q65 80 50 70" class="flow-color flow-thick"/>
+
+  <!-- Secondary flow paths, thinner, adding complexity, detail, and hinting at larger connections (8 elements) -->
+  <path d="M30 60 C40 75 60 75 70 60" class="flow-color flow-thin"/>
+  <path d="M70 40 C60 25 40 25 30 40" class="flow-color flow-thin"/>
+  <path d="M40 20 C55 10 60 25 60 40" class="flow-color flow-medium"/>
+  <path d="M60 80 C45 90 40 75 40 60" class="flow-color flow-medium"/>
+  <!-- Paths designed for Gestalt closure, implying continuation beyond the frame -->
+  <path d="M25 35 Q15 25 25 15" class="flow-color flow-thin"/>
+  <path d="M75 65 Q85 75 75 85" class="flow-color flow-thin"/>
+  <path d="M20 70 Q10 80 20 90" class="flow-color flow-thin"/>
+  <path d="M80 30 Q90 20 80 10" class="flow-color flow-thin"/>
+
+  <!-- Tertiary Accent Nodes: Small nodes or energy bursts, adding emphasis and reinforcing connectivity. (13 elements) -->
+  <circle cx="28" cy="45" r="1.5" class="accent-color"/>
+  <circle cx="72" cy="55" r="1.5" class="accent-color"/>
+  <circle cx="50" cy="20" r="1.5" class="accent-color"/>
+  <circle cx="50" cy="80" r="1.5" class="accent-color"/>
+  <circle cx="35" cy="70" r="1.5" class="accent-color"/>
+  <circle cx="65" cy="30" r="1.5" class="accent-color"/>
+  <circle cx="20" cy="25" r="1.5" class="accent-color"/>
+  <circle cx="80" cy="75" r="1.5" class="accent-color"/>
+  <circle cx="45" cy="55" r="1.5" class="accent-color"/> <!-- Near core -->
+  <circle cx="55" cy="45" r="1.5" class="accent-color"/> <!-- Near core -->
+  <circle cx="15" cy="50" r="1.5" class="accent-color"/>
+  <circle cx="85" cy="50" r="1.5" class="accent-color"/>
+  <circle cx="50" cy="50" r="2.5" class="accent-color"/> <!-- Central accent for the core -->
+
+</svg>

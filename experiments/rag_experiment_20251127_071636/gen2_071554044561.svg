@@ -1,0 +1,62 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Main color palette */
+      /* Darker green for bold core elements and nodes */
+      .dark-g {
+        stroke: #10b981;
+        fill: none;
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      /* Lighter green for flowing connections */
+      .light-g {
+        stroke: #6ee7b7;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      /* Darker green for filled nodes */
+      .node-g {
+        fill: #10b981;
+      }
+    </style>
+  </defs>
+
+  <!-- Core Neural Structure: Four bold, organic arcs creating an implied central mass (Gestalt closure) -->
+  <path d="M 35 40 C 30 25, 50 20, 65 30" class="dark-g"/>
+  <path d="M 65 30 C 70 45, 50 60, 35 50" class="dark-g"/>
+  <path d="M 35 50 C 30 65, 50 80, 65 70" class="dark-g"/>
+  <path d="M 65 70 C 70 55, 50 40, 35 40" class="dark-g"/>
+
+  <!-- Inner Flow & Connection Lines: Lighter, thinner strokes weaving through the core -->
+  <path d="M 40 45 Q 50 50 60 45" class="light-g"/>
+  <path d="M 40 55 Q 50 50 60 55" class="light-g"/>
+  <path d="M 45 40 Q 50 50 45 60" class="light-g"/>
+  <path d="M 55 40 Q 50 50 55 60" class="light-g"/>
+
+  <!-- Outer Flow & Radiating Lines: Extending connections outwards, enhancing organic flow -->
+  <path d="M 25 45 C 15 35, 30 20, 45 25" class="light-g"/>
+  <path d="M 75 55 C 85 65, 70 80, 55 75" class="light-g"/>
+  <path d="M 50 20 C 60 10, 70 20, 75 30" class="light-g"/>
+  <path d="M 50 80 C 40 90, 30 80, 25 70" class="light-g"/>
+  <path d="M 30 70 Q 20 80 15 65" class="light-g"/>
+  <path d="M 70 30 Q 80 20 85 35" class="light-g"/>
+
+  <!-- Neural Nodes: Filled circles representing data points or synapses -->
+  <circle cx="35" cy="40" r="2" class="node-g"/>
+  <circle cx="65" cy="30" r="2" class="node-g"/>
+  <circle cx="35" cy="50" r="2" class="node-g"/>
+  <circle cx="65" cy="70" r="2" class="node-g"/>
+
+  <circle cx="50" cy="50" r="2.5" class="node-g"/> <!-- Central node for emphasis -->
+
+  <circle cx="25" cy="45" r="1.5" class="node-g"/>
+  <circle cx="45" cy="25" r="1.5" class="node-g"/>
+  <circle cx="75" cy="55" r="1.5" class="node-g"/>
+  <circle cx="55" cy="75" r="1.5" class="node-g"/>
+  <circle cx="75" cy="30" r="1.5" class="node-g"/>
+  <circle cx="25" cy="70" r="1.5" class="node-g"/>
+</svg>

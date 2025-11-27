@@ -1,0 +1,62 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Define primary color palette for NeuralFlow */
+      .color-dark { fill: #3730a3; } /* Deep blue-purple, representing depth and technology */
+      .color-light { fill: #10b981; } /* Bright green, representing growth, intelligence, and data */
+      .stroke-dark { stroke: #3730a3; }
+      .stroke-light { stroke: #10b981; }
+
+      /* Common styles for flowing path elements */
+      .flow-path {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3;
+      }
+
+      /* Style for small node elements */
+      .node-small {
+        r: 2.5; /* Radius for small nodes/synapses */
+      }
+    </style>
+  </defs>
+
+  <!-- Central "Neural Core" (2 elements) -->
+  <!-- Main core body: an organic, slightly asymmetrical shape representing the central processing unit or "brain" -->
+  <path class="color-dark" d="M45 20 C25 10 5 35 15 60 Q25 85 50 85 Q75 85 85 60 C95 35 75 10 55 20 Q45 15 45 20Z"/>
+  <!-- Inner glowing part: a slightly smaller, overlapping shape in the lighter color to create depth, energy, and highlight activity within the core -->
+  <path class="color-light" d="M48 25 C30 18 15 40 25 60 Q35 78 50 78 Q65 78 75 60 C85 40 70 18 52 25 Q48 22 48 25Z"/>
+
+  <!-- Main Flow Streams (4 elements) -->
+  <!-- These larger paths represent primary data pathways or significant neural connections, showcasing continuous flow -->
+  <path class="flow-path stroke-light" d="M50 78 Q60 90 80 85 C95 80 90 60 78 50"/>
+  <path class="flow-path stroke-light" d="M25 60 Q10 70 10 85 Q20 95 40 90"/>
+  <path class="flow-path stroke-light" d="M52 25 Q70 10 85 15 Q95 30 80 40"/>
+  <path class="flow-path stroke-light" d="M15 60 Q5 40 10 25 Q20 10 40 15"/>
+
+  <!-- Minor Connecting Paths / Signals (10 elements) -->
+  <!-- Smaller, more numerous paths representing finer connections, signal transmission, and distributed processing -->
+  <path class="flow-path stroke-dark" d="M40 15 Q30 5 20 10"/>
+  <path class="flow-path stroke-light" d="M80 40 Q70 50 65 60"/>
+  <path class="flow-path stroke-dark" d="M25 60 Q20 70 30 75"/>
+  <path class="flow-path stroke-light" d="M40 90 Q50 95 60 85"/>
+  <path class="flow-path stroke-dark" d="M78 50 Q70 40 60 35"/>
+  <path class="flow-path stroke-light" d="M10 85 Q0 70 10 60"/>
+  <path class="flow-path stroke-dark" d="M45 20 Q55 10 65 15"/>
+  <path class="flow-path stroke-light" d="M15 60 Q25 50 30 45"/>
+  <path class="flow-path stroke-dark" d="M80 85 Q70 95 60 90"/>
+  <path class="flow-path stroke-light" d="M50 78 Q40 85 30 75"/>
+
+  <!-- Small "Nodes" or "Synapses" (9 elements) -->
+  <!-- Circles indicating individual neurons, data points, or critical connection points within the network -->
+  <circle class="node-small color-light" cx="80" cy="40"/>
+  <circle class="node-small color-dark" cx="65" cy="60"/>
+  <circle class="node-small color-light" cx="30" cy="75"/>
+  <circle class="node-small color-dark" cx="60" cy="85"/>
+  <circle class="node-small color-light" cx="20" cy="10"/>
+  <circle class="node-small color-dark" cx="60" cy="35"/>
+  <circle class="node-small color-light" cx="10" cy="60"/>
+  <circle class="node-small color-dark" cx="65" cy="15"/>
+  <circle class="node-small color-light" cx="30" cy="45"/>
+</svg>

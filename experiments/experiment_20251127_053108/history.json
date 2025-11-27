@@ -1,0 +1,42 @@
+[
+  {
+    "generation": 1,
+    "mean_fitness": 84.9,
+    "std_fitness": 3.5623026261113755,
+    "max_fitness": 88,
+    "min_fitness": 78,
+    "best_individual_id": "gen1_051015672039"
+  },
+  {
+    "generation": 2,
+    "mean_fitness": 84.9,
+    "std_fitness": 3.935733730830885,
+    "max_fitness": 90,
+    "min_fitness": 79,
+    "best_individual_id": "gen2_051300076193"
+  },
+  {
+    "generation": 3,
+    "mean_fitness": 86.3,
+    "std_fitness": 3.769615364994153,
+    "max_fitness": 90,
+    "min_fitness": 78,
+    "best_individual_id": "gen3_051520724964"
+  },
+  {
+    "generation": 4,
+    "mean_fitness": 86.6,
+    "std_fitness": 2.764054992217051,
+    "max_fitness": 90,
+    "min_fitness": 80,
+    "best_individual_id": "gen4_052128382939"
+  },
+  {
+    "generation": 5,
+    "mean_fitness": 88.2,
+    "std_fitness": 1.16619037896906,
+    "max_fitness": 90,
+    "min_fitness": 87,
+    "best_individual_id": "gen5_052653417498"
+  }
+]

@@ -1,0 +1,79 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    NeuralFlow Logo: A symbolic representation of neural connections, data flow, and AI processing.
+    Style: elegant, abstract, symbolic, bold.
+    Aesthetic Principles: Golden Ratio, Symmetrical Composition, Creative Negative Space.
+    Colors: #a78bfa (primary purple), #c4b5fd (secondary lighter purple).
+    Complexity: 26 elements.
+  -->
+
+  <!-- Central Core (2 elements) - Represents the central AI processing unit. -->
+  <!-- Outer core, darker purple. -->
+  <circle cx="50" cy="50" r="10" fill="#a78bfa"/>
+  <!-- Inner core, lighter purple. Its radius (6.18) is based on the Golden Ratio (10 / 1.618 ≈ 6.18). -->
+  <circle cx="50" cy="50" r="6.18" fill="#c4b5fd"/>
+
+  <!-- Neural Pathways / Data Streams (8 sets of 3 elements each = 24 elements) -->
+  <!-- Each set forms a 'lobe' or 'tendril' and consists of a main flowing path, an inner highlight path,
+       and a small node at its tip, suggesting data points or neural synapses.
+       These 8 sets are rotated symmetrically around the center, creating a dynamic, interconnected pattern. -->
+
+  <!-- Lobe 1 (0 degrees rotation) -->
+  <g transform="rotate(0 50 50)">
+    <!-- Main flowing path, bold and elegant. -->
+    <path d="M 50 40 C 65 20, 80 25, 85 45 C 80 65, 65 80, 50 60 Q 45 50, 50 40 Z" fill="#a78bfa"/>
+    <!-- Inner highlight path, creating depth and a sense of internal flow. -->
+    <path d="M 50 43 C 62 25, 75 28, 80 45 C 75 62, 62 75, 50 57 Q 48 50, 50 43 Z" fill="#c4b5fd"/>
+    <!-- Small node at the tip, indicating a connection point or concentrated data. -->
+    <circle cx="82" cy="45" r="3" fill="#a78bfa"/>
+  </g>
+
+  <!-- Lobe 2 (45 degrees rotation) -->
+  <g transform="rotate(45 50 50)">
+    <path d="M 50 40 C 65 20, 80 25, 85 45 C 80 65, 65 80, 50 60 Q 45 50, 50 40 Z" fill="#a78bfa"/>
+    <path d="M 50 43 C 62 25, 75 28, 80 45 C 75 62, 62 75, 50 57 Q 48 50, 50 43 Z" fill="#c4b5fd"/>
+    <circle cx="82" cy="45" r="3" fill="#a78bfa"/>
+  </g>
+
+  <!-- Lobe 3 (90 degrees rotation) -->
+  <g transform="rotate(90 50 50)">
+    <path d="M 50 40 C 65 20, 80 25, 85 45 C 80 65, 65 80, 50 60 Q 45 50, 50 40 Z" fill="#a78bfa"/>
+    <path d="M 50 43 C 62 25, 75 28, 80 45 C 75 62, 62 75, 50 57 Q 48 50, 50 43 Z" fill="#c4b5fd"/>
+    <circle cx="82" cy="45" r="3" fill="#a78bfa"/>
+  </g>
+
+  <!-- Lobe 4 (135 degrees rotation) -->
+  <g transform="rotate(135 50 50)">
+    <path d="M 50 40 C 65 20, 80 25, 85 45 C 80 65, 65 80, 50 60 Q 45 50, 50 40 Z" fill="#a78bfa"/>
+    <path d="M 50 43 C 62 25, 75 28, 80 45 C 75 62, 62 75, 50 57 Q 48 50, 50 43 Z" fill="#c4b5fd"/>
+    <circle cx="82" cy="45" r="3" fill="#a78bfa"/>
+  </g>
+
+  <!-- Lobe 5 (180 degrees rotation) -->
+  <g transform="rotate(180 50 50)">
+    <path d="M 50 40 C 65 20, 80 25, 85 45 C 80 65, 65 80, 50 60 Q 45 50, 50 40 Z" fill="#a78bfa"/>
+    <path d="M 50 43 C 62 25, 75 28, 80 45 C 75 62, 62 75, 50 57 Q 48 50, 50 43 Z" fill="#c4b5fd"/>
+    <circle cx="82" cy="45" r="3" fill="#a78bfa"/>
+  </g>
+
+  <!-- Lobe 6 (225 degrees rotation) -->
+  <g transform="rotate(225 50 50)">
+    <path d="M 50 40 C 65 20, 80 25, 85 45 C 80 65, 65 80, 50 60 Q 45 50, 50 40 Z" fill="#a78bfa"/>
+    <path d="M 50 43 C 62 25, 75 28, 80 45 C 75 62, 62 75, 50 57 Q 48 50, 50 43 Z" fill="#c4b5fd"/>
+    <circle cx="82" cy="45" r="3" fill="#a78bfa"/>
+  </g>
+
+  <!-- Lobe 7 (270 degrees rotation) -->
+  <g transform="rotate(270 50 50)">
+    <path d="M 50 40 C 65 20, 80 25, 85 45 C 80 65, 65 80, 50 60 Q 45 50, 50 40 Z" fill="#a78bfa"/>
+    <path d="M 50 43 C 62 25, 75 28, 80 45 C 75 62, 62 75, 50 57 Q 48 50, 50 43 Z" fill="#c4b5fd"/>
+    <circle cx="82" cy="45" r="3" fill="#a78bfa"/>
+  </g>
+
+  <!-- Lobe 8 (315 degrees rotation) -->
+  <g transform="rotate(315 50 50)">
+    <path d="M 50 40 C 65 20, 80 25, 85 45 C 80 65, 65 80, 50 60 Q 45 50, 50 40 Z" fill="#a78bfa"/>
+    <path d="M 50 43 C 62 25, 75 28, 80 45 C 75 62, 62 75, 50 57 Q 48 50, 50 43 Z" fill="#c4b5fd"/>
+    <circle cx="82" cy="45" r="3" fill="#a78bfa"/>
+  </g>
+</svg>

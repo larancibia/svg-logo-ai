@@ -1,0 +1,62 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    NeuralFlow Logo: Symbolic, abstract, organic, elegant representation of AI and data flow.
+    - Complexity: 28 elements (optimal range: 20-40).
+    - Aesthetic Principles: Golden Ratio (φ≈1.618) applied to key proportions (e.g., maximum extents of outer vs. inner paths),
+      3-fold rotational symmetry, and creative use of negative space.
+    - Color Scheme: #a78bfa (lighter purple) and #8b5cf6 (darker purple).
+  -->
+
+  <!-- Central Node (1 element) -->
+  <circle cx="50" cy="50" r="6" fill="#8b5cf6"/>
+
+  <!-- Main Flowing Petals (3 elements - Darker Purple) -->
+  <!-- These paths define the primary, robust structure of the neural flow. -->
+  <g id="main-flow-petal-group" fill="#8b5cf6">
+    <path d="M50 50 C65 40, 80 20, 85 30 C90 45, 80 70, 60 75 C40 80, 25 65, 20 40 C25 20, 40 25, 50 30 C55 35, 50 45, 50 50 Z"/>
+    <path d="M50 50 C65 40, 80 20, 85 30 C90 45, 80 70, 60 75 C40 80, 25 65, 20 40 C25 20, 40 25, 50 30 C55 35, 50 45, 50 50 Z" transform="rotate(120 50 50)"/>
+    <path d="M50 50 C65 40, 80 20, 85 30 C90 45, 80 70, 60 75 C40 80, 25 65, 20 40 C25 20, 40 25, 50 30 C55 35, 50 45, 50 50 Z" transform="rotate(240 50 50)"/>
+  </g>
+
+  <!-- Inner Flow Path Channels (3 elements - Lighter Purple) -->
+  <!-- These paths, nested within the darker petals, create a dynamic sense of flowing channels and leverage negative space. -->
+  <g id="inner-flow-channel-group" fill="#a78bfa">
+    <path d="M50 50 C58 45, 70 28, 75 33 C78 45, 70 60, 55 65 C40 70, 30 55, 30 40 C35 30, 45 35, 50 40 C52 45, 50 48, 50 50 Z"/>
+    <path d="M50 50 C58 45, 70 28, 75 33 C78 45, 70 60, 55 65 C40 70, 30 55, 30 40 C35 30, 45 35, 50 40 C52 45, 50 48, 50 50 Z" transform="rotate(120 50 50)"/>
+    <path d="M50 50 C58 45, 70 28, 75 33 C78 45, 70 60, 55 65 C40 70, 30 55, 30 40 C35 30, 45 35, 50 40 C52 45, 50 48, 50 50 Z" transform="rotate(240 50 50)"/>
+  </g>
+
+  <!-- Inner Channel Data Nodes (9 elements - Darker Purple) -->
+  <!-- Small circles representing data points or synaptic connections within the flow channels. -->
+  <g id="data-nodes-group" fill="#8b5cf6">
+    <!-- Arm 1 nodes -->
+    <circle cx="68.79" cy="43.16" r="2"/>
+    <circle cx="69.69" cy="53.47" r="2"/>
+    <circle cx="65.32" cy="62.86" r="2"/>
+    <!-- Arm 2 nodes (rotated 120 deg) -->
+    <circle cx="68.79" cy="43.16" r="2" transform="rotate(120 50 50)"/>
+    <circle cx="69.69" cy="53.47" r="2" transform="rotate(120 50 50)"/>
+    <circle cx="65.32" cy="62.86" r="2" transform="rotate(120 50 50)"/>
+    <!-- Arm 3 nodes (rotated 240 deg) -->
+    <circle cx="68.79" cy="43.16" r="2" transform="rotate(240 50 50)"/>
+    <circle cx="69.69" cy="53.47" r="2" transform="rotate(240 50 50)"/>
+    <circle cx="65.32" cy="62.86" r="2" transform="rotate(240 50 50)"/>
+  </g>
+
+  <!-- Background Ring Nodes (12 elements - Lighter Purple) -->
+  <!-- A subtle outer ring of nodes to complete the cosmic/network aesthetic. -->
+  <g id="bg-nodes-group" fill="#a78bfa">
+    <circle cx="90" cy="50" r="1.5"/>
+    <circle cx="84.64" cy="70" r="1.5"/>
+    <circle cx="70" cy="84.64" r="1.5"/>
+    <circle cx="50" cy="90" r="1.5"/>
+    <circle cx="29.99" cy="84.64" r="1.5"/>
+    <circle cx="15.36" cy="70" r="1.5"/>
+    <circle cx="10" cy="50" r="1.5"/>
+    <circle cx="15.36" cy="30" r="1.5"/>
+    <circle cx="29.99" cy="15.36" r="1.5"/>
+    <circle cx="50" cy="10" r="1.5"/>
+    <circle cx="70" cy="15.36" r="1.5"/>
+    <circle cx="84.64" cy="30" r="1.5"/>
+  </g>
+</svg>
