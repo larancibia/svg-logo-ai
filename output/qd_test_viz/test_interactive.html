@@ -1,0 +1,3806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QD Archive Visualization</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .controls {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        select, button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .grid-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .grid-view {
+            flex: 1;
+            min-width: 400px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: crosshair;
+        }
+        .info-panel {
+            min-width: 300px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .logo-preview {
+            margin-top: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Quality-Diversity Archive Visualization</h1>
+        <p>Interactive exploration of 5D behavior space</p>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">Coverage</div>
+                <div class="stat-value" id="coverage">0%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Occupied Cells</div>
+                <div class="stat-value" id="occupied">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg Fitness</div>
+                <div class="stat-value" id="avg-fitness">0.0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Max Fitness</div>
+                <div class="stat-value" id="max-fitness">0.0</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <label>X-Axis:</label>
+            <select id="x-dim">
+                <option value="0">Complexity</option>
+                <option value="1">Style</option>
+                <option value="2">Symmetry</option>
+                <option value="3">Color Richness</option>
+                <option value="4">Emotional Tone</option>
+            </select>
+
+            <label>Y-Axis:</label>
+            <select id="y-dim">
+                <option value="1">Style</option>
+                <option value="0">Complexity</option>
+                <option value="2">Symmetry</option>
+                <option value="3">Color Richness</option>
+                <option value="4">Emotional Tone</option>
+            </select>
+
+            <button onclick="renderGrid()">Update View</button>
+            <button onclick="exportData()">Export Data</button>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-view">
+                <h3>Behavior Space Projection</h3>
+                <canvas id="grid-canvas" width="500" height="500"></canvas>
+            </div>
+            <div class="info-panel">
+                <h3>Selection Info</h3>
+                <div id="selection-info">Click on a cell to see details</div>
+                <div class="logo-preview" id="logo-preview"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const archiveData = {
+  "dimensions": [
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "dimension_names": [
+    "Complexity",
+    "Style",
+    "Symmetry",
+    "Color Richness",
+    "Emotional Tone"
+  ],
+  "entries": [
+    {
+      "logo_id": "logo_0",
+      "behavior": [
+        8,
+        9,
+        3,
+        7,
+        9
+      ],
+      "fitness": 81.4051917741946,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.007102345510849539
+      },
+      "genome": {
+        "company": "Company0"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_1",
+      "behavior": [
+        1,
+        5,
+        3,
+        8,
+        6
+      ],
+      "fitness": 84.63582652870863,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.161456337502344
+      },
+      "genome": {
+        "company": "Company1"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_2",
+      "behavior": [
+        6,
+        8,
+        6,
+        7,
+        8
+      ],
+      "fitness": 74.68653257702667,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.3499537130624457
+      },
+      "genome": {
+        "company": "Company2"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_3",
+      "behavior": [
+        8,
+        2,
+        2,
+        7,
+        8
+      ],
+      "fitness": 86.1641397717911,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.40917263282897287
+      },
+      "genome": {
+        "company": "Company3"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_4",
+      "behavior": [
+        4,
+        6,
+        8,
+        9,
+        2
+      ],
+      "fitness": 80.1209539474983,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.1521212003687633
+      },
+      "genome": {
+        "company": "Company4"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_5",
+      "behavior": [
+        7,
+        0,
+        4,
+        1,
+        8
+      ],
+      "fitness": 71.03796681232512,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.02227192346403528
+      },
+      "genome": {
+        "company": "Company5"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_6",
+      "behavior": [
+        4,
+        0,
+        2,
+        9,
+        8
+      ],
+      "fitness": 83.78550697956199,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.761630813244835
+      },
+      "genome": {
+        "company": "Company6"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_7",
+      "behavior": [
+        7,
+        2,
+        7,
+        0,
+        2
+      ],
+      "fitness": 82.40310465234055,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7607335088836481
+      },
+      "genome": {
+        "company": "Company7"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_8",
+      "behavior": [
+        2,
+        2,
+        9,
+        1,
+        7
+      ],
+      "fitness": 76.99116490399673,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.326599104682625
+      },
+      "genome": {
+        "company": "Company8"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_9",
+      "behavior": [
+        3,
+        4,
+        7,
+        5,
+        5
+      ],
+      "fitness": 84.08094519874683,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.5471662065302669
+      },
+      "genome": {
+        "company": "Company9"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_10",
+      "behavior": [
+        4,
+        3,
+        9,
+        5,
+        3
+      ],
+      "fitness": 92.41149605096228,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.512402175637002
+      },
+      "genome": {
+        "company": "Company10"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_11",
+      "behavior": [
+        8,
+        8,
+        8,
+        2,
+        5
+      ],
+      "fitness": 76.66541881718238,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.48158986455622266
+      },
+      "genome": {
+        "company": "Company11"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_12",
+      "behavior": [
+        8,
+        1,
+        3,
+        7,
+        7
+      ],
+      "fitness": 91.64098846049589,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7162435701895264
+      },
+      "genome": {
+        "company": "Company12"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_13",
+      "behavior": [
+        4,
+        1,
+        8,
+        9,
+        7
+      ],
+      "fitness": 74.7125383209213,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.21293391866447853
+      },
+      "genome": {
+        "company": "Company13"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_14",
+      "behavior": [
+        1,
+        0,
+        3,
+        1,
+        9
+      ],
+      "fitness": 84.85508747727079,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.3108211411820062
+      },
+      "genome": {
+        "company": "Company14"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_15",
+      "behavior": [
+        2,
+        4,
+        7,
+        5,
+        9
+      ],
+      "fitness": 78.80461932595676,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8170229069389168
+      },
+      "genome": {
+        "company": "Company15"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_16",
+      "behavior": [
+        4,
+        5,
+        7,
+        3,
+        8
+      ],
+      "fitness": 82.20587914617579,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.40007317727285874
+      },
+      "genome": {
+        "company": "Company16"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_17",
+      "behavior": [
+        0,
+        1,
+        0,
+        3,
+        4
+      ],
+      "fitness": 76.34808194483402,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.07446040003190535
+      },
+      "genome": {
+        "company": "Company17"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_18",
+      "behavior": [
+        9,
+        3,
+        6,
+        5,
+        4
+      ],
+      "fitness": 73.00519547647114,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8556515810060297
+      },
+      "genome": {
+        "company": "Company18"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_19",
+      "behavior": [
+        0,
+        6,
+        1,
+        4,
+        7
+      ],
+      "fitness": 70.37141582722879,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9702650032942202
+      },
+      "genome": {
+        "company": "Company19"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_20",
+      "behavior": [
+        1,
+        1,
+        0,
+        1,
+        8
+      ],
+      "fitness": 93.95888680407069,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.003977255799964996
+      },
+      "genome": {
+        "company": "Company20"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_21",
+      "behavior": [
+        0,
+        8,
+        4,
+        4,
+        6
+      ],
+      "fitness": 73.16501337895401,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7100171934230713
+      },
+      "genome": {
+        "company": "Company21"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_22",
+      "behavior": [
+        7,
+        0,
+        2,
+        7,
+        4
+      ],
+      "fitness": 87.36666014910887,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.24712669996454895
+      },
+      "genome": {
+        "company": "Company22"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_23",
+      "behavior": [
+        6,
+        6,
+        5,
+        8,
+        7
+      ],
+      "fitness": 75.90658905614171,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8456784724910736
+      },
+      "genome": {
+        "company": "Company23"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_24",
+      "behavior": [
+        8,
+        3,
+        9,
+        1,
+        1
+      ],
+      "fitness": 72.51441971617727,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6907794118265546
+      },
+      "genome": {
+        "company": "Company24"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_25",
+      "behavior": [
+        3,
+        4,
+        3,
+        1,
+        4
+      ],
+      "fitness": 71.5811689866636,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9012690514861756
+      },
+      "genome": {
+        "company": "Company25"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_26",
+      "behavior": [
+        4,
+        0,
+        7,
+        7,
+        9
+      ],
+      "fitness": 88.07311512646518,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.4588768806016924
+      },
+      "genome": {
+        "company": "Company26"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_27",
+      "behavior": [
+        7,
+        6,
+        6,
+        6,
+        0
+      ],
+      "fitness": 87.49512803710657,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.49551107458584176
+      },
+      "genome": {
+        "company": "Company27"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_28",
+      "behavior": [
+        8,
+        1,
+        8,
+        3,
+        2
+      ],
+      "fitness": 77.84736423032047,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8980559967362994
+      },
+      "genome": {
+        "company": "Company28"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_29",
+      "behavior": [
+        3,
+        6,
+        7,
+        0,
+        1
+      ],
+      "fitness": 88.3246345814,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.28316743011509393
+      },
+      "genome": {
+        "company": "Company29"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_30",
+      "behavior": [
+        3,
+        6,
+        8,
+        1,
+        1
+      ],
+      "fitness": 75.19378687665804,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6823434313315362
+      },
+      "genome": {
+        "company": "Company30"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_31",
+      "behavior": [
+        6,
+        8,
+        6,
+        6,
+        3
+      ],
+      "fitness": 89.98472006769248,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.34989219649921965
+      },
+      "genome": {
+        "company": "Company31"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_32",
+      "behavior": [
+        3,
+        6,
+        9,
+        4,
+        4
+      ],
+      "fitness": 79.39608255302633,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6816707666794477
+      },
+      "genome": {
+        "company": "Company32"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_33",
+      "behavior": [
+        1,
+        2,
+        2,
+        9,
+        1
+      ],
+      "fitness": 86.15159680126506,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.5687332389775013
+      },
+      "genome": {
+        "company": "Company33"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_34",
+      "behavior": [
+        9,
+        6,
+        1,
+        6,
+        7
+      ],
+      "fitness": 74.67910307612519,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.22309123509165418
+      },
+      "genome": {
+        "company": "Company34"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_35",
+      "behavior": [
+        8,
+        2,
+        5,
+        0,
+        7
+      ],
+      "fitness": 85.45612365864233,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6918661538838529
+      },
+      "genome": {
+        "company": "Company35"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_36",
+      "behavior": [
+        3,
+        0,
+        2,
+        2,
+        6
+      ],
+      "fitness": 76.74007124401732,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.3350273100969
+      },
+      "genome": {
+        "company": "Company36"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_37",
+      "behavior": [
+        8,
+        1,
+        8,
+        9,
+        2
+      ],
+      "fitness": 91.21153509572426,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.19290524347893145
+      },
+      "genome": {
+        "company": "Company37"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_38",
+      "behavior": [
+        0,
+        1,
+        3,
+        4,
+        0
+      ],
+      "fitness": 79.59653272480901,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6117878856129116
+      },
+      "genome": {
+        "company": "Company38"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_39",
+      "behavior": [
+        8,
+        1,
+        3,
+        9,
+        9
+      ],
+      "fitness": 73.79886207327982,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.1122887391306372
+      },
+      "genome": {
+        "company": "Company39"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_40",
+      "behavior": [
+        9,
+        1,
+        1,
+        0,
+        4
+      ],
+      "fitness": 76.27475316706013,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.2749073370276388
+      },
+      "genome": {
+        "company": "Company40"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_41",
+      "behavior": [
+        6,
+        0,
+        1,
+        9,
+        9
+      ],
+      "fitness": 90.5824322562228,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.5724523779858041
+      },
+      "genome": {
+        "company": "Company41"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_42",
+      "behavior": [
+        8,
+        9,
+        4,
+        4,
+        4
+      ],
+      "fitness": 81.66078381883736,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7586035175905829
+      },
+      "genome": {
+        "company": "Company42"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_43",
+      "behavior": [
+        2,
+        2,
+        2,
+        0,
+        3
+      ],
+      "fitness": 76.01943456840043,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.5010207039971089
+      },
+      "genome": {
+        "company": "Company43"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_44",
+      "behavior": [
+        7,
+        5,
+        7,
+        2,
+        3
+      ],
+      "fitness": 79.08902653477293,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6751082977046908
+      },
+      "genome": {
+        "company": "Company44"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_45",
+      "behavior": [
+        1,
+        9,
+        3,
+        3,
+        2
+      ],
+      "fitness": 83.27420549373859,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8098015805729863
+      },
+      "genome": {
+        "company": "Company45"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_46",
+      "behavior": [
+        6,
+        0,
+        2,
+        9,
+        7
+      ],
+      "fitness": 79.94510764931998,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9053445181170089
+      },
+      "genome": {
+        "company": "Company46"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_47",
+      "behavior": [
+        0,
+        7,
+        3,
+        6,
+        5
+      ],
+      "fitness": 73.43860472093115,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.4635400655439522
+      },
+      "genome": {
+        "company": "Company47"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_48",
+      "behavior": [
+        0,
+        4,
+        1,
+        7,
+        1
+      ],
+      "fitness": 94.52281919675737,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6829634704317699
+      },
+      "genome": {
+        "company": "Company48"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_49",
+      "behavior": [
+        0,
+        5,
+        4,
+        0,
+        5
+      ],
+      "fitness": 90.03725092475844,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.30853955397050725
+      },
+      "genome": {
+        "company": "Company49"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_50",
+      "behavior": [
+        9,
+        5,
+        7,
+        1,
+        9
+      ],
+      "fitness": 78.408898248633,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6965964623941515
+      },
+      "genome": {
+        "company": "Company50"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_51",
+      "behavior": [
+        7,
+        3,
+        8,
+        9,
+        3
+      ],
+      "fitness": 78.9944985910099,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6566097204714828
+      },
+      "genome": {
+        "company": "Company51"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_52",
+      "behavior": [
+        9,
+        0,
+        6,
+        3,
+        9
+      ],
+      "fitness": 79.26076589053767,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.2191585310812192
+      },
+      "genome": {
+        "company": "Company52"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_53",
+      "behavior": [
+        9,
+        8,
+        3,
+        3,
+        3
+      ],
+      "fitness": 93.4096425970266,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.17075572266593386
+      },
+      "genome": {
+        "company": "Company53"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_54",
+      "behavior": [
+        9,
+        8,
+        2,
+        0,
+        5
+      ],
+      "fitness": 73.31926186614557,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.908590338792831
+      },
+      "genome": {
+        "company": "Company54"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_55",
+      "behavior": [
+        6,
+        8,
+        4,
+        5,
+        3
+      ],
+      "fitness": 94.15297525436733,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.030328591170018848
+      },
+      "genome": {
+        "company": "Company55"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_56",
+      "behavior": [
+        2,
+        9,
+        8,
+        9,
+        5
+      ],
+      "fitness": 92.73606934584802,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.4076865317230832
+      },
+      "genome": {
+        "company": "Company56"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_57",
+      "behavior": [
+        2,
+        2,
+        0,
+        4,
+        3
+      ],
+      "fitness": 83.2862839239636,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.4297609922665486
+      },
+      "genome": {
+        "company": "Company57"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_58",
+      "behavior": [
+        9,
+        4,
+        2,
+        1,
+        1
+      ],
+      "fitness": 88.5440710940317,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6130503995372395
+      },
+      "genome": {
+        "company": "Company58"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_59",
+      "behavior": [
+        3,
+        4,
+        5,
+        5,
+        8
+      ],
+      "fitness": 85.86181268200174,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.24407487717916487
+      },
+      "genome": {
+        "company": "Company59"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_60",
+      "behavior": [
+        0,
+        8,
+        2,
+        0,
+        3
+      ],
+      "fitness": 76.86423158837512,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.013810229313077071
+      },
+      "genome": {
+        "company": "Company60"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_61",
+      "behavior": [
+        4,
+        3,
+        3,
+        6,
+        0
+      ],
+      "fitness": 71.01672935656991,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6136492151707049
+      },
+      "genome": {
+        "company": "Company61"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_62",
+      "behavior": [
+        3,
+        0,
+        7,
+        5,
+        6
+      ],
+      "fitness": 93.66389721629687,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.29263152464754927
+      },
+      "genome": {
+        "company": "Company62"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_63",
+      "behavior": [
+        8,
+        0,
+        5,
+        0,
+        7
+      ],
+      "fitness": 80.64796282173913,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.08060954258808195
+      },
+      "genome": {
+        "company": "Company63"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_64",
+      "behavior": [
+        3,
+        8,
+        4,
+        9,
+        7
+      ],
+      "fitness": 93.67588737397766,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7904339841284326
+      },
+      "genome": {
+        "company": "Company64"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_65",
+      "behavior": [
+        4,
+        3,
+        0,
+        1,
+        7
+      ],
+      "fitness": 90.04444092629328,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.4868608208446744
+      },
+      "genome": {
+        "company": "Company65"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_66",
+      "behavior": [
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "fitness": 75.10608130612059,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.3796116091750079
+      },
+      "genome": {
+        "company": "Company66"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_67",
+      "behavior": [
+        8,
+        1,
+        2,
+        0,
+        6
+      ],
+      "fitness": 77.55993488549453,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8606576759518935
+      },
+      "genome": {
+        "company": "Company67"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_68",
+      "behavior": [
+        7,
+        5,
+        3,
+        3,
+        6
+      ],
+      "fitness": 70.59949595815772,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.3638623459365071
+      },
+      "genome": {
+        "company": "Company68"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_69",
+      "behavior": [
+        0,
+        1,
+        6,
+        0,
+        4
+      ],
+      "fitness": 84.59927848865173,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.697039528995662
+      },
+      "genome": {
+        "company": "Company69"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_70",
+      "behavior": [
+        3,
+        2,
+        6,
+        8,
+        2
+      ],
+      "fitness": 87.21765823303208,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.07783969237064747
+      },
+      "genome": {
+        "company": "Company70"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_71",
+      "behavior": [
+        9,
+        2,
+        5,
+        9,
+        9
+      ],
+      "fitness": 85.71506364616269,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.30163264167575954
+      },
+      "genome": {
+        "company": "Company71"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_72",
+      "behavior": [
+        7,
+        0,
+        5,
+        0,
+        7
+      ],
+      "fitness": 84.50507158177298,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7387236176421029
+      },
+      "genome": {
+        "company": "Company72"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_73",
+      "behavior": [
+        2,
+        5,
+        1,
+        9,
+        0
+      ],
+      "fitness": 76.38581404789215,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.06499795887577176
+      },
+      "genome": {
+        "company": "Company73"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_74",
+      "behavior": [
+        5,
+        1,
+        9,
+        3,
+        2
+      ],
+      "fitness": 81.83090811711844,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.4061575911770623
+      },
+      "genome": {
+        "company": "Company74"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_75",
+      "behavior": [
+        4,
+        9,
+        4,
+        8,
+        3
+      ],
+      "fitness": 70.78383749162244,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8127123047113998
+      },
+      "genome": {
+        "company": "Company75"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_76",
+      "behavior": [
+        0,
+        8,
+        0,
+        9,
+        2
+      ],
+      "fitness": 77.99433467113788,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.5755460430255256
+      },
+      "genome": {
+        "company": "Company76"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_77",
+      "behavior": [
+        0,
+        9,
+        1,
+        1,
+        3
+      ],
+      "fitness": 91.31234196342658,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.2121406730804818
+      },
+      "genome": {
+        "company": "Company77"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_78",
+      "behavior": [
+        3,
+        2,
+        2,
+        5,
+        7
+      ],
+      "fitness": 89.01543861446174,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9894159299286792
+      },
+      "genome": {
+        "company": "Company78"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_79",
+      "behavior": [
+        8,
+        9,
+        7,
+        6,
+        4
+      ],
+      "fitness": 87.99824671641119,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7640502362451098
+      },
+      "genome": {
+        "company": "Company79"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_80",
+      "behavior": [
+        8,
+        9,
+        9,
+        1,
+        7
+      ],
+      "fitness": 83.78376584664652,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.44002739492344667
+      },
+      "genome": {
+        "company": "Company80"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_81",
+      "behavior": [
+        2,
+        6,
+        9,
+        1,
+        4
+      ],
+      "fitness": 82.60104053746659,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6330055989964614
+      },
+      "genome": {
+        "company": "Company81"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_82",
+      "behavior": [
+        9,
+        5,
+        4,
+        7,
+        4
+      ],
+      "fitness": 87.77971954059917,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.17452760117151678
+      },
+      "genome": {
+        "company": "Company82"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_83",
+      "behavior": [
+        8,
+        5,
+        9,
+        9,
+        2
+      ],
+      "fitness": 91.02750161682616,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.48192363691200724
+      },
+      "genome": {
+        "company": "Company83"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_84",
+      "behavior": [
+        8,
+        5,
+        1,
+        7,
+        9
+      ],
+      "fitness": 93.18702011437378,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.4683490835040929
+      },
+      "genome": {
+        "company": "Company84"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_85",
+      "behavior": [
+        8,
+        3,
+        1,
+        2,
+        4
+      ],
+      "fitness": 93.75767758228393,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.11248346773421247
+      },
+      "genome": {
+        "company": "Company85"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_86",
+      "behavior": [
+        3,
+        0,
+        2,
+        8,
+        8
+      ],
+      "fitness": 76.10691197400077,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8067400130316315
+      },
+      "genome": {
+        "company": "Company86"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_87",
+      "behavior": [
+        9,
+        0,
+        3,
+        6,
+        0
+      ],
+      "fitness": 77.48585240558472,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.39492830000045
+      },
+      "genome": {
+        "company": "Company87"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_88",
+      "behavior": [
+        5,
+        3,
+        2,
+        3,
+        2
+      ],
+      "fitness": 85.67704616557492,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7953925297975678
+      },
+      "genome": {
+        "company": "Company88"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_89",
+      "behavior": [
+        3,
+        0,
+        2,
+        1,
+        8
+      ],
+      "fitness": 93.23310210774947,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7448138658192648
+      },
+      "genome": {
+        "company": "Company89"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_90",
+      "behavior": [
+        4,
+        7,
+        6,
+        1,
+        9
+      ],
+      "fitness": 94.4444616977221,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.0802106923732756
+      },
+      "genome": {
+        "company": "Company90"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_91",
+      "behavior": [
+        0,
+        5,
+        8,
+        2,
+        6
+      ],
+      "fitness": 86.43972647712772,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7512198814947929
+      },
+      "genome": {
+        "company": "Company91"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_92",
+      "behavior": [
+        9,
+        3,
+        5,
+        4,
+        8
+      ],
+      "fitness": 83.93683122903504,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.42255150400314445
+      },
+      "genome": {
+        "company": "Company92"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_93",
+      "behavior": [
+        8,
+        4,
+        5,
+        0,
+        5
+      ],
+      "fitness": 72.32005061291856,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.1534193035796968
+      },
+      "genome": {
+        "company": "Company93"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_94",
+      "behavior": [
+        7,
+        8,
+        3,
+        3,
+        3
+      ],
+      "fitness": 82.18415107573516,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.5056996763375502
+      },
+      "genome": {
+        "company": "Company94"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_95",
+      "behavior": [
+        8,
+        8,
+        2,
+        4,
+        3
+      ],
+      "fitness": 84.64872160106111,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.1600585214204423
+      },
+      "genome": {
+        "company": "Company95"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_96",
+      "behavior": [
+        4,
+        7,
+        3,
+        6,
+        4
+      ],
+      "fitness": 78.58570876719526,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.1683003496266936
+      },
+      "genome": {
+        "company": "Company96"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_97",
+      "behavior": [
+        4,
+        7,
+        2,
+        9,
+        4
+      ],
+      "fitness": 87.1248357624906,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6851851798080282
+      },
+      "genome": {
+        "company": "Company97"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_98",
+      "behavior": [
+        5,
+        6,
+        9,
+        9,
+        9
+      ],
+      "fitness": 75.75531705519465,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.22152704162076775
+      },
+      "genome": {
+        "company": "Company98"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_99",
+      "behavior": [
+        1,
+        0,
+        2,
+        2,
+        5
+      ],
+      "fitness": 88.1469691823275,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9517304284927075
+      },
+      "genome": {
+        "company": "Company99"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_100",
+      "behavior": [
+        5,
+        3,
+        8,
+        4,
+        5
+      ],
+      "fitness": 81.83082419081656,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.617417645822526
+      },
+      "genome": {
+        "company": "Company100"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_101",
+      "behavior": [
+        3,
+        3,
+        7,
+        3,
+        7
+      ],
+      "fitness": 76.06226721036211,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.2087822692120762
+      },
+      "genome": {
+        "company": "Company101"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_102",
+      "behavior": [
+        9,
+        8,
+        5,
+        5,
+        0
+      ],
+      "fitness": 89.03951813060587,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9248638032502539
+      },
+      "genome": {
+        "company": "Company102"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_103",
+      "behavior": [
+        8,
+        4,
+        2,
+        9,
+        6
+      ],
+      "fitness": 79.33766023478454,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.03990021746179595
+      },
+      "genome": {
+        "company": "Company103"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_104",
+      "behavior": [
+        3,
+        5,
+        5,
+        2,
+        6
+      ],
+      "fitness": 87.97162395807622,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.5724473208990288
+      },
+      "genome": {
+        "company": "Company104"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_105",
+      "behavior": [
+        7,
+        5,
+        4,
+        0,
+        1
+      ],
+      "fitness": 80.98390623047983,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.832377636172894
+      },
+      "genome": {
+        "company": "Company105"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_106",
+      "behavior": [
+        8,
+        6,
+        1,
+        9,
+        6
+      ],
+      "fitness": 76.15294196752076,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7852384968880797
+      },
+      "genome": {
+        "company": "Company106"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_107",
+      "behavior": [
+        9,
+        8,
+        7,
+        5,
+        3
+      ],
+      "fitness": 85.52512734000976,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8169607648146426
+      },
+      "genome": {
+        "company": "Company107"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_108",
+      "behavior": [
+        5,
+        1,
+        1,
+        1,
+        8
+      ],
+      "fitness": 90.70051650748711,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.022317119566980126
+      },
+      "genome": {
+        "company": "Company108"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_109",
+      "behavior": [
+        4,
+        6,
+        3,
+        1,
+        6
+      ],
+      "fitness": 92.69554604897833,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.29540848069171866
+      },
+      "genome": {
+        "company": "Company109"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_110",
+      "behavior": [
+        8,
+        8,
+        6,
+        5,
+        6
+      ],
+      "fitness": 86.96203239695808,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8336348639561817
+      },
+      "genome": {
+        "company": "Company110"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_111",
+      "behavior": [
+        0,
+        0,
+        2,
+        9,
+        3
+      ],
+      "fitness": 76.23055526299136,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7018306990229667
+      },
+      "genome": {
+        "company": "Company111"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_112",
+      "behavior": [
+        9,
+        3,
+        9,
+        5,
+        2
+      ],
+      "fitness": 82.81046974721406,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9264806388176551
+      },
+      "genome": {
+        "company": "Company112"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_113",
+      "behavior": [
+        5,
+        4,
+        0,
+        9,
+        3
+      ],
+      "fitness": 80.0551579624117,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6741976532360362
+      },
+      "genome": {
+        "company": "Company113"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_114",
+      "behavior": [
+        3,
+        7,
+        6,
+        9,
+        3
+      ],
+      "fitness": 72.41581014309433,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.27796981027132694
+      },
+      "genome": {
+        "company": "Company114"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_115",
+      "behavior": [
+        1,
+        1,
+        4,
+        5,
+        2
+      ],
+      "fitness": 93.80490282311712,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.03439746066488614
+      },
+      "genome": {
+        "company": "Company115"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_116",
+      "behavior": [
+        4,
+        2,
+        1,
+        4,
+        8
+      ],
+      "fitness": 90.49972613712963,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8736652957522544
+      },
+      "genome": {
+        "company": "Company116"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_117",
+      "behavior": [
+        2,
+        8,
+        3,
+        4,
+        9
+      ],
+      "fitness": 73.57597397739735,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8435617941670487
+      },
+      "genome": {
+        "company": "Company117"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_118",
+      "behavior": [
+        9,
+        0,
+        5,
+        8,
+        5
+      ],
+      "fitness": 77.52216198156347,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9563166221267214
+      },
+      "genome": {
+        "company": "Company118"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_119",
+      "behavior": [
+        3,
+        3,
+        0,
+        1,
+        3
+      ],
+      "fitness": 84.0155693506541,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.3038334019075378
+      },
+      "genome": {
+        "company": "Company119"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_120",
+      "behavior": [
+        8,
+        9,
+        8,
+        5,
+        8
+      ],
+      "fitness": 80.7226719503328,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.949743853184415
+      },
+      "genome": {
+        "company": "Company120"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_121",
+      "behavior": [
+        4,
+        8,
+        3,
+        9,
+        5
+      ],
+      "fitness": 86.4781194159286,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.12926390350327344
+      },
+      "genome": {
+        "company": "Company121"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_122",
+      "behavior": [
+        7,
+        8,
+        6,
+        7,
+        8
+      ],
+      "fitness": 92.5047086035469,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.37614040477725574
+      },
+      "genome": {
+        "company": "Company122"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_123",
+      "behavior": [
+        6,
+        2,
+        1,
+        4,
+        4
+      ],
+      "fitness": 71.5791949985083,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7284830614426205
+      },
+      "genome": {
+        "company": "Company123"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_124",
+      "behavior": [
+        0,
+        4,
+        4,
+        7,
+        6
+      ],
+      "fitness": 90.25515048778081,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.5600367396734517
+      },
+      "genome": {
+        "company": "Company124"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_125",
+      "behavior": [
+        9,
+        1,
+        8,
+        6,
+        0
+      ],
+      "fitness": 90.24526635911513,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7420549487977414
+      },
+      "genome": {
+        "company": "Company125"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_126",
+      "behavior": [
+        5,
+        2,
+        5,
+        5,
+        5
+      ],
+      "fitness": 73.07481445649125,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.41498827921771897
+      },
+      "genome": {
+        "company": "Company126"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_127",
+      "behavior": [
+        1,
+        1,
+        0,
+        4,
+        2
+      ],
+      "fitness": 88.21016480820957,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.24450020892096758
+      },
+      "genome": {
+        "company": "Company127"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_128",
+      "behavior": [
+        6,
+        5,
+        7,
+        2,
+        7
+      ],
+      "fitness": 80.27198117388826,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8315045496538795
+      },
+      "genome": {
+        "company": "Company128"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_129",
+      "behavior": [
+        1,
+        2,
+        6,
+        9,
+        4
+      ],
+      "fitness": 76.5094309805159,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.15419988165031695
+      },
+      "genome": {
+        "company": "Company129"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_130",
+      "behavior": [
+        3,
+        1,
+        6,
+        5,
+        7
+      ],
+      "fitness": 81.30298372041337,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.38986543565927323
+      },
+      "genome": {
+        "company": "Company130"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_131",
+      "behavior": [
+        7,
+        8,
+        6,
+        3,
+        7
+      ],
+      "fitness": 94.07211939852192,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.10318182512603213
+      },
+      "genome": {
+        "company": "Company131"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_132",
+      "behavior": [
+        4,
+        8,
+        6,
+        7,
+        4
+      ],
+      "fitness": 85.04937184092853,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.38155469666748343
+      },
+      "genome": {
+        "company": "Company132"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_133",
+      "behavior": [
+        3,
+        4,
+        4,
+        5,
+        4
+      ],
+      "fitness": 92.94007409300997,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.01516590544466534
+      },
+      "genome": {
+        "company": "Company133"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_134",
+      "behavior": [
+        1,
+        9,
+        9,
+        4,
+        1
+      ],
+      "fitness": 88.60629829589033,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9724601808358789
+      },
+      "genome": {
+        "company": "Company134"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_135",
+      "behavior": [
+        1,
+        6,
+        3,
+        1,
+        4
+      ],
+      "fitness": 87.33771417636655,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8491311030088143
+      },
+      "genome": {
+        "company": "Company135"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_136",
+      "behavior": [
+        3,
+        6,
+        5,
+        9,
+        1
+      ],
+      "fitness": 86.55747335347641,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9046165226764299
+      },
+      "genome": {
+        "company": "Company136"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_137",
+      "behavior": [
+        4,
+        7,
+        6,
+        1,
+        8
+      ],
+      "fitness": 90.25981332410899,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.18876165793185662
+      },
+      "genome": {
+        "company": "Company137"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_138",
+      "behavior": [
+        2,
+        5,
+        3,
+        3,
+        1
+      ],
+      "fitness": 77.06880990965752,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.08652728049222458
+      },
+      "genome": {
+        "company": "Company138"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_139",
+      "behavior": [
+        5,
+        3,
+        2,
+        5,
+        9
+      ],
+      "fitness": 83.5434976147288,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.46838565019854694
+      },
+      "genome": {
+        "company": "Company139"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_140",
+      "behavior": [
+        2,
+        4,
+        2,
+        3,
+        7
+      ],
+      "fitness": 71.81597152121044,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.16029442520221115
+      },
+      "genome": {
+        "company": "Company140"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_141",
+      "behavior": [
+        4,
+        9,
+        0,
+        4,
+        9
+      ],
+      "fitness": 73.68805447597951,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.9853270550805423
+      },
+      "genome": {
+        "company": "Company141"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_142",
+      "behavior": [
+        8,
+        0,
+        3,
+        8,
+        3
+      ],
+      "fitness": 91.19700331723023,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6635829770022433
+      },
+      "genome": {
+        "company": "Company142"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_143",
+      "behavior": [
+        8,
+        2,
+        0,
+        1,
+        2
+      ],
+      "fitness": 91.61515038786354,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.3346506442593643
+      },
+      "genome": {
+        "company": "Company143"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_144",
+      "behavior": [
+        2,
+        6,
+        0,
+        3,
+        2
+      ],
+      "fitness": 81.14831129206493,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.21845707818878957
+      },
+      "genome": {
+        "company": "Company144"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_145",
+      "behavior": [
+        5,
+        7,
+        6,
+        8,
+        1
+      ],
+      "fitness": 71.15432001951288,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.7971501667701383
+      },
+      "genome": {
+        "company": "Company145"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_146",
+      "behavior": [
+        6,
+        1,
+        3,
+        2,
+        8
+      ],
+      "fitness": 74.18945848307497,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.46713994140333137
+      },
+      "genome": {
+        "company": "Company146"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_147",
+      "behavior": [
+        5,
+        7,
+        3,
+        7,
+        9
+      ],
+      "fitness": 91.73977576388927,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.8156527176600868
+      },
+      "genome": {
+        "company": "Company147"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_148",
+      "behavior": [
+        8,
+        0,
+        9,
+        4,
+        2
+      ],
+      "fitness": 79.39922053636606,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.928625961050886
+      },
+      "genome": {
+        "company": "Company148"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    },
+    {
+      "logo_id": "logo_149",
+      "behavior": [
+        9,
+        7,
+        1,
+        0,
+        4
+      ],
+      "fitness": 83.64253578556118,
+      "raw_behavior": {
+        "complexity": 20,
+        "style": 0.5,
+        "symmetry": 0.5,
+        "color_richness": 0.5,
+        "emotional_tone": 0.6125453215358313
+      },
+      "genome": {
+        "company": "Company149"
+      },
+      "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"#4CAF50\"/></svg>",
+      "metadata": {}
+    }
+  ],
+  "coverage_metrics": {
+    "overall_coverage": 0.0015,
+    "occupied_cells": 150,
+    "total_cells": 100000,
+    "per_dimension_coverage": {
+      "complexity": 1.0,
+      "style": 1.0,
+      "symmetry": 1.0,
+      "color_richness": 1.0,
+      "emotional_tone": 1.0
+    },
+    "quality_distribution": {
+      "min": 70.37141582722879,
+      "max": 94.52281919675737,
+      "mean": 82.77817976372104,
+      "std": 6.928533211016278,
+      "median": 83.04233762047633,
+      "q25": 76.68408192389111,
+      "q75": 88.2960171381024
+    },
+    "diversity_metrics": {
+      "average_behavior_distance": 16.555346756152126,
+      "unique_behaviors": 150,
+      "generation_diversity": 1
+    }
+  }
+};
+        let currentXDim = 0;
+        let currentYDim = 1;
+
+        function initialize() {
+            // Update stats
+            const metrics = archiveData.coverage_metrics;
+            document.getElementById('coverage').textContent =
+                (metrics.overall_coverage * 100).toFixed(1) + '%';
+            document.getElementById('occupied').textContent =
+                metrics.occupied_cells;
+            document.getElementById('avg-fitness').textContent =
+                metrics.quality_distribution.mean.toFixed(1);
+            document.getElementById('max-fitness').textContent =
+                metrics.quality_distribution.max.toFixed(1);
+
+            renderGrid();
+        }
+
+        function renderGrid() {
+            currentXDim = parseInt(document.getElementById('x-dim').value);
+            currentYDim = parseInt(document.getElementById('y-dim').value);
+
+            const canvas = document.getElementById('grid-canvas');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+
+            // Clear
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, width, height);
+
+            // Get dimensions
+            const xDimSize = archiveData.dimensions[currentXDim];
+            const yDimSize = archiveData.dimensions[currentYDim];
+
+            const cellWidth = width / xDimSize;
+            const cellHeight = height / yDimSize;
+
+            // Project entries to 2D
+            const grid = {};
+            archiveData.entries.forEach(entry => {
+                const x = entry.behavior[currentXDim];
+                const y = entry.behavior[currentYDim];
+                const key = `${x},${y}`;
+
+                if (!grid[key] || entry.fitness > grid[key].fitness) {
+                    grid[key] = entry;
+                }
+            });
+
+            // Render cells
+            Object.entries(grid).forEach(([key, entry]) => {
+                const [x, y] = key.split(',').map(Number);
+
+                // Color by fitness
+                const fitness = entry.fitness;
+                const normalized = (fitness - 60) / 40; // Assuming 60-100 range
+                const color = getFitnessColor(normalized);
+
+                ctx.fillStyle = color;
+                ctx.fillRect(
+                    x * cellWidth,
+                    (yDimSize - 1 - y) * cellHeight,
+                    cellWidth - 1,
+                    cellHeight - 1
+                );
+            });
+
+            // Add grid lines
+            ctx.strokeStyle = '#ddd';
+            ctx.lineWidth = 0.5;
+            for (let i = 0; i <= xDimSize; i++) {
+                ctx.beginPath();
+                ctx.moveTo(i * cellWidth, 0);
+                ctx.lineTo(i * cellWidth, height);
+                ctx.stroke();
+            }
+            for (let i = 0; i <= yDimSize; i++) {
+                ctx.beginPath();
+                ctx.moveTo(0, i * cellHeight);
+                ctx.lineTo(width, i * cellHeight);
+                ctx.stroke();
+            }
+        }
+
+        function getFitnessColor(normalized) {
+            // Viridis-like colormap
+            const r = Math.floor(255 * (0.267 + 0.733 * normalized));
+            const g = Math.floor(255 * (0.005 + 0.765 * normalized));
+            const b = Math.floor(255 * (0.329 + 0.145 * (1 - normalized)));
+            return `rgb(${r},${g},${b})`;
+        }
+
+        // Canvas click handler
+        document.getElementById('grid-canvas').addEventListener('click', (e) => {
+            const canvas = e.target;
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const xDimSize = archiveData.dimensions[currentXDim];
+            const yDimSize = archiveData.dimensions[currentYDim];
+            const cellWidth = canvas.width / xDimSize;
+            const cellHeight = canvas.height / yDimSize;
+
+            const cellX = Math.floor(x / cellWidth);
+            const cellY = yDimSize - 1 - Math.floor(y / cellHeight);
+
+            // Find entry
+            const key = `${cellX},${cellY}`;
+            const entry = archiveData.entries.find(e =>
+                e.behavior[currentXDim] === cellX &&
+                e.behavior[currentYDim] === cellY
+            );
+
+            if (entry) {
+                showEntryDetails(entry);
+            } else {
+                document.getElementById('selection-info').innerHTML =
+                    '<p>Empty cell at (' + cellX + ', ' + cellY + ')</p>';
+                document.getElementById('logo-preview').innerHTML = '';
+            }
+        });
+
+        function showEntryDetails(entry) {
+            const info = `
+                <p><strong>Logo ID:</strong> ${entry.logo_id}</p>
+                <p><strong>Fitness:</strong> ${entry.fitness.toFixed(2)}</p>
+                <p><strong>Behavior:</strong> ${entry.behavior.join(', ')}</p>
+                <p><strong>Company:</strong> ${entry.genome.company || 'N/A'}</p>
+            `;
+            document.getElementById('selection-info').innerHTML = info;
+
+            // Show SVG preview (limited to avoid issues)
+            const preview = `<div>${entry.svg_code.substring(0, 500)}...</div>`;
+            document.getElementById('logo-preview').innerHTML = preview;
+        }
+
+        function exportData() {
+            const dataStr = JSON.stringify(archiveData, null, 2);
+            const blob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'qd_archive_export.json';
+            a.click();
+        }
+
+        // Initialize on load
+        initialize();
+    </script>
+</body>
+</html>
